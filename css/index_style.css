@@ -335,7 +335,7 @@ video {
 
 @media screen and (max-width: 834px) {
   .map_base > img {
-    width: 750px;
+    width: 90vw;
   }
 }
 
@@ -345,16 +345,10 @@ video {
     top: -50px;
     left: 100px;
   }
-  .map_base > img {
-    width: 500px;
-  }
 }
 
 @media screen and (max-width: 480px) {
   .map_container {
     margin: auto;
-  }
-  .map_base > img {
-    width: 350px;
   }
 }

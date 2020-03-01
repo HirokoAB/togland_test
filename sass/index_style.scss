@@ -340,7 +340,7 @@ video {
 
 @media screen and (max-width: 834px){
    .map_base > img{
-    width:750px;
+    width:90vw;
   } 
 }
 //ipad環境のブレイクポイント 
@@ -351,15 +351,9 @@ video {
     left: 100px;
   }
   .map_base > img{
-    width:500px;
+    // width:500px;
   }
 
-  // .key_1 {
-  //   display: none !important;
-  // }
-  // .key_2 {
-  //   display: inline-block !important;
-  // }
 }
 //モバイル端末のレスポンシブ
 @media screen and (max-width: 480px) {
@@ -368,12 +362,9 @@ video {
   }
 
     .map_base > img{
-    width:350px;
+    // width:350px;
   }
-  // .base_img {
-  //   margin-top: 10px;
-  //   width: 100%;
-  // }
+
 }
 
 
