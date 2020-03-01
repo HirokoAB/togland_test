@@ -90,14 +90,6 @@ video {
   content: " ";
 }
 
-.keybox {
-  top: -90px;
-}
-
-.key_2 {
-  display: none !important;
-}
-
 .shake {
   -webkit-animation: shake 8s infinite ease-in alternate;
   animation: shake 8s infinite ease-in alternate;
