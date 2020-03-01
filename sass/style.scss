@@ -1,0 +1,449 @@
+@import url(reset.css);
+
+body{
+	margin-top:0;
+    font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+    background-color: #ECECEC;
+   	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+   	background-size: 14px 14px;
+
+}
+
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+ 
+footer {
+  margin-top: auto;
+}
+ // header{
+ // 	height: 60px;
+ // }
+/*↓リンクの下線はなし、マウスオンで下線あり*/
+a{ 
+	text-decoration: 
+	none;
+	color:black!important;
+}
+a:hover
+ { text-decoration:
+  underline;
+}
+
+h1 {
+ 	margin-bottom: 2px;
+ 	font-size:24px;
+}
+
+img{
+	object-fit: cover;
+}
+
+
+.margin-auto{
+	margin:auto;
+}
+
+.text-center{
+	text-align:center;
+}
+
+.text-right{
+	text-align:right;
+}
+
+.text-six{
+	font-weight: 600;
+}
+
+.text-seven{
+	font-weight: 700;
+}
+
+.flex{
+	display:flex;
+}
+.align-center{
+	align-items:center;
+}
+.mgn-3{
+	margin:3px;
+}
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+.content{
+	margin-top:50px;
+	padding-bottom: 50px;
+	background-color:white;
+}
+
+
+.sub-title{
+	margin:20px auto 20px;
+	text-align: center;
+}
+ .sub-title::after{
+ 	content:'';
+ 	display:block;
+ 	height:10px;
+ 	width:100%;
+	background:black;
+	margin-top:5px;
+ }
+
+
+
+.img_box{
+	width: 100vw;
+	height: auto;
+	min-height: 100vh;
+	background: linear-gradient( 180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(../img/kamiwari.jpeg);
+	background-size:cover;
+	background-position: center;
+	// background-image:url( ../img/outdoor_img.jpg ); 
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	position:relative;
+
+ }
+
+// 背景画像に色を重ねるだけの場合はこのコード
+ // .img_box::after{
+	// content:'';
+ // 	background-color: rgba(255, 255, 255, 0.7);
+ // 	position: absolute;
+ // 	top:0;
+ // 	right:0;
+ // 	bottom:0;
+ // 	left:0; 
+
+
+ // }
+
+
+
+
+ .img_box > img{
+ 	margin: auto;
+ 	height:auto;
+ 	width:800px;
+ 	opacity:0.8;
+
+ }
+#timer{
+	position: absolute;
+	color:white;
+	font-family: "M PLUS Rounded 1c
+ ";
+	max-width: 500px;
+	text-align:center;
+	margin-top:-1%;
+	font-size: 5.5rem;
+	font-weight: bold;
+}
+.timer_title{
+	font-size: 2rem;
+	margin-bottom: 5%;
+}
+.yycountdown-box{
+	text-align:center;
+}
+
+.yyc-day-text,.yyc-hou-text,
+.yyc-min-text,.yyc-sec-text{
+	font-size:1rem;
+}
+
+//スライダーの設定
+.owl-item > img{
+	width: 300px;
+	height:300px;
+	object-fit: cover;
+}
+
+
+
+//mainのコンテンツ
+.slider-box{
+	// padding:30px;
+	// border: 1px solid gray;
+}
+
+// ブログコンテンツの背景
+// .blog-content{
+// 	background-color:;
+// }
+
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+.blog-container{
+	display:flex;
+	flex-direction:column;
+	padding-top:50px
+}
+.blog-container::after{
+	content:'';
+ 	display:block;
+ 	height:1px;
+ 	width:100%;
+	background:#cccccc;
+	margin-top:10px;
+
+}
+.post-title,.post-date,
+.post-excerpt,.post-more,
+.post-content{
+	margin-bottom:10px;
+}
+
+.post-date{
+	color:gray;
+	
+}
+.post-title > h2 {
+	color:black!important;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+
+.post-thumbnail>img{
+	width:100%;
+	height:auto;
+	max-height: 800px;
+	margin-bottom:50px;
+}
+
+.post-excerpt::before,
+.post-excerpt::after{
+	content:'"';
+	font-family:"";
+	font-size: 1.3rem;
+}
+
+.post-more{
+	text-align:right;
+}
+
+.post-more::before{
+	content:'▶︎';
+}
+
+.see-more{
+	padding-top:30px;
+	font-size: 1.2rem;
+}
+
+.see-more >p{
+	content:'';
+ 	display:block;
+ 	height:10px;
+ 	width:100%;
+	background:black;
+	margin-top:5px;
+
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+.single-content >p{
+	line-height: 2;
+}
+.article_img > img{
+	width:100%;
+	height:auto;
+	object-fit: cover;
+}
+
+.nav-below,.list-btn{
+	width:100%;
+	text-align:center;
+	padding:5px;
+	margin-top:30px;
+
+	
+}
+.pre_text::after{
+	content:'';
+	width:20px;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+.footer{
+	height:60px;
+	background-color:black;
+
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+.archive-base{
+	margin-top:0;
+    font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+    background-color: #ECECEC;
+   	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+   	background-size: 14px 14px;
+
+}
+.base{
+	background-color:white;
+	padding:3%;
+	padding-top:5%;
+}
+
+.archive-box{
+	margin-top:10%;
+}
+.archive-container{
+	display:flex;
+	align-items:center;
+}
+
+.archive-container img{
+	width:200px;
+	height:200px;
+}
+
+.archive-row{
+	margin-left:2%;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+
+.single_img > img{
+	width:100%;
+	height:500px;
+}
+
+.single-upper,.single-content{
+	margin-top:2%;
+	justify-content:space-between;
+	padding:2%;
+}
+
+.nav-box{
+	margin-top:3%;
+}
+
+.single-base{
+	background-image:url(../img/outdoor.svg);
+
+}
+
+
+@media screen and (max-width: 480px) {
+	.single-upper{
+		padding:0;
+		flex-direction:column;
+	}
+	.single-upper >h1{
+		font-size:16px;
+	}
+	.post-date{
+		font-size:9px;
+	}
+	.single-content >p{
+	font-size: 10px;
+	}
+	.single_img > img{
+	height: 150px;
+
+	}
+
+	hr{
+		margin:0.5em 0;
+	}
+
+}
+
+//  .hamburger {
+//   display: none;
+//   width: 28px;
+//   align-self: center;
+//   margin-right: 20px;
+// }
+
+// .hamburger span::after,
+// .hamburger span::before {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   top: -9px;
+// }
+
+// .hamburger span::after{
+//   top: 9px;
+// }
+
+// .hamburger span {
+//   position: relative;
+//   display: block;
+// }
+
+// .hamburger span,
+// .hamburger span::after,
+// .hamburger span::before {
+//   width: 100%;
+//   height: 5px;
+//   background-color: #fff;
+//   transition: all 0.5s;    
+//   /*←アニメーション*/
+//   backface-visibility: hidden;
+//   border-radius: 2px;
+// }
+
+// .hamburger.on span {
+//   background-color: transparent;
+// }
+
+// .hamburger.on span::before {
+//   transform: rotate(45deg) translate(5px, 5px);
+// }
+
+// .hamburger.on span::œafter {
+//   transform: rotate(-45deg) translate(7px, -8px);
+// }
+/* ハンバーガーメニューここまで */

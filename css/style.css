@@ -1,0 +1,345 @@
+@charset "UTF-8";
+@import url(reset.css);
+body {
+  margin-top: 0;
+  font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+  background-color: #ECECEC;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #F9F9F9), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #F9F9F9), color-stop(0.75, #F9F9F9), color-stop(0.75, transparent), to(transparent));
+  background-size: 14px 14px;
+}
+
+body,
+#wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/*↓リンクの下線はなし、マウスオンで下線あり*/
+a {
+  text-decoration: none;
+  color: black !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin-bottom: 2px;
+  font-size: 24px;
+}
+
+img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-six {
+  font-weight: 600;
+}
+
+.text-seven {
+  font-weight: 700;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.mgn-3 {
+  margin: 3px;
+}
+
+.content {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.sub-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+
+.sub-title::after {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: black;
+  margin-top: 5px;
+}
+
+.img_box {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/kamiwari.jpeg);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/kamiwari.jpeg);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/kamiwari.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img_box > img {
+  margin: auto;
+  height: auto;
+  width: 800px;
+  opacity: 0.8;
+}
+
+#timer {
+  position: absolute;
+  color: white;
+  font-family: "M PLUS Rounded 1c ";
+  max-width: 500px;
+  text-align: center;
+  margin-top: -1%;
+  font-size: 5.5rem;
+  font-weight: bold;
+}
+
+.timer_title {
+  font-size: 2rem;
+  margin-bottom: 5%;
+}
+
+.yycountdown-box {
+  text-align: center;
+}
+
+.yyc-day-text, .yyc-hou-text,
+.yyc-min-text, .yyc-sec-text {
+  font-size: 1rem;
+}
+
+.owl-item > img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.blog-container::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #cccccc;
+  margin-top: 10px;
+}
+
+.post-title, .post-date,
+.post-excerpt, .post-more,
+.post-content {
+  margin-bottom: 10px;
+}
+
+.post-date {
+  color: gray;
+}
+
+.post-title > h2 {
+  color: black !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.post-thumbnail > img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  margin-bottom: 50px;
+}
+
+.post-excerpt::before,
+.post-excerpt::after {
+  content: '"';
+  font-family: "";
+  font-size: 1.3rem;
+}
+
+.post-more {
+  text-align: right;
+}
+
+.post-more::before {
+  content: '▶︎';
+}
+
+.see-more {
+  padding-top: 30px;
+  font-size: 1.2rem;
+}
+
+.see-more > p {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 100%;
+  background: black;
+  margin-top: 5px;
+}
+
+.single-content > p {
+  line-height: 2;
+}
+
+.article_img > img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.nav-below, .list-btn {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  margin-top: 30px;
+}
+
+.pre_text::after {
+  content: '';
+  width: 20px;
+}
+
+.footer {
+  height: 60px;
+  background-color: black;
+}
+
+.archive-base {
+  margin-top: 0;
+  font-family: 'Noto Sans JP', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+  background-color: #ECECEC;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #F9F9F9), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #F9F9F9), color-stop(0.75, #F9F9F9), color-stop(0.75, transparent), to(transparent));
+  background-size: 14px 14px;
+}
+
+.base {
+  background-color: white;
+  padding: 3%;
+  padding-top: 5%;
+}
+
+.archive-box {
+  margin-top: 10%;
+}
+
+.archive-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.archive-container img {
+  width: 200px;
+  height: 200px;
+}
+
+.archive-row {
+  margin-left: 2%;
+}
+
+.single_img > img {
+  width: 100%;
+  height: 500px;
+}
+
+.single-upper, .single-content {
+  margin-top: 2%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.nav-box {
+  margin-top: 3%;
+}
+
+.single-base {
+  background-image: url(../img/outdoor.svg);
+}
+
+@media screen and (max-width: 480px) {
+  .single-upper {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .single-upper > h1 {
+    font-size: 16px;
+  }
+  .post-date {
+    font-size: 9px;
+  }
+  .single-content > p {
+    font-size: 10px;
+  }
+  .single_img > img {
+    height: 150px;
+  }
+  hr {
+    margin: 0.5em 0;
+  }
+}
+
+/* ハンバーガーメニューここまで */

@@ -1,0 +1,129 @@
+$gray:#96A8B2;
+$navi:#2F4650;
+$color-kurashi:#F4DE00;
+$color-umi:#6AC2EF;
+$color-yama:#B3C551;
+$color-boshu:#CB3A48;
+
+
+.page-content{
+	width:1180px;
+	font-size:20px;
+	color:$navi;
+	a{
+		color:$navi;
+	}
+	.flex{
+		display:flex;
+		// position:relative;
+		}
+	.page-list{
+		position:relative;
+	}
+	ul{
+		justify-content:space-between;
+		
+		li>img{
+			display:inline-block;
+			vertical-align:center;
+		}
+		:first-child > img{
+		margin-right:10px;
+		}
+		:last-child > img{
+			margin-left:10px;
+		}
+	}
+	
+	.list_upper{
+		// margin-bottom:700px;
+		&::before{
+			position:absolute;
+			content:'';
+			background:$gray;
+			height:1px;
+			display:block;
+			left:0;
+			right:0;
+			top:-10.5px;
+			}
+		}
+	.list_down{
+		margin-top:700px;
+	}
+	.list_down::after{
+		position:absolute;
+			content:'';
+			background:$gray;
+			height:1px;
+			display:block;
+			left:0;
+			right:0;
+			bottom:-10.5px;
+		}
+		.content-illust{
+			position:relative;
+			justify-content:center;
+			>img{
+				position:absolute;
+			}
+		}
+		h3{
+			position:relative;
+			font-size:50px;
+			font-weight:bold;
+		}
+		.title_sec{
+			position:relative;
+			top:568px;
+			left:-62px;
+			letter-spacing:3.35rem;
+			z-index:10;
+		}
+		.tako{
+			top:-30px;
+			width:120px;
+			right:253px;
+			transform:rotate(14deg);
+		}
+
+		.matsu{
+			top:4px;
+			left:510px;
+			width:170px;
+		}
+		.kamome{
+			top:95px;
+			width:100px;
+			left:404px;
+		}
+		.owashi{
+			top:85px;
+			width:258px;
+			right:288px;
+			transform:rotate(-3deg);
+		}
+		.kokugan{
+			top:386px;
+			width:106px;
+			right:493px;
+			transform:rotate(-1deg);
+		}
+		.ginzake{
+			top:210px;
+			width:325px;
+			left:240px;
+			transform:rotate(1deg);
+			
+		}
+
+		.img_sec{
+			align-items:center;
+			position:absolute;
+			top:13px;
+			left:128px;
+			opacity:0.7;
+			filter:invert(100%);
+		}
+
+}

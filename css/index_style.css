@@ -1,0 +1,360 @@
+html {
+  overflow: auto;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+}
+
+#cover_img > img {
+  width: 100vw;
+  height: auto;
+  opacity: 0.8;
+  z-index: 15;
+}
+
+area {
+  border: none;
+  outline: none;
+}
+
+.video_wrappar {
+  width: 100vw;
+  height: 100vw;
+  min-height: 100vh;
+}
+
+.video_wrappar > img {
+  width: 100%;
+  height: 100%;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.map_container {
+  position: relative;
+  max-width: 1100px;
+  height: auto;
+  margin: auto;
+}
+
+.guide {
+  width: 300px;
+  position: relative;
+  top: -190px;
+  left: 60px;
+}
+
+.arrow_box {
+  display: none;
+  position: absolute;
+  padding: 16px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  margin-top: -10px;
+}
+
+.arrow_box::after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+.keybox {
+  top: -90px;
+}
+
+.key_2 {
+  display: none !important;
+}
+
+.shake {
+  -webkit-animation: shake 8s infinite ease-in alternate;
+  animation: shake 8s infinite ease-in alternate;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-10deg);
+    transform: translate(0, 0) rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: translate(0, -3px) rotate(0deg);
+    transform: translate(0, -3px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(10deg);
+    transform: translate(0, 0) rotate(10deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(-10deg);
+    transform: translate(0, 0) rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: translate(0, -3px) rotate(0deg);
+    transform: translate(0, -3px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(10deg);
+    transform: translate(0, 0) rotate(10deg);
+  }
+}
+
+.shake_sec {
+  -webkit-animation: shake 0.5s infinite ease-in alternate;
+  animation: shake 0.5s infinite ease-in alternate;
+}
+
+.rotate {
+  -webkit-animation: rotate 4s infinite linear alternate;
+  animation: rotate 4s infinite linear alternate;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.flash {
+  -webkit-animation: Flash 10s infinite;
+  animation: Flash 10s infinite;
+}
+
+@-webkit-keyframes Flash {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes Flash {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.holizonal {
+  -webkit-animation: horizontal 2s ease-in-out infinite alternate;
+  animation: horizontal 2s ease-in-out infinite alternate;
+}
+
+.holizonal_sec {
+  -webkit-animation: horizontal 2s linear infinite alternate;
+  animation: horizontal 2s linear infinite alternate;
+}
+
+.vertical {
+  -webkit-animation: vertical 2s ease-in-out infinite alternate;
+  animation: vertical 2s ease-in-out infinite alternate;
+}
+
+.vertical_sec {
+  -webkit-animation: vertical_sec 2s ease-in-out infinite alternate;
+  animation: vertical_sec 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes horizontal {
+  0% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@keyframes horizontal {
+  0% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@-webkit-keyframes horizontal_sec {
+  0% {
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@keyframes horizontal_sec {
+  0% {
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@-webkit-keyframes vertical {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY 0px;
+    transform: translateY 0px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes vertical {
+  0% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY 0px;
+    transform: translateY 0px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes vertical_sec {
+  0% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translateY 0px;
+    transform: translateY 0px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes vertical_sec {
+  0% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translateY 0px;
+    transform: translateY 0px;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .guide {
+    width: 200px;
+    top: -250px;
+    left: 30px;
+  }
+  .keybox {
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .map_base > img {
+    width: 750px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .guide {
+    width: 100px;
+    top: -50px;
+    left: 100px;
+  }
+  .map_base > img {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map_container {
+    margin: auto;
+  }
+  .map_base > img {
+    width: 350px;
+  }
+}

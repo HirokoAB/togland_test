@@ -1,0 +1,35 @@
+{
+  "name": "outdoorfesta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HirokoAB/outdoorfesta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HirokoAB/outdoorfesta/issues"
+  },
+  "homepage": "https://github.com/HirokoAB/outdoorfesta#readme",
+  "dependencies": {
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.5",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "sass": "^1.23.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}
