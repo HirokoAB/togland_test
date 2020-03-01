@@ -335,7 +335,7 @@ video {
 
 @media screen and (max-width: 834px) {
   .map_base > img {
-    width: 90vw;
+    width: 80vw;
   }
 }
 
