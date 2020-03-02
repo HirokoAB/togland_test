@@ -74,6 +74,9 @@ img {
   align-items: center;
 }
 
+.column{
+  flex-direction: column;
+}
 .mgn-3 {
   margin: 3px;
 }
@@ -160,6 +163,14 @@ img {
   margin-bottom: 5%;
 }
 
+.caution{
+    font-weight: 500;
+    line-height: 1.7;
+    margin:30px auto 0px auto; 
+}
+.caution p {
+  margin:auto;
+}
 .event-img {
   position: relative;
   /* 相対位置指定 */

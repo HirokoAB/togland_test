@@ -48,6 +48,10 @@ img {
   margin: auto;
 }
 
+.mgn-3 {
+  margin: 3px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -76,8 +80,11 @@ img {
   align-items: center;
 }
 
-.mgn-3 {
-  margin: 3px;
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .content {

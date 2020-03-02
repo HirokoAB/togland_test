@@ -25,10 +25,11 @@ Template Name: Home Page
 	
 	<!-- メインのコンテンツ -->
 	<div class="container">	
-		<div class="row content upper-conteiner">
-			<div class="sub-title"><h1>開催にあたって</h1>
-日本国内における新型コロナウィルス感染症の発生に関し、正確な情報の収集に努めるとともに、感染拡大の防止に注意を払い、本イベントを実施する予定です。ただし、宮城県内における感染の拡大が確認されるなど、現時点と異なる状況になった場合は中止になる可能性があります。
-※2月27日(木)現在</div>
+		<div class="row content upper-conteiner ">
+			<div class="flex column caution">
+			<h1 class="sub-title yellow">開催にあたりまして</h1>
+			<p class="col-sm-10">日本国内における新型コロナウィルス感染症の発生に関し、正確な情報の収集に努めるとともに、感染拡大の防止に注意を払い、本イベントを実施する予定です。ただし、宮城県内における感染の拡大が確認されるなど、現時点と異なる状況になった場合は中止になる可能性があります。※2月27日(木)現在</p>
+			</div>
 			<div class="sub-title">
 				<h1>EVENT PHOTO</h1>
 				<h1>こんなことやります</h1>
@@ -55,7 +56,7 @@ Template Name: Home Page
 				            <div class="owl-item event-img">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/kupp.jpg" alt="" >
 				            	<div class="mask">
-				            		<div class="caption">KUPP</div>
+				            		<div class="caption">KUBB</div>
 				            	</div>
 							</div>
 				            <div class="owl-item event-img">

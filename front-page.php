@@ -21,16 +21,14 @@
 						<div  type="image/svg+xml" style="z-index: 1" class="map map_base">
 							<img class="base_img" src="<?php echo get_template_directory_uri(); ?>/img/map_base.png"  usemap="#tgitem" alt="戸倉ネイチャーパークトップページに表示する地図のベース画像"/>
 						</div>
-						<!-- <div  type="image/svg+xml" style="z-index: 2" class="map map eagle shake">
-							<img class=""src="<?php echo get_template_directory_uri(); ?>/img/map_eagle.svg" alt="戸倉ネイチャーパークトップページに表示しているサイトオオワシのイラスト">	
-						</div> -->
+						<div  type="image/svg+xml" style="z-index: 2" class="map map eagle shake">
+							<img class=""src="<?php echo get_template_directory_uri(); ?>/img/eagle.png" alt="戸倉ネイチャーパークトップページに表示しているサイトオオワシのイラスト">	
+						</div>
 <!-- 						<div  type="image/svg+xml" style="z-index: 6"  class="map compass">
 							<img class="" src="<?php echo get_template_directory_uri(); ?>/img/map_compass.svg" usemap="" alt="" />
 						</div> -->
 						<div  type="image/svg+xml" style="z-index:7" class="map keybox flash" id="">
-							<img class="key_1" src="<?php echo get_template_directory_uri(); ?>/img/map_keybox.svg" usemap="#tgitem" alt="" />
-							<a href="<?php echo get_permalink( HOME );?>"><img class="key_2" src="<?php echo get_template_directory_uri(); ?>/img/map_keybox.svg" alt="" /></a>
-							<!-- <img class="guide flash" src="<?php echo get_template_directory_uri(); ?>/img/guide_2.svg" alt="戸倉ネイチャーパークトップページに表示している同じサーバー上で公開しているサイトへ遷移する宝箱の画像"> -->
+							<img class="key_1" src="<?php echo get_template_directory_uri(); ?>/img/treasure.png" usemap="#tgitem" alt="" />
 						</div>
 				</div>
 			</div>
@@ -68,7 +66,6 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.rwdImageMaps.min.js"></script>
-<!-- <script src="<?php echo get_template_directory_uri(); ?>/js/map.js"></script> -->
 <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script> -->
 
 <script>
