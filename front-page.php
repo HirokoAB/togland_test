@@ -21,9 +21,9 @@
 						<div  type="image/svg+xml" style="z-index: 1" class="map map_base">
 							<img class="base_img" src="<?php echo get_template_directory_uri(); ?>/img/map_base.png"  usemap="#tgitem" alt="戸倉ネイチャーパークトップページに表示する地図のベース画像"/>
 						</div>
-						<!-- <div  type="image/svg+xml" style="z-index: 2" class="map map eagle shake">
-							<img class=""src="<?php echo get_template_directory_uri(); ?>/img/map_eagle.svg" alt="戸倉ネイチャーパークトップページに表示しているサイトオオワシのイラスト">	
-						</div> -->
+						<div  type="image/svg+xml" style="z-index: 2" class="map map eagle shake">
+							<img class=""src="<?php echo get_template_directory_uri(); ?>/img/eagle.png" alt="戸倉ネイチャーパークトップページに表示しているサイトオオワシのイラスト">	
+						</div>
 <!-- 						<div  type="image/svg+xml" style="z-index: 6"  class="map compass">
 							<img class="" src="<?php echo get_template_directory_uri(); ?>/img/map_compass.svg" usemap="" alt="" />
 						</div> -->
@@ -66,7 +66,6 @@
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.rwdImageMaps.min.js"></script>
-<!-- <script src="<?php echo get_template_directory_uri(); ?>/js/map.js"></script> -->
 <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script> -->
 
 <script>

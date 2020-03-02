@@ -12,13 +12,6 @@ body {
   border: none;
 }
 
-#cover_img > img {
-  width: 100vw;
-  height: auto;
-  opacity: 0.8;
-  z-index: 15;
-}
-
 area {
   border: none;
   outline: none;
@@ -30,25 +23,11 @@ area {
   min-height: 100vh;
 }
 
-.video_wrappar > img {
-  width: 100%;
-  height: 100%;
-}
-
-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-}
-
 .map {
   position: absolute;
-  top: 0;
-  width: 100vw;
+  left:0;
+  right:0;
+  margin:auto;
 }
 
 .map_container {
@@ -56,12 +35,14 @@ video {
   max-width: 1100px;
   height: auto;
   margin:auto;
+  text-align:center;
+  
+  img {
+    margin: 0 auto;
+    display:block;
+  }
 }
 
-// .base_img {
-//   width: 100%;
-//   height: auto;
-// }
 
 .guide {
   width: 300px;
@@ -326,13 +307,13 @@ video {
     top: -250px;
     left: 30px;
   }
-  .keybox {
-    top: 0px;
-  }
+     .map_container img {
+    width:80vw;
+  } 
 }
 
 @media screen and (max-width: 834px){
-   .map_base > img{
+   .map_container img {
     width:80vw;
   } 
 }
