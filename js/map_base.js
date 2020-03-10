@@ -11,6 +11,7 @@
 ;(function($) {
 	$.fn.rwdImageMaps = function() {
 		var $img = this;
+		console.log("js走っていますう〜")
 
 		var rwdImageMap = function() {
 			$img.each(function() {

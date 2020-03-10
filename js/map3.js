@@ -57,10 +57,10 @@
 
 						console.log('これがtemp.srcの中身', temp.src);
 						if (!w)
-							w = $that.width;
+							w = $temp.width;
 						console.log('これがtempの幅', w)
 						if (!h)
-							h = $that.height;
+							h = $temp.height;
 						console.log('これがtempの高さ', h)
 					}
 

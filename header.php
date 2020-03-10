@@ -9,5 +9,13 @@
 	
 	
 <?php wp_head(); ?>
-	<title>南三陸アウトドアフェスタ</title>
+	<title>遊びがまなびに変わる場所戸倉ネイチャーパークWEBサイト</title>
 </head>
+
+<body>
+	<header>
+		<div class="daiary_container container">
+    <h2 class="daiary_main_title">Togura Nature Park Times!</h2>
+    <h3 class="times-subtitle">あそびが学びにかわる場所 戸倉ネイチャーパークの日々をお届け</h3>
+	</header>
+
