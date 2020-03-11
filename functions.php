@@ -113,6 +113,9 @@ add_action( 'init', 'create_pts_daiary');
 function myscripts(){
 
 		wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'app.js', get_template_directory_uri() . '/js/app.js',array(),
+    		false,
+    		true );
 
 	if(is_home() || is_post_type_archive( 'outdoor' )){
 			wp_enqueue_script( 'jquery-1.10.2.min.js', get_template_directory_uri() . '/lib/yycountdown/js/jquery-1.10.2.min.js',array(),
@@ -121,9 +124,6 @@ function myscripts(){
     		wp_enqueue_script( 'jquery.yycountdown.min.js', get_template_directory_uri() . '/lib/yycountdown/js/jquery.yycountdown.min.js',array(),
     		false,
     		true);
-    		wp_enqueue_script( 'app.js', get_template_directory_uri() . '/js/app.js',array(),
-    		false,
-    		true );
 			wp_enqueue_script( 'owl.carousel.js', get_template_directory_uri() . '/lib/assets/js/owl.carousel.js',array(),
     		false,
     		true);
@@ -138,7 +138,14 @@ function myscripts(){
 			array(),
     		false,
     		true
-    		 );
+   			 );
+	}elseif(is_front_page()){
+			wp_enqueue_script( 'owl.carousel.js', get_template_directory_uri() . '/lib/assets/js/owl.carousel.js',array(),
+    		false,
+    		true);
+    		wp_enqueue_script( 'owl.app.js', get_template_directory_uri() . '/lib/assets/js/owl.app.js',array(),
+    		false,
+    		true);
 	}
 };
 add_action( 'wp_enqueue_scripts' , 'myscripts' );
@@ -153,12 +160,10 @@ function mystyle(){
 			wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css' );
 			wp_enqueue_style( 'bootstrap.min.css', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css' );
 
-	if(is_home() || is_page( 14 ) || is_singular('outdoor')){
+	if(is_home() || is_page( 14 ) || is_singular('outdoor')) {
 			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 			wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
 			wp_enqueue_style( 'outdoor_style.css', get_template_directory_uri() . '/css/outdoor_style.css', array(), '1.0.3' );
-
-
 	}elseif(is_post_type_archive( 'daiary' )){
 			wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
 	}elseif(is_page('192')){
@@ -167,6 +172,8 @@ function mystyle(){
 			wp_enqueue_style( 'content.css',get_template_directory_uri() . '/css/page-issue.css' );			
 	}elseif(is_front_page ()){
 		   wp_enqueue_style( 'index_style.css',get_template_directory_uri() . '/css/index_style.css' );
+		   wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
+		   wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
 	}
 
 	else{
