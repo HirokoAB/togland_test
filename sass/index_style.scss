@@ -19,8 +19,7 @@ area {
 
 .map_wrappar {
   width: 100vw;
-  height: 100vw;
-  min-height: 100vh;
+  height: auto;
 }
 
 .map {
@@ -28,6 +27,12 @@ area {
   left:0;
   right:0;
   margin:auto;
+    // ::before {
+    // content:''; 
+    // display:block; 
+    // padding-top:100%;
+    // }
+  
 }
 
 .map_container {
@@ -341,6 +346,12 @@ area {
 
 }
 
+
+//TOP-Pageの真ん中のcss//////////////
+.about_container{
+
+  
+}
 
 
 

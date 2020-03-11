@@ -2,19 +2,19 @@
 
 <body>
 	<main>
-			<div class="main_container contaier">
+			<div class="main_container contaier"　style="z-index: ">
 				<section>
 						
-						<div class="map_wrappar">
+						<div class="map_wrappar row">
 						
-							<div class="map_container">
-								<div  type="image/svg+xml" style="z-index: 1" class="map map_base">
+							<div class="map_container col-12">
+								<div  type="image/svg+xml" style="z-index:0;" class="map map_base">
 									<img class="base_img" src="<?php echo get_template_directory_uri(); ?>/img/map_base.png"  usemap="#tgitem" alt="戸倉ネイチャーパークトップページに表示する地図のベース画像"/>
 								</div>
-								<div  type="image/svg+xml" style="z-index: 2" class="map map eagle shake">
+								<div  type="image/svg+xml" style="z-index:1;" class="map map eagle shake">
 									<img class=""src="<?php echo get_template_directory_uri(); ?>/img/eagle.png" alt="戸倉ネイチャーパークトップページに表示しているサイトオオワシのイラスト">	
 								</div>
-								<div  type="image/svg+xml" style="z-index:7" class="map keybox flash" id="">
+								<div  type="image/svg+xml" style="z-index:2;" class="map keybox flash" id="">
 									<img class="key_1" src="<?php echo get_template_directory_uri(); ?>/img/treasure.png" usemap="#tgitem" alt="" />
 								</div>
 							</div>
@@ -35,12 +35,12 @@
 				</section>
 						<!-- </div> -->
 				<section>
-						<div class="about_container contaier">
+						<div class="about_container container">
 							<h2 class="about_subtitle subtitile">戸倉ネイチャーパークとは？</h2>
 							<!-- TOP真ん中の記述の上段raw -->
 							<div class="row">
 								<div class="col-12">
-									<div class="col-5 about_left">
+									<div class="col-5 about_left flex">
 										<p class="abnp_article">戸倉ネイチャーパーク(公園)と言っても、そこにはすべり台やジャングルジムといった遊具はありません。南三陸町戸倉地域をそう呼ぼうとしているだけです。しかし遊具はなくても、たくさんの自然の魅力があります。
 										海からは牡蠣やワカメ、ギンザケなどの恵みがあるとともに、シベリアから越冬にやってきたコクガンが漂い、空には同じく飛来した勇猛なオオワシが舞い、川には秋サケが産卵に回遊し遡上します。森には潮風に育まれたたくましい木が育ち、その森のビタミンが海の豊穣をつくり上げます。これらの魅力的な自然は、宝物と言ってふさわしいものです。その宝物を探しに、町の公園に訪れるようにぜひみなさんに来て欲しい。実は戸倉エリアには、この自然と豊かにふれあう機会をつくっているさまざまな活動や施設があります。そこを訪ねることが宝物の発見につながります。ワクワクしますよね、まさにエリア全体が自然を楽しめる公園のようなのです。なので自然公園＝ネイチャーパークと呼ぶことにしました。上の宝探しの地図を手に、ぜひ戸倉ネイチャーパークにお越しください。心踊らせましょう。</p>
 									</div>
@@ -57,39 +57,39 @@
 								        <div class="owl-stage">
 								            <div class="owl-item event-img">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/altimet.jpg" alt="" >
-								            	<div class="mask">
+								            	<!-- <div class="mask">
 								            		<div class="caption">アルティメット</div>
-								            	</div>
+								            	</div> -->
 											</div>
 								            <div class="owl-item event-img">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/tent.jpg" alt="" >
-								            	<div class="mask">
+								            	<!-- <div class="mask">
 								            		<div class="caption">テント展示会</div>
-								            	</div>
+								            	</div> -->
 											</div>
 								            <div class="owl-item event-img">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/kupp.jpg" alt="" >
-								            	<div class="mask">
+								            	<!-- <div class="mask">
 								            		<div class="caption">KUBB</div>
-								            	</div>
+								            	</div> -->
 											</div>
 								            <div class="owl-item event-img">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/baum.jpg" alt="" >
-								            	<div class="mask">
+								            	<!-- <div class="mask">
 								            		<div class="caption">バームクーヘン作り</div>
-								            	</div>
+								            	</div> -->
 											</div>
 								            <div class="owl-item event-img">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/naturegame.jpg" alt="" >
-								            	<div class="mask">
+								            	<!-- <div class="mask">
 								            		<div class="caption">ネイチャーゲーム</div>
-								            	</div>
+								            	</div> -->
 											</div>
 								            <div class="owl-item event-img">
 												<img src="<?php echo get_template_directory_uri(); ?>/img/smork.jpg" alt="" >
-								            	<div class="mask">
+								            	<!-- <div class="mask">
 								            		<div class="caption">薫製教室</div>
-								            	</div>
+								            	</div> -->
 											</div>
 								        </div>
 								 	</div>	
