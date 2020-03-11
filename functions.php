@@ -139,8 +139,7 @@ function myscripts(){
     		false,
     		true
     		 );
-		}
-
+	}
 };
 add_action( 'wp_enqueue_scripts' , 'myscripts' );
 
@@ -166,37 +165,15 @@ function mystyle(){
 			wp_enqueue_style( 'content.css',get_template_directory_uri() . '/css/content.css' );
 	}elseif(is_page('196')){
 			wp_enqueue_style( 'content.css',get_template_directory_uri() . '/css/page-issue.css' );			
+	}elseif(is_front_page ()){
+		   wp_enqueue_style( 'index_style.css',get_template_directory_uri() . '/css/index_style.css' );
 	}
-	// else{
-	// 	var_dump('なんか違うみたいです!!');
-	// }
+
+	else{
+		var_dump('なんか違うみたいです!!');
+	}
 };
 add_action( 'wp_enqueue_scripts' , 'mystyle' );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
