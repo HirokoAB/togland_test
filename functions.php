@@ -143,7 +143,7 @@ function myscripts(){
 			wp_enqueue_script( 'owl.carousel.js', get_template_directory_uri() . '/lib/assets/js/owl.carousel.js',array(),
     		false,
     		true);
-    		wp_enqueue_script( 'owl.app.js', get_template_directory_uri() . '/lib/assets/js/owl.app.js',array(),
+    		wp_enqueue_script( 'owl_front.app.js', get_template_directory_uri() . '/lib/assets/js/owl_front.app.js',array(),
     		false,
     		true);
 	}

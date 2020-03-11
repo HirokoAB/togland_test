@@ -17,6 +17,10 @@ area {
   outline: none;
 }
 
+.flex{
+  display:flex;
+}
+
 .map_wrappar {
   width: 100vw;
   height: auto;
@@ -350,7 +354,22 @@ area {
 //TOP-Pageの真ん中のcss//////////////
 .about_container{
 
-  
+  .about_upper{
+    align-items:center;
+    justify-content: center;
+  }
+
+  .about_right{
+    
+  }
+
+  .guide_to_np{
+    text-align:end;
+  }
+
+  .owl-carousel .owl-item img {
+  object-fit:cover;
+}
 }
 
 
