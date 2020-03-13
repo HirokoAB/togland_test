@@ -352,3 +352,43 @@ area {
   -o-object-fit: cover;
   object-fit: cover;
 }
+
+.page_container {
+  margin-top: 148px;
+}
+
+.page_container h2 {
+  text-align: center;
+}
+
+.page_container .content_box {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 38px;
+}
+
+.page_container .content_list, .page_container .link_container .link_list, .link_container .page_container .link_list {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page_container li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 279px;
+}
+
+.link_container {
+  margin-top: 148px;
+}
+
+.link_container h2, .link_container p {
+  text-align: center;
+}

@@ -372,6 +372,36 @@ area {
 }
 }
 
+.page_container{
+    margin-top:148px;
+    h2{
+      text-align:center;
+    }
+  .content_box{
+    justify-content:center;
+    padding-top:38px;
+  }
+  .content_list{
+    justify-content:space-between;
+  }
+
+  li{
+    display:flex;
+    flex-direction:column;
+    max-width:279px;
+  }
+}
+
+.link_container{
+  margin-top:148px;
+  h2,p{
+    text-align:center;   
+  }
+
+  .link_list{
+    @extend .content_list
+  }
+}
 
 
 
