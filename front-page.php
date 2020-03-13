@@ -4,7 +4,6 @@
 	<main>
 			<div class="main_container contaier"　style="z-index: ">
 				<section>
-						
 						<div class="map_wrappar row">
 						
 							<div class="map_container col-12">
@@ -34,6 +33,11 @@
 						</map>
 				</section>
 						<!-- </div> -->
+				
+				<section>
+					
+				</section>
+						<!-- ここにダイアリーの一覧を挿入 -->
 				<section>
 						<div class="about_container container">
 							<h2 class="about_subtitle subtitile">戸倉ネイチャーパークとは？</h2>
@@ -100,37 +104,35 @@
 							</div>
 						</div>
 				</section>
-
+				<!-- TOP中段発刊物へのリンク -->
 				<section>
 						<div class="page_container container">
-							<h2 class="link_subtitle sub_title"></h2>
-							<p></p>					
-							<div class="row">
-								<ul class=" content_list col-12">
-									<li><img src="" alt="">
+							<h2 class="page_subtitle sub_title">戸倉の人・自然について作ってみました</h2>				
+							<div class="row content_box">
+								<ul class="content_list flex col-10">
+									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
 										<p>地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます</p>
 									</li>
-									<li><img src="" alt="">
+									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
 										<p>海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
 									</li>
-									<li><img src="" alt="">
+									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
 										<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
 									</li>
 								</ul>
 							</div>
 						</div>
 				</section>
-						<!-- ここにダイアリーの一覧を挿入 -->
 				<section>
 						<div class="link_container container">
 							<h2 class="link_subtitle subtitle">関係団体の皆様</h2>
 							<p>戸倉ネイチャーパークを盛り上げていく団体の皆様</p>
-							<div class="row">
-								<div class="col-12">
-									<ul class="link_list col-10">
-										<li><img src="" alt=""></li>
-										<li><img src="" alt=""></li>
-										<li><img src="" alt=""></li>
+							<div class="row flex">
+								<div class="col-12 content_box">
+									<ul class="link_list col-10 flex">
+										<li><img src="<?php echo get_template_directory_uri(); ?>/img/link_banner.png" alt=""></li>
+										<li><img src="<?php echo get_template_directory_uri(); ?>/img/link_banner.png" alt=""></li>
+										<li><img src="<?php echo get_template_directory_uri(); ?>/img/link_banner.png" alt=""></li>
 									</ul>
 									<div class="flex">
 										<img src="" alt="">
