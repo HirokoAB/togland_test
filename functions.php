@@ -9,6 +9,22 @@
 */
    	add_theme_support('post-thumbnails');
 
+
+
+//thumbnailに付くクラスを削除する	
+function image_tag_delete( $html ){
+$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+$html = preg_replace( '/class=[\'"]([^\'"]+)[\'"]/i', '', $html );
+$html = preg_replace( '/title=[\'"]([^\'"]+)[\'"]/i', '', $html );
+$html = preg_replace( '/<a href=".+">/', '', $html );
+$html = preg_replace( '/<\/a>/', '', $html );
+return $html;
+}
+add_filter( 'image_send_to_editor', 'image_tag_delete', 10 );
+add_filter( 'post_thumbnail_html', 'image_tag_delete', 10 );
+
+
+
 ////////////////////////////////////////////////////////////////////////
 //////////////////カスタム投稿タイプのアウトドアに関する記述/////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -239,8 +255,8 @@ add_action('rewrite_rules_array', 'myUrlRewrite' );
 
 function myPostTypeLink($link, $post ) {
 if ( $post->post_type == 'daiary' ) {
-if ( $cats = get_the_terms( $post->ID, 'tpdairy' ) ) {
-$link = str_replace( '%tpdairy%', current( $cats )->slug, $link );
+if ( $cats = get_the_terms( $post->ID, 'tpdaiary' ) ) {	
+$link = str_replace( '%tpdaiary%', current( $cats )->slug, $link );
 }
 }
 return $link;
