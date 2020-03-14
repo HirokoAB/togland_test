@@ -10,8 +10,8 @@
 
 //bootstrapカードレイアウト のDOM
 
-$(".daiary_content").children('p').addClass('card-text');
+$(".card-body").children('p').addClass('card-text');
 
-$(".group-3").children('.card').wrap('<div class=col-4 + card-wrap-4 >');
-$(".group-6").children('.card').wrap('<div class=col-4 + card-wrap-4 >')
+$(".group-1").children('.card').addClass('col-6');
+$(".group-3").children('.card').addClass('col-4')
 
