@@ -80,6 +80,14 @@ area {
   content: " ";
 }
 
+.diary-container {
+  padding: 10%;
+}
+
+.diary-container background-color .card {
+  margin-right: 10px;
+}
+
 .shake {
   -webkit-animation: shake 8s infinite ease-in alternate;
   animation: shake 8s infinite ease-in alternate;

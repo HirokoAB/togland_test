@@ -35,8 +35,14 @@
 						<!-- </div> -->
 				
 				<section>
-					
-				</section>
+
+					<div class="diary-container container">
+						<?php get_template_part('content','diary'); ?>	
+					</div>
+				
+					</section>
+
+
 						<!-- ここにダイアリーの一覧を挿入 -->
 				<section>
 						<div class="about_container container">

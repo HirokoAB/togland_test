@@ -47,7 +47,7 @@ $(function(){
             biggestHeight = $(this).height()
         }
     });
-    $(".about_container").css( 'margin-top' , biggestHeight );
+    $(".diary-container").css( 'margin-top' , biggestHeight );
 })
 
 
