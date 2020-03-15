@@ -17,7 +17,10 @@
 	<div class="header_container">
 	 <h3 class="main_sub_title">戸倉ネイチャーパークの最新情報をお届けするWEBサイト</h3>			
     <h2 class="main_title">Togura Nature Park Times</h2>
+    <?php wp_nav_menu( $args ); ?>
     </div>
+
 	</header>
+<div class="np-container"> 	
 	
 

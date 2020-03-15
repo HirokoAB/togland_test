@@ -1,5 +1,29 @@
+.np-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
 header .header_container {
-  border-top: 10px solid #2F4650;
+  max-width: 1100px;
+  margin: auto;
+  padding-bottom: 1%;
+}
+
+header::before {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 100vw;
+  background: #2F4650;
+}
+
+header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #cccccc;
+  margin-bottom: 10px;
 }
 
 header .main_sub_title {
@@ -18,11 +42,23 @@ header .main_title {
   letter-spacing: -0.03em;
 }
 
-header .main_title::after {
+header #menu-global_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  margin: 0 2px 0 2px;
+  font-weight: 600;
+}
+
+header .menu-global_menu-container::before {
   content: '';
   display: block;
   height: 1px;
   width: 100%;
   background: #cccccc;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
