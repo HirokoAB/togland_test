@@ -1,124 +1,6 @@
 <?php  
 
 
-
-/**
-
-* サムネイルの設定
-
-*/
-   	add_theme_support('post-thumbnails');
-
-
-
-//thumbnailに付くクラスを削除する	
-function image_tag_delete( $html ){
-$html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
-$html = preg_replace( '/class=[\'"]([^\'"]+)[\'"]/i', '', $html );
-$html = preg_replace( '/title=[\'"]([^\'"]+)[\'"]/i', '', $html );
-$html = preg_replace( '/<a href=".+">/', '', $html );
-$html = preg_replace( '/<\/a>/', '', $html );
-return $html;
-}
-add_filter( 'image_send_to_editor', 'image_tag_delete', 10 );
-add_filter( 'post_thumbnail_html', 'image_tag_delete', 10 );
-
-
-
-////////////////////////////////////////////////////////////////////////
-//////////////////カスタム投稿タイプのアウトドアに関する記述/////////////////////
-////////////////////////////////////////////////////////////////////////
-
-function create_post_type() {
-	register_post_type( 'outdoor', // 投稿タイプ名の定義
-	array(
-		'labels' => array(
-		'name' => __( "アウトドア", "custom-post-type-ui"  ), // 表示する投稿タイプ名
-		'singular_name' => __( 'アウトドア' ),
-		'all_items' => __( "アウトドア一覧", "custom-post-type-ui" ),
-		),
-		'supports' => array( 'title', 'editor', 'thumbnail' ),
-		'public' => true,
-		'menu_position' => 6,
-		'has_archive' => true,
-		'rewrite'     => array( 'slug' => 'outdoor_ivent' ),
-		)
-	);
-}
-	add_action( 'init', 'create_post_type' );
-
-
-
-//////////////////////////////////////////
-//////カスタム投稿タイプのUIに関する記述//////
-/////////////////////////////////////////
-
-
-function create_pts_daiary() {
-
-	/**
-	 * Post Type: ダイアリー.
-	 */
-
-	register_post_type( "daiary", array(
-		"label" =>"ダイアリー",
-		"labels" => array(
-							"name" => "ダイアリー", 
-							"singular_name" =>  "ダイアリー",
-							"all_items" =>  "ダイアリー一覧",
-							"add_new" => "ダイアリーの追加",
-							"edit_item" =>"ダイアリーの編集"
-						),
-		"discription" => "ダイアリーを投稿するためのオリジナル投稿タイプ",
-		"delete_with_user" => false,
-		"rest_base" => "",
-		"rest_controller_class" => "WP_REST_Posts_Controller",
-		"exclude_from_search" => false,
-		"map_meta_cap" => true,
-		"menu_position" => 5,
-		"has_archive" => true,
-		"public" => true,
-		"publicly_queryable" => true,
-		"query_var" => true,
-		"show_ui" => true,
-		"show_in_menu" => true,
-		"show_in_nav_menus" => true,		
-		"show_in_rest" => true,
-		"supports" => array( "title", "editor", "thumbnail","page-attributes","author","excerpt" ),
-		"taxonomies" => array("daiary_cat","umisato","itonami",
-			"boshu"),
-		)
-	);
-
-	register_taxonomy(
-		"daiary_cat",
-		"daiary",
-		array(
-				"label" => "ダイアリーのカテゴリー",
-				"labels" => array(
-									"popular_items" => "よく使うカテゴリー",
-									"edit_item" => "カテゴリを編集",
-									"add_new_item" => "カテゴリを追加",
-								 ),
-				"public" => true,
-				"publicly_queryable" => true,
-				"hierarchical" => true,
-				"show_ui" => true,
-				"show_in_menu" => true,
-				"show_in_nav_menus" => true,
-				"query_var" => true,
-				"rewrite" => array( 'slug' => 'tpdaiary',),
-				"show_admin_column" => true,
-				"show_in_rest" => true,
-				"rest_base" => "dairy_cat",
-				"show_in_quick_edit" => false,
-		)
-	);
-
-}
-add_action( 'init', 'create_pts_daiary');
-
-
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////JS・CSSの読み込み設定////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -190,6 +72,7 @@ function mystyle(){
 		   wp_enqueue_style( 'index_style.css',get_template_directory_uri() . '/css/index_style.css' );
 		   wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 		   wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
+		   wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
 	}
 
 	else{
@@ -199,19 +82,197 @@ function mystyle(){
 add_action( 'wp_enqueue_scripts' , 'mystyle' );
 
 
+////////////////////////////////////////////////////////////////////////
+//////////////////カスタム投稿タイプのアウトドアに関する記述/////////////////////
+////////////////////////////////////////////////////////////////////////
+
+function create_post_type() {
+	register_post_type( 'outdoor', // 投稿タイプ名の定義
+	array(
+		'labels' => array(
+		'name' => __( "アウトドア", "custom-post-type-ui"  ), // 表示する投稿タイプ名
+		'singular_name' => __( 'アウトドア' ),
+		'all_items' => __( "アウトドア一覧", "custom-post-type-ui" ),
+		),
+		'supports' => array( 'title', 'editor', 'thumbnail' ),
+		'public' => true,
+		'menu_position' => 6,
+		'has_archive' => true,
+		'rewrite'     => array( 'slug' => 'outdoor_ivent' ),
+		)
+	);
+}
+	add_action( 'init', 'create_post_type' );
 
 
-//抜粋の削除
+
+//////////////////////////////////////////
+//////カスタム投稿タイプのUIに関する記述////////
+/////////////////////////////////////////
+
+
+function create_pts_daiary() {
+
+	/**
+	 * Post Type: ダイアリー.
+	 */
+
+	register_post_type( "daiary", array(
+		"label" =>"ダイアリー",
+		"labels" => array(
+							"name" => "ダイアリー", 
+							"singular_name" =>  "ダイアリー",
+							"all_items" =>  "ダイアリー一覧",
+							"add_new" => "ダイアリーの追加",
+							"edit_item" =>"ダイアリーの編集"
+						),
+		"discription" => "ダイアリーを投稿するためのオリジナル投稿タイプ",
+		"delete_with_user" => false,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"exclude_from_search" => false,
+		"map_meta_cap" => true,
+		"menu_position" => 5,
+		"has_archive" => true,
+		"public" => true,
+		"publicly_queryable" => true,
+		"query_var" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,		
+		"show_in_rest" => true,
+		"supports" => array( "title", "editor", "thumbnail","page-attributes","author","excerpt" ),
+		"taxonomies" => array("daiary_cat","umisato","itonami",
+			"boshu"),
+		)
+	);
+
+	register_taxonomy(
+		"daiary_cat",
+		"daiary",
+		array(
+				"label" => "ダイアリーのカテゴリー",
+				"labels" => array(
+									"popular_items" => "よく使うカテゴリー",
+									"edit_item" => "カテゴリを編集",
+									"add_new_item" => "カテゴリを追加",
+								 ),
+				"public" => true,
+				"publicly_queryable" => true,
+				"hierarchical" => true,
+				"show_ui" => true,
+				"show_in_menu" => true,
+				"show_in_nav_menus" => true,
+				"query_var" => true,
+				"rewrite" => array( 'slug' => 'tpdaiary',),
+				"show_admin_column" => true,
+				"show_in_rest" => true,
+				"rest_base" => "daiary_cat",
+				"show_in_quick_edit" => false,
+		)
+	);
+
+}
+add_action( 'init', 'create_pts_daiary');
+
+
+
+
+
+//////////////////サムネイルに関する記述//////////////////////////////////
+
+   	
+
+add_theme_support('post-thumbnails');
+add_image_size('top-thumbnail', 100, 300);
+
+
+
+//thumbnailに付くクラスを削除する	
+// function image_tag_delete( $html ){
+// $html = preg_replace( '/(width|height)="\d*"\s/', '', $html );
+// $html = preg_replace( '/class=[\'"]([^\'"]+)[\'"]/i', '', $html );
+// $html = preg_replace( '/title=[\'"]([^\'"]+)[\'"]/i', '', $html );
+// $html = preg_replace( '/<a href=".+">/', '', $html );
+// $html = preg_replace( '/<\/a>/', '', $html );
+// return $html;
+// }
+// add_filter( 'image_send_to_editor', 'image_tag_delete', 10 );
+// add_filter( 'post_thumbnail_html', 'image_tag_delete', 10 );
+
+
+/////////////////読み込まれる画像のサイズを指定///////////////////////////////
+
+function resize_at_upload( $file ) {
+ 
+	if ( $file['type'] == 'image/jpeg' OR $file['type'] == 'image/gif' OR $file['type'] == 'image/png') {
+ 
+		$w = 300;
+		$h = 0;
+ 
+		$image = wp_get_image_editor( $file['file'] );
+ 
+		if ( ! is_wp_error( $image ) ){
+			$size = getimagesize( $file['file'] );
+ 
+			if ( $size[0] > $w || $size[1] > $h ){
+				$image->resize( $w, $h, false );
+				$final_image = $image->save( $file['file'] );
+			}
+		}
+	}
+ 
+	return $file;
+ 
+}
+ 
+add_action( 'wp_handle_upload', 'resize_at_upload' );
+
+
+/////////////////抜粋に表示される文字数の設定//////////////////////////////////
+
+function twpp_change_excerpt_length( $length ) {
+  $length = 50;
+
+  if ( is_category('diary') || is_tax('diary') ) {
+    $length = 27;
+  } 
+
+  return $length; 
+}
+
+add_filter( 'excerpt_length', 'twpp_change_excerpt_length', 999 );
+
+
+////////////////////////moreタグの設定////////////////////////////////////
 function new_excerpt_more($more){
     global $post;
-    return '';
+    return ' ...';
 }
 add_filter('excerpt_more','new_excerpt_more',9999);
-//抜粋の文字数の指定
-function custom_excerpt_length( $length ) {
-     return 110; 
-}       
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+
+
+//カスタム投稿のタクソノミーとタームをURLに反映させる
+function myUrlRewrite($rules){
+$myRule = array();
+$myRule['tpdaiary/([^/]+)/?$'] = 'index.php?daiary_cat[1]';
+$myRule['tpdaiary/([^/]+)/([^/]+)?$'] = 'index.php?daiary_cat[2]';
+return array_merge( $myRule, $rules );
+}
+add_action('rewrite_rules_array', 'myUrlRewrite' );
+
+function myPostTypeLink($link, $post ) {
+if ( $post->post_type == 'daiary' ) {
+if ( $cats = get_the_terms( $post->ID, 'tpdaiary' ) ) {	
+$link = str_replace( '%tpdaiary%', current( $cats )->slug, $link );
+}
+}
+return $link;
+}
+add_filter('post_type_link', 'myPostTypeLink', 10, 2 );
+add_filter('post_link', 'myPostTypeLink', 10, 2 );
 
 
 
@@ -243,26 +304,6 @@ function limit_category_select() {
 
 <?php
 }
-
-//カスタム投稿のタクソノミーとタームをURLに反映させる
-function myUrlRewrite($rules){
-$myRule = array();
-$myRule['tpdaiary/([^/]+)/?$'] = 'index.php?daiary_cat[1]';
-$myRule['tpdaiary/([^/]+)/([^/]+)?$'] = 'index.php?daiary_cat[2]';
-return array_merge( $myRule, $rules );
-}
-add_action('rewrite_rules_array', 'myUrlRewrite' );
-
-function myPostTypeLink($link, $post ) {
-if ( $post->post_type == 'daiary' ) {
-if ( $cats = get_the_terms( $post->ID, 'tpdaiary' ) ) {	
-$link = str_replace( '%tpdaiary%', current( $cats )->slug, $link );
-}
-}
-return $link;
-}
-add_filter('post_type_link', 'myPostTypeLink', 10, 2 );
-add_filter('post_link', 'myPostTypeLink', 10, 2 );
 
 
 
