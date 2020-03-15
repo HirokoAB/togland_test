@@ -13,5 +13,9 @@
 $(".card-body").children('p').addClass('card-text');
 
 $(".group-1").children('.card').addClass('col-6');
-$(".group-3").children('.card').addClass('col-4')
+$(".group-3").children('.card').addClass('col-4');
+$('.daiary_cat-9').css('background', 'blue');
+$('.daiary_cat-10').css('background', 'green');
+$('.daiary_cat-11').css('background', 'red');
+
 

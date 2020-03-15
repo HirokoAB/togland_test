@@ -57,6 +57,7 @@ function mystyle(){
 	
 			wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css' );
 			wp_enqueue_style( 'bootstrap.min.css', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css' );
+			wp_enqueue_style( 'header.css', get_template_directory_uri() . '/css/header.css' );
 
 	if(is_home() || is_page( 14 ) || is_singular('outdoor')) {
 			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
@@ -227,6 +228,16 @@ function resize_at_upload( $file ) {
 }
  
 add_action( 'wp_handle_upload', 'resize_at_upload' );
+
+/////////////////タイトルに表示される文字数の設定//////////////////////////////////
+
+
+add_filter('the_title', 'my_the_title', 10, 2);
+function my_the_title($title, $id) {
+    $title = mb_strimwidth($title, 0, 40, "…","UTF-8");
+    return $title;
+}
+
 
 
 /////////////////抜粋に表示される文字数の設定//////////////////////////////////

@@ -34,7 +34,7 @@ Template Name: Archive-daiary
 					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( '','class' => 'card-img-top' ) ); ?></a>
 					    <?php else: ?>
 
-					        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/dango.png"; ?>" alt="" class="card-img-top"></a>           
+					        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img-top"></a>           
 				<?php endif; ?>
 
         <?php $term = wp_get_post_terms($post->ID,"daiary_cat", array("fields"=>"ids") ); ?>
@@ -46,7 +46,7 @@ Template Name: Archive-daiary
               
 					    <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
 
-					    
+
               <?php the_excerpt('...'); ?>
 
               <p class="daiary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p>

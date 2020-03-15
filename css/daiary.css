@@ -1,5 +1,9 @@
-h2, h3, h4, p {
+h2, h3, h4, p, a {
   color: #2F4650;
+}
+
+p {
+  text-align: justify;
 }
 
 .flex {
@@ -61,9 +65,12 @@ h2, h3, h4, p {
   background-color: yellow;
 }
 
+.diary-container .card-title {
+  font-weight: 700;
+}
+
 .diary-container .card-text {
   font-size: 0.8rem;
-  text-align: justify;
 }
 
 .diary-container .daiary-date {

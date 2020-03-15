@@ -13,11 +13,11 @@
 </head>
 
 <body>
-<!-- 	<header>
-		<div class="daiary_container container">
-    <h2 class="daiary_main_title">Togura Nature Park Times!</h2>
-    <h3 class="times-subtitle">あそびが学びにかわる場所 戸倉ネイチャーパークの日々をお届け</h3>
+	<header>
+	<div class="header_container">
+	 <h3 class="main_sub_title">戸倉ネイチャーパークの最新情報をお届けするWEBサイト</h3>			
+    <h2 class="main_title">Togura Nature Park Times</h2>
+    </div>
 	</header>
 	
 
- -->

@@ -37,7 +37,9 @@
 				<section>
 
 					<div class="diary-container container">
-						<?php get_template_part('content','diary'); ?>	
+						<h2 class="diary_subtitle subtitile">NaturePark Diary</h2>
+						<p></p>
+						<?php get_template_part('content','daiary'); ?>	
 					</div>
 				
 					</section>
