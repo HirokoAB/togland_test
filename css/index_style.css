@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   border: none;
+  color: #333333;
 }
 
 area {
@@ -21,6 +22,23 @@ area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.subtitle {
+  color: black;
+  font-family: escrow-compressed,serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: left !important;
+}
+
+.subtitle::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #cccccc;
+  margin-bottom: 1%;
 }
 
 .map_wrappar {
@@ -39,10 +57,20 @@ area {
   position: relative;
   max-width: 1100px;
   height: auto;
+  margin-top: 1%;
   text-align: center;
 }
 
-.map_container img {
+.map_container::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #cccccc;
+  margin-bottom: 1%;
+}
+
+.map_container::after img {
   margin: 0 auto;
   display: block;
 }
@@ -79,11 +107,21 @@ area {
   content: " ";
 }
 
-.diary-container {
-  padding: 10%;
+.daiary-container::before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: #cccccc;
+  margin-bottom: 1%;
 }
 
-.diary-container background-color .card {
+.daiary-container .diary-content {
+  padding: 10%;
+  background-color: gray;
+}
+
+.daiary-container .card {
   margin-right: 10px;
 }
 

@@ -37,9 +37,21 @@
 				<section>
 
 					<div class="diary-container container">
-						<h2 class="diary_subtitle subtitile">NaturePark Diary</h2>
+						<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
 						<p></p>
-						<?php get_template_part('content','daiary'); ?>	
+						<div class="diary-content-1 contaier">
+							<div class="row">
+								<div class=col-4>
+						<?php get_template_part('content','daiary'); ?>
+								</div>
+							</div>
+						</div>
+						<div class="diary-content-2 contaier">
+						<?php get_template_part('content','daiary'); ?>
+						</div>
+						<div class="diary-content-3 contaier">
+						<?php get_template_part('content','daiary'); ?>
+						</div>	
 					</div>
 				
 					</section>
@@ -47,8 +59,8 @@
 
 						<!-- ここにダイアリーの一覧を挿入 -->
 				<section>
+					<h2 class="about_subtitle subtitle">戸倉ネイチャーパークとは？</h2>
 						<div class="about_container container">
-							<h2 class="about_subtitle subtitile">戸倉ネイチャーパークとは？</h2>
 							<!-- TOP真ん中の記述の上段raw -->
 							<div class="row">
 								<div class="col-12">
@@ -115,7 +127,7 @@
 				<!-- TOP中段発刊物へのリンク -->
 				<section>
 						<div class="page_container container">
-							<h2 class="page_subtitle sub_title">戸倉の人・自然について作ってみました</h2>				
+							<h2 class="page_subtitle subtitle">戸倉の人・自然について作ってみました</h2>				
 							<div class="row content_box">
 								<ul class="content_list flex col-10">
 									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">

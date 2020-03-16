@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+header a, header p, header li {
+  color: #333333;
+}
+
 header .header_container {
   max-width: 1100px;
   margin: auto;
@@ -14,7 +18,7 @@ header::before {
   display: block;
   height: 10px;
   width: 100vw;
-  background: #2F4650;
+  background: black;
 }
 
 header::after {
@@ -23,14 +27,15 @@ header::after {
   height: 1px;
   width: 100%;
   background: #cccccc;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
 }
 
 header .main_sub_title {
   margin-top: 1%;
-  margin-bottom: 0px;
+  margin-bottom: -1%;
   font-size: 0.8rem;
   text-align: center;
+  color: #333333;
 }
 
 header .main_title {
@@ -40,6 +45,8 @@ header .main_title {
   margin-top: -0.5%;
   font-weight: 700;
   letter-spacing: -0.03em;
+  width: 45%;
+  margin: -2px auto;
 }
 
 header #menu-global_menu {
@@ -49,9 +56,10 @@ header #menu-global_menu {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   margin: 0 2px 0 2px;
   font-weight: 600;
+  color: #333333;
 }
 
 header .menu-global_menu-container::before {

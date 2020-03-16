@@ -6,10 +6,10 @@ Template Name: Archive-daiary
 
 
  
-<div class="row"> 
+<div class=""> 
     <!-- サブクエリに渡す配列を作成 -->
     <?php $args =  array( 
-        'posts_per_page' => 9,
+        'posts_per_page' => 3,
         'post_type' => 'daiary',
         'order' => 'DESC',
         'tax_query' => array(
@@ -29,19 +29,25 @@ Template Name: Archive-daiary
               <?php while ( $the_query->have_posts()) : ?>
                 <?php $the_query->the_post();?>
 
-				<div class="card col-lg-4" >
+				<div class="card mb-3">
+        <div class="row no-gutters">
+        <div class="col-lg-6">
+
 						<?php if (has_post_thumbnail()): ?>
-					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( '','class' => 'card-img-top' ) ); ?></a>
+					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
 					    <?php else: ?>
 
-					        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img-top"></a>           
+					        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a>           
 				<?php endif; ?>
+        </div>
 
+        <div class="col-lg-6" >
+              <div class="card-body">
         <?php $term = wp_get_post_terms($post->ID,"daiary_cat", array("fields"=>"ids") ); ?>
         <?php $term_n = wp_get_post_terms($post->ID,"daiary_cat", array("fields"=>"names") ); ?>  
         <span class="daiary_cat-<?php echo $term[0]  ; ?> daiary_title" 　><?php echo $term_n[0]; ?></span>
+          
 
-				 	<div class="card-body">
 
               
 					    <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
@@ -54,6 +60,9 @@ Template Name: Archive-daiary
 					</div>
 
 				</div>
+
+        </div>
+        </div>
 
 <?php endwhile; ?>
       

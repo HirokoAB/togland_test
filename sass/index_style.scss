@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   border: none;
+  color:#333333;
 }
 
 area {
@@ -19,6 +20,23 @@ area {
 
 .flex{
   display:flex;
+}
+
+.subtitle{
+  color:black;
+  font-family: escrow-compressed,serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align:left !important;
+  
+    &::after{
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: #cccccc;
+      margin-bottom: 1%;
+}
 }
 
 .map_wrappar {
@@ -43,15 +61,24 @@ area {
   position: relative;
   max-width: 1100px;
   height: auto;
-  // margin:auto;
+  margin-top:1%;
   text-align:center;
+  
+          &::after{
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: #cccccc;
+      margin-bottom: 1%;
+  
   
   img {
     margin: 0 auto;
     display:block;
   }
 }
-
+}
 
 .guide {
   width: 300px;
@@ -89,10 +116,19 @@ area {
 ///////////////////////////////////////////////////////
 //////////////TOPページのdiaryの調整//////////////////////
 ///////////////////////////////////////////////////////
-
-.diary-container{
+.daiary-container{
+  &::before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #cccccc;
+    margin-bottom: 1%;
+}
+.diary-content{
   padding:10%;
-  background-color
+  background-color:gray;
+  }
   .card{
     margin-right:10px;
   }
@@ -414,8 +450,6 @@ area {
     @extend .content_list
   }
 }
-
-
 
 
 
