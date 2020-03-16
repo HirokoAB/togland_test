@@ -1,6 +1,9 @@
 .np-container {
-  max-width: 1100px;
   margin: auto;
+}
+
+.np-container .row {
+  padding: 1px;
 }
 
 header a, header p, header li {

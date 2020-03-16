@@ -50,4 +50,20 @@ $(function(){
     $(".diary-container").css( 'margin-top' , biggestHeight );
 })
 
+var property = window.getComputedStyle($('.card-title')[0], '::before').getPropertyValue('background-color');
+var sheets = document.styleSheets,
+  sheet = sheets[11];
+
+
+$(function() {
+
+  if($(".card-title").parent().hasClass('daiary_cat-10')) {   // Webkit
+    sheet.insertRule('.diary-content-1 .card-title::before{ background:yellow }', sheet.cssRules.length);
+  }
+  else if (sheet.addRule) {  // IE
+    sheet.addRule('.diary-content-1 .card-title::before{ background:yellow }', -1);
+  }
+
+  console.log(sheet.cssRules.length);
+});
 

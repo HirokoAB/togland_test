@@ -22,6 +22,6 @@
     </div>
 
 	</header>
-<div class="np-container"> 	
+<div class="np-container container"> 	
 	
 

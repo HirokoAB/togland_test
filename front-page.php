@@ -2,11 +2,11 @@
 
 <body>
 	<main>
-			<div class="main_container contaier"　style="z-index: ">
+			<div class="main_container">
 				<section>
-						<div class="map_wrappar row">
+						<div class="">
 						
-							<div class="map_container col-12">
+							<div class="map_container">
 								<div  type="image/svg+xml" style="z-index:0;" class="map map_base">
 									<img class="base_img" src="<?php echo get_template_directory_uri(); ?>/img/map_base.png"  usemap="#tgitem" alt="戸倉ネイチャーパークトップページに表示する地図のベース画像"/>
 								</div>
@@ -17,7 +17,7 @@
 									<img class="key_1" src="<?php echo get_template_directory_uri(); ?>/img/treasure.png" usemap="#tgitem" alt="" />
 								</div>
 							</div>
-						</div>
+						</div>			
 
 						<map name="tgitem">
 							<area onFocus="this.blur();" shape="rect" coords="66,243,223,354" href="https://www.m-kankou.jp/kamiwari-camp/" alt="神割キャンプ場ホームページへ遷移" target="_blank" />
@@ -36,29 +36,28 @@
 				
 				<section>
 
-					<div class="diary-container container">
-						<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
-						<p></p>
-						<div class="diary-content-1 contaier">
-							<div class="row">
-								<div class=col-4>
-						<?php get_template_part('content','daiary'); ?>
-								</div>
+					<div class="diary-container">
+							<div class="diary-title_upper title flex">
+							<div  class="flex title">	
+							<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
+							<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
+						</div>
+							<div class="link-to-archive">
+								<p>　<b>→</b>　一覧ページはこちら</p>
 							</div>
-						</div>
-						<div class="diary-content-2 contaier">
-						<?php get_template_part('content','daiary'); ?>
-						</div>
-						<div class="diary-content-3 contaier">
-						<?php get_template_part('content','daiary'); ?>
-						</div>	
+							</div>
+								<div class="diary-content-1">
+								<div class="row">
+								<?php get_template_part('content','daiary'); ?>
+								</div>
+						
+							</div>
 					</div>
-				
 					</section>
 
 
 						<!-- ここにダイアリーの一覧を挿入 -->
-				<section>
+				<section class="about_naturepark">
 					<h2 class="about_subtitle subtitle">戸倉ネイチャーパークとは？</h2>
 						<div class="about_container container">
 							<!-- TOP真ん中の記述の上段raw -->
