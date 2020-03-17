@@ -76,7 +76,6 @@ area {
       display: block;
       height: 1px;
       width: 100%;
-      background: #cccccc;
       margin-bottom: 1%;
   
   
@@ -118,6 +117,10 @@ area {
   content: " ";
 }
 
+.main-contant{
+  border-bottom:solid 1px #cccccc;
+  padding-bottom:1rem;
+}
 
 ///////////////////////////////////////////////////////
 //////////////TOPページのdiaryの調整//////////////////////
@@ -419,23 +422,47 @@ area {
 }
 }
 
+
+.aside{
+      border-left:solid 0.3px #cccccc;
+  }
 .page_container{
-    margin-top:148px;
+  .page-title-box{
+
+     border-bottom:solid 1px black;
+    margin-bottom:1rem;
+    
+    p{
+      font-size:0.7rem;
+    }
+  }
+
+
     h2{
       text-align:center;
     }
+
   .content_box{
     justify-content:center;
-    padding-top:38px;
   }
   .content_list{
     justify-content:space-between;
+    
+      .card,.card-img-top {
+        border-radius:0px;
+        border:none;
   }
+  }
+  
 
+  
   li{
     display:flex;
     flex-direction:column;
-    max-width:279px;
+    max-width:279px;    
+  p{
+    font-size:0.6rem;
+    }
   }
 }
 
@@ -445,9 +472,12 @@ area {
     text-align:center;   
   }
 
+
   .link_list{
     @extend .content_list
   }
+
+
 }
 
 

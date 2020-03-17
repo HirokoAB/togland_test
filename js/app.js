@@ -48,7 +48,7 @@ $(function(){
             console.log('lkjhgj');
         }
     });
-    $(".diary-container").css( 'margin-top' , biggestHeight );
+    $(".main-contant").css( 'margin-top' , biggestHeight );
 })
 
 var property = window.getComputedStyle($('.card-title')[0], '::before').getPropertyValue('background-color');
@@ -58,7 +58,7 @@ var sheets = document.styleSheets,
 
 $(function() {
 
-  if($(".card-title").parent().hasClass('daiary_cat-10')) {   // Webkit
+  if($(".card-title").parent().hasClass('daiary_cat-9')) {   // Webkit
     sheet.insertRule('.diary-content-1 .card-title::before{ background:yellow }', sheet.cssRules.length);
   }
   else if (sheet.addRule) {  // IE

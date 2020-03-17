@@ -50,6 +50,7 @@ Template Name: Archive-daiary
 
             <div class="card-right col-sm-7" >
                   <div class="card-body">
+                  <?php $term = wp_get_post_terms($post->ID,"daiary_cat", array("fields"=>"ids") ); ?>
                   <div class="daiary_cat-<?php echo $term[0]  ; ?> title-wrappar">
     					    <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
                   </div>
