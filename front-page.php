@@ -20,7 +20,7 @@
 						</div>			
 
 						<map name="tgitem">
-							<area onFocus="this.blur();" shape="rect" coords="66,243,223,354" href="https://www.m-kankou.jp/kamiwari-camp/" alt="神割キャンプ場ホームページへ遷移" target="_blank" />
+							<area onFocus="this.blur();"  shape="rect" coords="66,243,223,354" href="https://www.m-kankou.jp/kamiwari-camp/" alt="神割キャンプ場ホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="292,276,438,365" href="https://www.tamipack.jp/" alt="たみ子の海パックホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="460,206,613,312" href="https://www.pref.miyagi.jp/soshiki/sz-seinen/" alt="志津川自然の家ホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="745,162,898,260" href="https://www.facebook.com/yamagakko/" alt="波伝の森山学校ホームページへ遷移" target="_blank" />
@@ -34,26 +34,34 @@
 				</section>
 						<!-- </div> -->
 				
-				<section>
+				<section class="diary">
 
 					<div class="diary-container">
-							<div class="diary-title_upper title flex">
+						<div class="diary-title_upper title flex">
 							<div  class="flex title">	
 							<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
 							<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
-						</div>
-							<div class="link-to-archive">
-								<p>　<b>→</b>　一覧ページはこちら</p>
 							</div>
-							</div>
-								<div class="diary-content-1">
-								<div class="row">
-								<?php get_template_part('content','daiary'); ?>
-								</div>
 						
-							</div>
+						<div class="link-to-archive">
+							<p><b>→</b>　一覧ページはこちら</p>
+						</div>
+						</div>	
+
+
+						<div class="diary-content">
+
+							<?php get_template_part('content','featured'); ?>
+							
+						</div>
+					
+						<div class="diary-content-1">
+
+							<?php get_template_part('content','daiary'); ?>
+							
+						</div>
 					</div>
-					</section>
+				</section>
 
 
 						<!-- ここにダイアリーの一覧を挿入 -->

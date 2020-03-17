@@ -45,6 +45,7 @@ $(function(){
     $(".map_base *").each(function(){
         if ($(this).height() > biggestHeight ) {
             biggestHeight = $(this).height()
+            console.log('lkjhgj');
         }
     });
     $(".diary-container").css( 'margin-top' , biggestHeight );

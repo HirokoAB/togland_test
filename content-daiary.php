@@ -35,7 +35,7 @@ Template Name: Archive-daiary
                   echo '</div>'."\n"."\n"."<div class=".'"'."group-$pos_c row".'"'." >";
                       }; ?>
 
-        <div class="col-lg-6">
+        <div class="col-sm-6">
 				<div class="card">
           <div class="row no-gutters">
             <div class="card-left col-sm-5">
@@ -56,8 +56,11 @@ Template Name: Archive-daiary
 
                   <div class="card-text">
                   <?php the_excerpt('...'); ?>
-                  </div>
                   <p class="daiary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p>
+                  </div>
+
+
+                 
 
     					</div>
 

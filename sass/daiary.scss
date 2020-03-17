@@ -22,20 +22,81 @@ p{
 		display:flex;	
 		
 		}
+		
+
+.diary-content{
+	.col-sm-6{
+		padding:0;
+	}
+	.card{
+		position:relative;
+		border-radius:0px;
+		height:auto;
+		max-height:35rem;
+		margin-bottom:3rem;
+		padding-bottom:0.2%;
+		border:none;
+		border-bottom:0.5px solid #cccccc;	
+	
+	}
+	.card-img-top {	
+	border-radius:0px;
+	width:100%;
+	max-height:20rem;
+	object-fit:cover;
+
+	}
+
+	
+	.card_title{
+    	position:absolute;
+    	top:0%;
+    	font-size:0.7rem;
+    	box-sizing:border-box;
+    	padding:0.4rem 0.6rem 0.4rem 0.6rem;
+    	background-color:yellow;	
+    }
+
+    .card-body{
+    	position:relative;
+    	padding:20px 10px;
+    }
+    .card-title{
+    	font-weight:700;
+   		display:flex;
+    	min-height:48px;
+		align-items:center;
+
+    	&::before{
+      content: '';
+      display: block;
+      min-width: 2rem;
+      height:2rem;
+      background: #cccccc;
+      margin-bottom: 1%;
+      margin-right:5px;
+    }
+}
+
+	.card-text{
+		font-size:0.8rem;
+		p{
+			min-height:57px;
+		}
+	}
+
+	.daiary-date{
+		position:absolute;
+		margin-bottom:0;
+   		font-size:0.1rem;
+    	bottom:0.2rem;
+    	right:0.2rem;
+
+}
+	
+}
 
 .diary-content-1{
-	// display:flex;
-	// align-items:center;
-	// flex-direction:column;
-	//   &::before{
- //      content: '';
- //      display: inline-block;
- //      height: 1px;
- //      width: 100%;
- //      background: #cccccc;
- //      margin-bottom: 1%;
-// }
-
 
 	.group-1,
 	.group-3,
@@ -48,7 +109,7 @@ p{
 		:first-child{
 			padding-right:0.5%;
 		}
-	.col-lg-6{
+	.col-sm-6{
 		padding:0;
 	}
 	.card{
@@ -58,10 +119,6 @@ p{
 		max-height:11rem;
 		// margin-bottom:1rem;
 		padding-bottom:0.2%;
-		border:none;
-		border-top:0.5px solid #cccccc;
-		border-right:0.5px solid #cccccc;
-		
 	
 	}
 	.card-img {	
@@ -123,6 +180,7 @@ p{
 }
 }
 }
+
 
 
 	

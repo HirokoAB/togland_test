@@ -144,7 +144,7 @@ function create_pts_daiary() {
 		"show_in_rest" => true,
 		"supports" => array( "title", "editor", "thumbnail","page-attributes","author","excerpt" ),
 		"taxonomies" => array("daiary_cat","umisato","itonami",
-			"boshu"),
+			"boshu","featured"),
 		)
 	);
 
