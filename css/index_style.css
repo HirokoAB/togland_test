@@ -75,7 +75,6 @@ area {
   display: block;
   height: 1px;
   width: 100%;
-  background: #cccccc;
   margin-bottom: 1%;
 }
 
@@ -113,6 +112,11 @@ area {
   border-width: 10px;
   pointer-events: none;
   content: " ";
+}
+
+.main-contant {
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 1rem;
 }
 
 .diary-title_upper {
@@ -398,8 +402,17 @@ area {
   object-fit: cover;
 }
 
-.page_container {
-  margin-top: 148px;
+.aside {
+  border-left: solid 0.3px #cccccc;
+}
+
+.page_container .page-title-box {
+  border-bottom: solid 1px black;
+  margin-bottom: 1rem;
+}
+
+.page_container .page-title-box p {
+  font-size: 0.7rem;
 }
 
 .page_container h2 {
@@ -410,13 +423,17 @@ area {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-top: 38px;
 }
 
 .page_container .content_list, .page_container .link_container .link_list, .link_container .page_container .link_list {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.page_container .content_list .card, .page_container .link_container .link_list .card, .link_container .page_container .link_list .card, .page_container .content_list .card-img-top, .page_container .link_container .link_list .card-img-top, .link_container .page_container .link_list .card-img-top {
+  border-radius: 0px;
+  border: none;
 }
 
 .page_container li {
@@ -428,6 +445,10 @@ area {
   -ms-flex-direction: column;
   flex-direction: column;
   max-width: 279px;
+}
+
+.page_container li p {
+  font-size: 0.6rem;
 }
 
 .link_container {

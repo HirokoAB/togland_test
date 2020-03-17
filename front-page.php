@@ -32,36 +32,107 @@
 							<area onFocus="this.blur();" shape="poly" coords="25,541,28,540,165,488,220,513,228,588,231,653,201,676,94,685,34,635,26,545,26,545" href="<?php echo get_permalink( HOME );?> "alt="" target="_blank"/>
 						</map>
 				</section>
-						<!-- </div> -->
-				
-				<section class="diary">
+						<!-- </div>はfooterに準備 -->
+				<div class="main-contant">
 
-					<div class="diary-container">
-						<div class="diary-title_upper title flex">
-							<div  class="flex title">	
-							<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
-							<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
+					<div class="row">
+					<div class="col-lg-12">
+
+				<div class="row">
+					<div class="col-lg-9">
+					<section class="diary">
+
+						<div class="diary-container">
+							
+							<div class="diary-title-box flex">
+								<div class="diary-title_upper title flex">
+									<div  class="flex title">	
+									<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
+									<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
+									</div>
+								</div>	
+								
+								<div class="link-to-archive">
+									<a href=""><p><b>→</b>　一覧ページはこちら</p></a>
+								</div>
+							</div>	
+
+
+							<div class="diary-content">
+
+								<?php get_template_part('content','featured'); ?>
+								
 							</div>
 						
-						<div class="link-to-archive">
-							<p><b>→</b>　一覧ページはこちら</p>
+							<div class="diary-content-1">
+
+								<?php get_template_part('content','daiary'); ?>
+								
+							</div>
 						</div>
-						</div>	
-
-
-						<div class="diary-content">
-
-							<?php get_template_part('content','featured'); ?>
-							
-						</div>
+					</section>
 					
-						<div class="diary-content-1">
+					
+					<div class="col-lg-3 aside">
+					
 
-							<?php get_template_part('content','daiary'); ?>
-							
+						<div class="page_container">
+							<div class="page-title-box">
+								<div  class="flex title">	
+										<h2 class="page_subtitle subtitle">PickUp</h2>
+										<p>スタッフのブログやお知らせ</p>
+								</div>
+							</div>				
+							<div class="row content_box">
+								
+								<ul class="content_list col-lg-12">
+									<li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+										<p class="card-text">地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます</p>
+									</li>
+									<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+										<p class="card-text">海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
+									</li>
+									<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+										<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
+									</li>
+								</ul>
+								</div>
+
 						</div>
+
 					</div>
-				</section>
+					</div>
+
+
+
+				</div>
+				</div>
+			</div>		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 						<!-- ここにダイアリーの一覧を挿入 -->
@@ -131,26 +202,8 @@
 							</div>
 						</div>
 				</section>
-				<!-- TOP中段発刊物へのリンク -->
-				<section>
-						<div class="page_container container">
-							<h2 class="page_subtitle subtitle">戸倉の人・自然について作ってみました</h2>				
-							<div class="row content_box">
-								<ul class="content_list flex col-10">
-									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
-										<p>地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます</p>
-									</li>
-									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
-										<p>海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
-									</li>
-									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
-										<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-				</section>
-				<section>
+
+
 						<div class="link_container container">
 							<h2 class="link_subtitle subtitle">関係団体の皆様</h2>
 							<p>戸倉ネイチャーパークを盛り上げていく団体の皆様</p>
