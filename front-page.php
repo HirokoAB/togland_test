@@ -2,11 +2,11 @@
 
 <body>
 	<main>
-			<div class="main_container contaier"　style="z-index: ">
+			<div class="main_container">
 				<section>
-						<div class="map_wrappar row">
+						<div class="">
 						
-							<div class="map_container col-12">
+							<div class="map_container">
 								<div  type="image/svg+xml" style="z-index:0;" class="map map_base">
 									<img class="base_img" src="<?php echo get_template_directory_uri(); ?>/img/map_base.png"  usemap="#tgitem" alt="戸倉ネイチャーパークトップページに表示する地図のベース画像"/>
 								</div>
@@ -17,10 +17,10 @@
 									<img class="key_1" src="<?php echo get_template_directory_uri(); ?>/img/treasure.png" usemap="#tgitem" alt="" />
 								</div>
 							</div>
-						</div>
+						</div>			
 
 						<map name="tgitem">
-							<area onFocus="this.blur();" shape="rect" coords="66,243,223,354" href="https://www.m-kankou.jp/kamiwari-camp/" alt="神割キャンプ場ホームページへ遷移" target="_blank" />
+							<area onFocus="this.blur();"  shape="rect" coords="66,243,223,354" href="https://www.m-kankou.jp/kamiwari-camp/" alt="神割キャンプ場ホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="292,276,438,365" href="https://www.tamipack.jp/" alt="たみ子の海パックホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="460,206,613,312" href="https://www.pref.miyagi.jp/soshiki/sz-seinen/" alt="志津川自然の家ホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="745,162,898,260" href="https://www.facebook.com/yamagakko/" alt="波伝の森山学校ホームページへ遷移" target="_blank" />
@@ -34,19 +34,40 @@
 				</section>
 						<!-- </div> -->
 				
-				<section>
+				<section class="diary">
 
-					<div class="diary-container container">
-						<?php get_template_part('content','diary'); ?>	
+					<div class="diary-container">
+						<div class="diary-title_upper title flex">
+							<div  class="flex title">	
+							<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
+							<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
+							</div>
+						
+						<div class="link-to-archive">
+							<p><b>→</b>　一覧ページはこちら</p>
+						</div>
+						</div>	
+
+
+						<div class="diary-content">
+
+							<?php get_template_part('content','featured'); ?>
+							
+						</div>
+					
+						<div class="diary-content-1">
+
+							<?php get_template_part('content','daiary'); ?>
+							
+						</div>
 					</div>
-				
-					</section>
+				</section>
 
 
 						<!-- ここにダイアリーの一覧を挿入 -->
-				<section>
+				<section class="about_naturepark">
+					<h2 class="about_subtitle subtitle">戸倉ネイチャーパークとは？</h2>
 						<div class="about_container container">
-							<h2 class="about_subtitle subtitile">戸倉ネイチャーパークとは？</h2>
 							<!-- TOP真ん中の記述の上段raw -->
 							<div class="row">
 								<div class="col-12">
@@ -113,7 +134,7 @@
 				<!-- TOP中段発刊物へのリンク -->
 				<section>
 						<div class="page_container container">
-							<h2 class="page_subtitle sub_title">戸倉の人・自然について作ってみました</h2>				
+							<h2 class="page_subtitle subtitle">戸倉の人・自然について作ってみました</h2>				
 							<div class="row content_box">
 								<ul class="content_list flex col-10">
 									<li><img src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
