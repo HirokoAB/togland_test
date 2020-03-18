@@ -9,8 +9,9 @@
 // JSファイルのエンキュー///
 
 function myscripts(){
-
-		wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'jquery.min.js','https://code.jquery.com/jquery-3.3.1.slim.min.js',array(),'3.3.1', true);
+		wp_enqueue_script( 'popper.js','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',array(),'1.14.7', true );
+		wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js', array('popper.js'), '1.0.0', true );
 		wp_enqueue_script( 'app.js', get_template_directory_uri() . '/js/app.js',array(),
     		false,
     		true );
@@ -31,7 +32,7 @@ function myscripts(){
 
 
 	}elseif(is_page( 'daiary' ) || is_post_type_archive( 'daiary' )){
-			wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
+			// wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
 			wp_enqueue_script( 'daiary.js',get_template_directory_uri() . '/js/daiary.js',
 			array(),
     		false,

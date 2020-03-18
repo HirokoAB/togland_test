@@ -63,13 +63,13 @@
 								<?php get_template_part('content','featured'); ?>
 								
 							</div>
-						
+
 							<div class="diary-content-1">
 
 								<?php get_template_part('content','daiary'); ?>
-								
+
 							</div>
-						</div>
+
 					</section>
 					
 					
