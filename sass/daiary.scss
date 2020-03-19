@@ -13,6 +13,12 @@ h2,h3,h4,p,a{
 	color:#333333;
 }
 
+a:hover
+ { text-decoration:underline;
+	font-color:#0274b6;
+}
+
+
 p{
 	text-align:justify;
 }
@@ -93,7 +99,7 @@ p{
 		
 	}
 
-	.daiary-date{
+	.diary-date{
 
 		position:absolute;
 		margin-bottom:0;
@@ -147,7 +153,7 @@ p{
 
 	
  
-	.daiary_title{
+	.diary_title{
     	position:absolute;
     	top:0%;
     	font-size:0.7rem;
@@ -185,7 +191,7 @@ p{
 			min-height:57px;
 	}
 
-	.daiary-date{
+	.diary-date{
 		position:absolute;
    		font-size:0.1rem;
     	bottom:0.2rem;

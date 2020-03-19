@@ -3,8 +3,8 @@
 <head>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/index_style.css">
-<!-- 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/daiary.css">
-	<link rel='stylesheet' id='daiary.css-css'  href='http://localhost:8080/wordpress/wp-content/themes/outdoorfes/css/daiary.css?ver=5.3.2' type='text/css' media='all' /> -->
+<!-- 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/diary.css">
+	<link rel='stylesheet' id='diary.css-css'  href='http://localhost:8080/wordpress/wp-content/themes/outdoorfes/css/diary.css?ver=5.3.2' type='text/css' media='all' /> -->
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">

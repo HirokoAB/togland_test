@@ -2,11 +2,6 @@ h2, h3, h4, p, a {
   color: #333333;
 }
 
-a:hover {
-  text-decoration: underline;
-  font-color: #0274b6;
-}
-
 p {
   text-align: justify;
 }

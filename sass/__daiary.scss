@@ -11,7 +11,7 @@ body{
 h2,h3,h4,p{
 	color:$navi;
 }
-.daiary_container{
+.diary_container{
 	max-width:1180px;
 	box-sizing:border-box;
 	border:solid 90px white;
@@ -19,7 +19,7 @@ h2,h3,h4,p{
 	align-items:center;
 	flex-direction:column;
 	background-color:white;
-	.daiary_main_title{ 
+	.diary_main_title{ 
 		position:relative;
 		margin-top:60px;
 		font-family:Times New Roman;
@@ -102,7 +102,7 @@ h2,h3,h4,p{
 	width:807px;
 	margin:auto;
 	}
-	.daiary{
+	.diary{
 		flex-direction:column;
 		max-width:135px;
 		max-height:160px;
@@ -136,14 +136,14 @@ h2,h3,h4,p{
 		}
 	}
 
-	.daiary-content{
+	.diary-content{
 		margin-top:-180px;
 	}
 	.flex{
 		display:flex;
 	}
 
-	.daiary{
+	.diary{
 		overflow:hidden;
 	}
 	
@@ -166,14 +166,14 @@ h2,h3,h4,p{
 		display:block;
 		right:0;
 	}
-	.daiary_title a{
+	.diary_title a{
 		font-size:25px;
 	}
 
-	.daiary_date{
+	.diary_date{
 		height:35px;
 	}
-	.daiary_date time{
+	.diary_date time{
 		position:relative;
 		padding-left:45px;
 		color:#96A8B2;
@@ -181,28 +181,28 @@ h2,h3,h4,p{
 		vertical-align:top;
 		
 	}
-	.daiary_date::before{
+	.diary_date::before{
 		content: "";
 		height:35px;
 		width:35px;
 		position:absolute;
 		left:auto;
 	}
-	.cat-8 .daiary_date::before{
+	.cat-8 .diary_date::before{
 		background-color:$color-yama;
 
 		}
-	.cat-9 .daiary_date::before{
+	.cat-9 .diary_date::before{
 		background-color:$color-umi;
 		}
-	.cat-10 .daiary_date::before{
+	.cat-10 .diary_date::before{
 		background-color:$color-kurashi;
 		}
-	.daiary_content{
+	.diary_content{
 		line-height:1.68;
 	}
 
-	.daiary_content::before {
+	.diary_content::before {
 	  content: '';
 	  flex-grow: 1;
 	  height: 1px;
@@ -210,15 +210,15 @@ h2,h3,h4,p{
 	  margin-bottom: .5em;
 	}
 
-	.cat-8 .daiary_content::before {
+	.cat-8 .diary_content::before {
 	  background-color: $color-boshu;
 	}
 
-	.cat-9 .daiary_content::before {
+	.cat-9 .diary_content::before {
 	  background-color: $color-kurashi;
 	}
 
-	.cat-10 .daiary_content::before {
+	.cat-10 .diary_content::before {
 	  background-color: $color-umi;
 	}
 
@@ -234,11 +234,11 @@ h2,h3,h4,p{
 		margin-bottom:250px;
 		height:363px;
 
-		.daiary{
+		.diary{
 			align-items:center;
 			height:363px;
 			}
-		.daiary_content{
+		.diary_content{
 			width:288px;
 		}
 
@@ -278,14 +278,14 @@ h2,h3,h4,p{
 		.flex{
 			width:576px;
 		}
-		.daiary{
+		.diary{
 			height:125px;
 			margin-bottom:36px;
 			margin-right:9px;
 			width:387px;
 			
 		}
-		.daiary_date{
+		.diary_date{
 			display:block;
 			float:left;
 			height:auto;
@@ -293,11 +293,11 @@ h2,h3,h4,p{
 		time{
 			top:-3px;
 		}
-		.daiary_date::before{
+		.diary_date::before{
 		height:33px;
 		width:33px;
 		}
-		.daiary_title
+		.diary_title
 		{
 			float:left;
 			display:inline-block;
@@ -308,7 +308,7 @@ h2,h3,h4,p{
 				font-size:19px;
 			}		
 		}
-		.daiary_content{
+		.diary_content{
 			clear: both;
 		}
 		div:last-child{
@@ -333,7 +333,7 @@ h2,h3,h4,p{
 		height:100%;
 		margin-bottom:10px;
 	}
-	.daiary_date{
+	.diary_date{
 		position:relative;
 		margin-top:5px;
 		&::before{
@@ -345,7 +345,7 @@ h2,h3,h4,p{
 	}
 
 
-	.daiary_title {
+	.diary_title {
 		position:relative;
 		margin-top:-40px;
 		margin-left:22px;
@@ -363,17 +363,17 @@ h2,h3,h4,p{
 		}		
 	}
 
-	.cat-8 .daiary_title ::before{	
+	.cat-8 .diary_title ::before{	
 		background-color:$color-boshu;	
 	}
-	.cat-9 .daiary_title ::before{	
+	.cat-9 .diary_title ::before{	
 		background-color:$color-kurashi;	
 	}
-	.cat-10 .daiary_title ::before{	
+	.cat-10 .diary_title ::before{	
 		background-color:$color-umi;	
 	}
 	
-	.daiary_content{
+	.diary_content{
 		height:244px;
 		overflow:hidden;
 	}
@@ -391,7 +391,7 @@ h2,h3,h4,p{
 		flex-wrap:wrap-reverse;
 		}
 		
-		.daiary{
+		.diary{
 			width:365px;
 			margin-bottom:30px;
 			margin-left:-9px;
@@ -405,7 +405,7 @@ h2,h3,h4,p{
 		height:100%;
 		margin-bottom:5px;
 	}
-	.daiary_date{
+	.diary_date{
 		margin-top:10px;
 		&::before{
 		height:40px;
@@ -414,7 +414,7 @@ h2,h3,h4,p{
 
 	}
 
-	.daiary_title
+	.diary_title
 		{
 			float:left;
 			display:inline-block;
@@ -426,7 +426,7 @@ h2,h3,h4,p{
 		
 			}
 		}			
-	.daiary_content{
+	.diary_content{
 		display:none;
 		margin-top:3px;
 		}
@@ -434,7 +434,7 @@ h2,h3,h4,p{
 		top:-6px;
 	}
 
-	.daiary-icon-single{
+	.diary-icon-single{
 		position:absolute;
 		bottom:0;
 		align-items:center;

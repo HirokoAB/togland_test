@@ -31,9 +31,9 @@ function myscripts(){
     		true);
 
 
-	}elseif(is_page( 'daiary' ) || is_post_type_archive( 'daiary' )){
+	}elseif(is_page( 174 )){
 			// wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
-			wp_enqueue_script( 'daiary.js',get_template_directory_uri() . '/js/daiary.js',
+			wp_enqueue_script( 'diary.js',get_template_directory_uri() . '/js/diary.js',
 			array(),
     		false,
     		true
@@ -64,8 +64,8 @@ function mystyle(){
 			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 			wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
 			wp_enqueue_style( 'outdoor_style.css', get_template_directory_uri() . '/css/outdoor_style.css', array(), '1.0.3' );
-	}elseif(is_post_type_archive( 'daiary' )){
-			wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
+	}elseif(is_page('174')){
+			wp_enqueue_style( 'archive-diary.css',get_template_directory_uri() . '/css/archive-diary.css' );
 	}elseif(is_page('192')){
 			wp_enqueue_style( 'content.css',get_template_directory_uri() . '/css/content.css' );
 	}elseif(is_page('196')){
@@ -74,7 +74,10 @@ function mystyle(){
 		   wp_enqueue_style( 'index_style.css',get_template_directory_uri() . '/css/index_style.css' );
 		   wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 		   wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
-		   wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
+		   wp_enqueue_style( 'diary.css',get_template_directory_uri() . '/css/diary.css' );
+	}elseif(is_singular('diary')){
+			wp_enqueue_style( 'single-diary.css',get_template_directory_uri() . '/css/single-diary.css' );
+
 	}
 
 	else{
@@ -113,13 +116,13 @@ function create_post_type() {
 /////////////////////////////////////////
 
 
-function create_pts_daiary() {
+function create_pts_diary() {
 
 	/**
 	 * Post Type: ダイアリー.
 	 */
 
-	register_post_type( "daiary", array(
+	register_post_type( "diary", array(
 		"label" =>"ダイアリー",
 		"labels" => array(
 							"name" => "ダイアリー", 
@@ -144,14 +147,13 @@ function create_pts_daiary() {
 		"show_in_nav_menus" => true,		
 		"show_in_rest" => true,
 		"supports" => array( "title", "editor", "thumbnail","page-attributes","author","excerpt" ),
-		"taxonomies" => array("daiary_cat","umisato","itonami",
-			"boshu","featured"),
+		"taxonomies" => array("diary_cat")
 		)
 	);
 
 	register_taxonomy(
-		"daiary_cat",
-		"daiary",
+		"diary_cat",
+		"diary",
 		array(
 				"label" => "ダイアリーのカテゴリー",
 				"labels" => array(
@@ -166,16 +168,15 @@ function create_pts_daiary() {
 				"show_in_menu" => true,
 				"show_in_nav_menus" => true,
 				"query_var" => true,
-				"rewrite" => array( 'slug' => 'tpdaiary',),
 				"show_admin_column" => true,
 				"show_in_rest" => true,
-				"rest_base" => "daiary_cat",
+				"rest_base" => "diary_cat",
 				"show_in_quick_edit" => false,
 		)
 	);
 
 }
-add_action( 'init', 'create_pts_daiary');
+add_action( 'init', 'create_pts_diary');
 
 
 
@@ -186,7 +187,7 @@ add_action( 'init', 'create_pts_daiary');
    	
 
 add_theme_support('post-thumbnails');
-add_image_size('top-thumbnail', 100, 300);
+add_image_size('top-thumbnail', 100, 1000);
 
 
 
@@ -209,7 +210,7 @@ function resize_at_upload( $file ) {
  
 	if ( $file['type'] == 'image/jpeg' OR $file['type'] == 'image/gif' OR $file['type'] == 'image/png') {
  
-		$w = 300;
+		$w =1000;
 		$h = 0;
  
 		$image = wp_get_image_editor( $file['file'] );
@@ -269,16 +270,16 @@ add_filter('excerpt_more','new_excerpt_more',9999);
 //カスタム投稿のタクソノミーとタームをURLに反映させる
 function myUrlRewrite($rules){
 $myRule = array();
-$myRule['tpdaiary/([^/]+)/?$'] = 'index.php?daiary_cat[1]';
-$myRule['tpdaiary/([^/]+)/([^/]+)?$'] = 'index.php?daiary_cat[2]';
+$myRule['tpdiary/([^/]+)/?$'] = 'index.php?diary_cat[1]';
+$myRule['tpdiary/([^/]+)/([^/]+)?$'] = 'index.php?diary_cat[2]';
 return array_merge( $myRule, $rules );
 }
 add_action('rewrite_rules_array', 'myUrlRewrite' );
 
 function myPostTypeLink($link, $post ) {
-if ( $post->post_type == 'daiary' ) {
-if ( $cats = get_the_terms( $post->ID, 'tpdaiary' ) ) {	
-$link = str_replace( '%tpdaiary%', current( $cats )->slug, $link );
+if ( $post->post_type == 'diary' ) {
+if ( $cats = get_the_terms( $post->ID, 'tpdiary' ) ) {	
+$link = str_replace( '%tpdiary%', current( $cats )->slug, $link );
 }
 }
 return $link;
@@ -336,6 +337,7 @@ function limit_category_select() {
 define('BLOG', 14);
 define('HOME',84);
 define('issue',196);
+define('diary',174);
 
 
 

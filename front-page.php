@@ -53,7 +53,7 @@
 								</div>	
 								
 								<div class="link-to-archive">
-									<a href=""><p><b>→</b>　一覧ページはこちら</p></a>
+									<a href="<?php echo get_permalink( diary );?> "><p><b>→</b>　一覧ページはこちら</p></a>
 								</div>
 							</div>	
 
@@ -63,13 +63,13 @@
 								<?php get_template_part('content','featured'); ?>
 								
 							</div>
-
+						
 							<div class="diary-content-1">
 
-								<?php get_template_part('content','daiary'); ?>
-
+								<?php get_template_part('content','diary'); ?>
+								
 							</div>
-
+						</div>
 					</section>
 					
 					
