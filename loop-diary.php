@@ -12,10 +12,10 @@
 
           <?php if (has_post_thumbnail()): ?>
           
-                <?php the_post_thumbnail( '' , array( "class" => "diary-thumbnail col-12" ) ); ?>
+                <?php the_post_thumbnail( '' , array( "class" => "diary-thumbnail col-12","id" => 'diary-thumbnail' ) ); ?>
 
             <?php else: ?>
-                <img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img">          
+<!--                 <img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img">  -->         
             
           <?php endif; ?>
 

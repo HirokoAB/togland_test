@@ -16,6 +16,17 @@ a:hover {
   padding: 1px;
 }
 
+.title-box {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-bottom: solid 1px black;
+  margin-bottom: 1rem;
+}
+
 header a, header p, header li {
   color: #333333;
 }

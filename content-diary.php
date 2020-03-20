@@ -35,7 +35,7 @@ Template Name:Content-diary
                   echo '</div>'."\n"."\n"."<div class=".'"'."group-$pos_c row".'"'." >";
                       }; ?>
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 diary-box">
 				<div class="card">
           <div class="row no-gutters">
             <div class="card-left col-sm-5">
@@ -44,7 +44,7 @@ Template Name:Content-diary
     					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
     					    <?php else: ?>
 
-    					        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a>           
+    					        <!-- <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a> -->           
     				<?php endif; ?>
             </div>
 

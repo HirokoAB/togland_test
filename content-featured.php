@@ -26,14 +26,14 @@ Template Name: Archive-featured
 		<?php while ( $the_query->have_posts()) : ?>
                 <?php $the_query->the_post();?>    
 
-<div class="col-lg-6">
+<div class="col-lg-6 featured-box">
  <div class="card">
 
       <?php if (has_post_thumbnail()): ?>
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img-top') ); ?></a>
     	<?php else: ?>
-
-		<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img-top"></a>
+<!-- 
+		<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img-top"></a> -->
     	
     	<?php endif; ?>
 
@@ -64,5 +64,5 @@ Template Name: Archive-featured
       <?php endif; ?>
 
     </div>
-  </div>
+
 

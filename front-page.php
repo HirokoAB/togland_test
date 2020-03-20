@@ -39,12 +39,12 @@
 					<div class="col-lg-12">
 
 				<div class="row">
-					<div class="col-lg-9">
+					<div class="col-lg-10">
 					<section class="diary">
 
 						<div class="diary-container">
 							
-							<div class="diary-title-box flex">
+							<div class="diary-title-box flex title-box">
 								<div class="diary-title_upper title flex">
 									<div  class="flex title">	
 									<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
@@ -53,7 +53,7 @@
 								</div>	
 								
 								<div class="link-to-archive">
-									<a href="<?php echo get_permalink( diary );?> "><p><b>→</b>　一覧ページはこちら</p></a>
+									<a href="<?php echo get_permalink( diary );?> "><p><strong>→　一覧ページはこちら</strong></p></a>
 								</div>
 							</div>	
 
@@ -71,16 +71,17 @@
 							</div>
 						</div>
 					</section>
+				</div>
 					
 					
-					<div class="col-lg-3 aside">
+					<div class="col-lg-2 aside">
 					
 
 						<div class="page_container">
 							<div class="page-title-box">
 								<div  class="flex title">	
 										<h2 class="page_subtitle subtitle">PickUp</h2>
-										<p>スタッフのブログやお知らせ</p>
+										<p>工事中です...</p>
 								</div>
 							</div>				
 							<div class="row content_box">
@@ -101,7 +102,6 @@
 						</div>
 
 					</div>
-					</div>
 
 
 
@@ -109,46 +109,22 @@
 				</div>
 			</div>		
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 						<!-- ここにダイアリーの一覧を挿入 -->
 				<section class="about_naturepark">
+					<div class="title-box title">
 					<h2 class="about_subtitle subtitle">戸倉ネイチャーパークとは？</h2>
+					</div>
 						<div class="about_container container">
 							<!-- TOP真ん中の記述の上段raw -->
 							<div class="row">
 								<div class="col-12">
 									<div class="about_upper flex">
-										<div class="col-5 about_left">
+										<div class="col-6 about_left">
 											<p class="abnp_article">戸倉ネイチャーパーク(公園)と言っても、そこにはすべり台やジャングルジムといった遊具はありません。南三陸町戸倉地域をそう呼ぼうとしているだけです。しかし遊具はなくても、たくさんの自然の魅力があります。
 											海からは牡蠣やワカメ、ギンザケなどの恵みがあるとともに、シベリアから越冬にやってきたコクガンが漂い、空には同じく飛来した勇猛なオオワシが舞い、川には秋サケが産卵に回遊し遡上します。森には潮風に育まれたたくましい木が育ち、その森のビタミンが海の豊穣をつくり上げます。これらの魅力的な自然は、宝物と言ってふさわしいものです。その宝物を探しに、町の公園に訪れるようにぜひみなさんに来て欲しい。実は戸倉エリアには、この自然と豊かにふれあう機会をつくっているさまざまな活動や施設があります。そこを訪ねることが宝物の発見につながります。ワクワクしますよね、まさにエリア全体が自然を楽しめる公園のようなのです。なので自然公園＝ネイチャーパークと呼ぶことにしました。上の宝探しの地図を手に、ぜひ戸倉ネイチャーパークにお越しください。心踊らせましょう。</p>
 										</div>
 										
-										<div class="col-5 about_right">
+										<div class="col-7 about_right">
 											<img src="<?php echo get_template_directory_uri(); ?>/img/toguramap.svg" alt="">
 											<p class="guide_to_np">ネイチャーパークへ行ってみる</p>
 										</div>

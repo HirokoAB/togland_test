@@ -42,15 +42,15 @@ $(function(){
 
 });
 
+$(window).on('load', function(){
+  //ページ全体が読み込まれた時の処理
 
-  $(function(){
-      var height = "0";
-      $(".diary-thumbnail *").each(function(){
-        console.log('houo');
-        
+  var hieght = "0";
+      $(".diary-thumbnail").each(function(){
+        var height = $(".diary-thumbnail").width()*0.61;
+        console.log( height );
+        $(".diary-thumbnail").css( 'height' , height );
 
-        var width = $(this).width();
-        console.log( widht );
       });
     });
 
