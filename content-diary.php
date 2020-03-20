@@ -38,17 +38,21 @@ Template Name:Content-diary
         <div class="col-sm-6 diary-box">
 				<div class="card">
           <div class="row no-gutters">
-            <div class="card-left col-sm-4">
+            <div class="card-left col-sm-5">
 
     						<?php if (has_post_thumbnail()): ?>
+                  <div id="wrapper">
+                    <div class="filter">
     					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
+                    </div>
+                  </div>
     					    <?php else: ?>
 
     					        <!-- <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a> -->           
     				<?php endif; ?>
             </div>
 
-            <div class="card-right col-sm-8" >
+            <div class="card-right col-sm-7" >
                   <div class="card-body">
                      <?php
                     $term = wp_get_post_terms($post->ID,"diary_cat", array("fields"=>"ids") );

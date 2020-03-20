@@ -29,7 +29,11 @@ Template Name: Archive-featured
  <div class="card">
 
       <?php if (has_post_thumbnail()): ?>
+        <div id="wrapper">
+          <div>
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img-top') ); ?></a>
+          </div>
+      </div>
     	<?php else: ?>
 <!-- 
 		<a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img-top"></a> -->

@@ -10,6 +10,12 @@ $color-boshu:#CB3A48;
 .row{
 	max-width:1100px;
 }
+.card-title{
+	line-height:1.7;
+	:first-line {
+  	line-height: 1;
+}
+}
 
 h2,h3,h4,p,a{
 	color:#333333;
@@ -66,13 +72,61 @@ p{
 		// border-bottom:0.5px solid #cccccc;	
 	
 	}
-	.card-img-top {	
-	border-radius:0px;
-	width:100%;
-	max-height:14rem;
-	object-fit:cover;
+
+	// .card-img-top {	
+	// border-radius:0px;
+	// width:100%;
+	// max-height:14rem;
+	// object-fit:cover;
+
+	// }
+		#wrapper>div{
+		position:relative;
+		overflow:hidden;
+		background: linear-gradient(#000000);
+		// background-color: #000000;
+		
+		
+		
+		&::before{
+			content:'';
+			display:block;
+			padding-top:70.7%;
+			
+			
+		}
+		:after {/*基本的に画像に疑似要素は付けられないので包括するボックスに加える。*/
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.55; /*下に配置する画像が見えるよう、疑似要素は透過しておく*/
+}
+.filter:after{
+	background-image: linear-gradient(45deg, #1199c4, #B10DC9);
+}
+
+	img{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		width:100%;
+		margin:auto;
+		background: linear-gradient(#000000);
+		// opacity:0.7;
+		
+		
 
 	}
+}
+	.card-img-top{
+		object-fit:cover;
+		}
 
 	
 	.card_title{
@@ -89,10 +143,17 @@ p{
         padding: 2% 0;
     }
     .card-title{
+    	position:absolute;
+    	top:-38px;
     	font-weight:700;
    		display:flex;
     	max-height:48px;
 		align-items:flex-start;
+		
+		a{
+		color:white;	
+		}
+		
 
     	&::before{
       content: '';
@@ -138,14 +199,14 @@ p{
 		max-width:1100px;
 		flex-direction:inherit;
 		// border-bottom:solid 0.1px #EAEAEA;
-		padding-bottom:0.5%;
+		padding-bottom:2%;
 		.diary-box{
 		padding:0;
 		}
-		:first-child{
+		>:first-child{
 			padding-right:0.5%;
 		}
-		:last-child{
+		>:last-child{
 			padding-left:0.5%;
 		}
 
@@ -163,7 +224,8 @@ p{
 	.card-img {	
 	border-radius:0px;
 	width:100%;
-	max-height:7rem;
+	max-height:9rem;
+	margin-right:2%;
 	object-fit:cover;
 
 	}
@@ -190,6 +252,7 @@ p{
     	max-height:48px;
 		align-items:flex-start;
 		font-size:1rem;
+		margin-bottom:2%;
 
     	&::before{
       content: '';
