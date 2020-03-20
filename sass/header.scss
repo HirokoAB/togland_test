@@ -1,3 +1,7 @@
+$border:solid 0.3px #cccccc;
+
+
+
 a{ 
 	text-decoration: 
 	none;
@@ -21,6 +25,12 @@ a:hover
 	align-items:flex-end;
 	border-bottom:solid 1px black;
 	margin-bottom:1rem;
+	
+	}
+
+	.diary,.about-naturepark{
+		border-bottom:$border; 
+		
 	}
 
 

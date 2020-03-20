@@ -42,17 +42,17 @@ $(function(){
 
 });
 
-$(window).on('load', function(){
-  //ページ全体が読み込まれた時の処理
+// $(window).on('load', function(){
+//   //ページ全体が読み込まれた時の処理
 
-  var hieght = "0";
-      $(".diary-thumbnail").each(function(){
-        var height = $(".diary-thumbnail").width()*0.61;
-        console.log( height );
-        $(".diary-thumbnail").css( 'height' , height );
+//   var hieght = "0";
+//       $(".diary-thumbnail").each(function(){
+//         var height = $(".diary-thumbnail").width()*0.61;
+//         console.log( height );
+//         $(".diary-thumbnail").css( 'height' , height );
 
-      });
-    });
+//       });
+//     });
 
   // $(function(){
   //     var height = "";

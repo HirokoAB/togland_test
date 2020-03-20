@@ -30,8 +30,28 @@
   font-size: 0.8rem;
 }
 
-.archive-diary-container .article-container .diary-thumbnail {
-  padding: 0;
+.archive-diary-container .article-container #wrapper > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-diary-container .article-container #wrapper > div::before {
+  content: '';
+  display: block;
+  padding-top: 61.5%;
+}
+
+.archive-diary-container .article-container #wrapper > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+}
+
+.archive-diary-container .article-container #wrapper > div .diary-thumbnail {
   -o-object-fit: cover;
   object-fit: cover;
 }

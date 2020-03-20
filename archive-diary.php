@@ -10,7 +10,7 @@ Archive-diary
 
 
 
-<div class="main archive-diary-container col-9">
+<div class="main archive-diary-container col-8 ml-auto">
 
 <?php $args =  array( 
         'posts_per_page' =>10,
@@ -37,19 +37,13 @@ include('loop-diary.php');
 
 
 
-<div class="side col-2">
+<div class="side col-2 ml-auto">
 
   <?php the_post(); ?>
-    <h1 class="entry-title"><?php the_title(); ?></h1>
     
     <?php get_search_form(); ?>
     
-    <h2>月別アーカイブ:</h2>
-    <ul>
-      <?php wp_get_archives('type=monthly'); ?>
-    </ul>
-    
-    <h2>カテゴリー別アーカイブ:</h2>
+    <h6>カテゴリー別アーカイブ:</h6>
     <ul>
        <?php wp_list_categories(array(
     'taxonomy' => 'diary_cat', // タクソノミーの指定

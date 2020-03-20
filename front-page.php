@@ -35,79 +35,74 @@
 						<!-- </div>はfooterに準備 -->
 				<div class="main-contant">
 
+				<!-- 	<div class="row"> -->
+					<!-- <div class="col-lg-12"> -->
+
+				<section class="diary">
 					<div class="row">
-					<div class="col-lg-12">
-
-				<div class="row">
-					<div class="col-lg-10">
-					<section class="diary">
-
-						<div class="diary-container">
-							
-							<div class="diary-title-box flex title-box">
-								<div class="diary-title_upper title flex">
-									<div  class="flex title">	
-									<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
-									<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
+						<div class="col-lg-10">
+							<div class="diary-container">
+								
+								<div class="diary-title-box flex title-box">
+									<div class="diary-title_upper title flex">
+										<div  class="flex title">	
+										<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
+										<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
+										</div>
+									</div>	
+									
+									<div class="link-to-archive">
+										<a href="<?php echo get_permalink( diary );?> "><p><strong>→　一覧ページはこちら</strong></p></a>
 									</div>
 								</div>	
-								
-								<div class="link-to-archive">
-									<a href="<?php echo get_permalink( diary );?> "><p><strong>→　一覧ページはこちら</strong></p></a>
+
+
+								<div class="diary-content">
+									<div class="row no-gutters fea-box">
+
+									<?php get_template_part('content','featured'); ?>
+
+									</div>
+
+									
 								</div>
-							</div>	
+							
+								<div class="diary-content-1">
 
-
-							<div class="diary-content">
-
-								<?php get_template_part('content','featured'); ?>
-								
-							</div>
-						
-							<div class="diary-content-1">
-
-								<?php get_template_part('content','diary'); ?>
-								
+									<?php get_template_part('content','diary'); ?>
+									
+								</div>
 							</div>
 						</div>
-					</section>
-				</div>
-					
-					
-					<div class="col-lg-2 aside">
-					
 
-						<div class="page_container">
-							<div class="page-title-box">
-								<div  class="flex title">	
-										<h2 class="page_subtitle subtitle">PickUp</h2>
-										<p>工事中です...</p>
-								</div>
-							</div>				
-							<div class="row content_box">
-								
-								<ul class="content_list col-lg-12">
-									<li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
-										<p class="card-text">地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます</p>
-									</li>
-									<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
-										<p class="card-text">海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
-									</li>
-									<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
-										<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
-									</li>
-								</ul>
-								</div>
-
+					
+						<div class="col-lg-2 aside">
+							<div class="page_container">
+								<div class="page-title-box">
+									<div  class="flex title">	
+											<h2 class="page_subtitle subtitle">PickUp</h2>
+											<p>工事中です...</p>
+									</div>
+								</div>				
+								<div class="row content_box">
+									
+									<ul class="content_list col-lg-12">
+										<li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+											<p class="card-text">地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます</p>
+										</li>
+										<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+											<p class="card-text">海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
+										</li>
+										<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+											<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
+										</li>
+									</ul>
+									</div>
+							</div>
 						</div>
-
 					</div>
-
-
-
-				</div>
-				</div>
-			</div>		
+				</section>
+							
 
 						<!-- ここにダイアリーの一覧を挿入 -->
 				<section class="about_naturepark">

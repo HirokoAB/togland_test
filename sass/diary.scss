@@ -43,10 +43,15 @@ p{
 }
 
 .diary-content{
-	.featured-box{
+	.fea-box{
+		>:first-child{
 		padding-right:1%;
+	}
+	>:last-child{
 		padding-left:1%;
 	}
+
+}
 	.col-sm-6{
 		padding:0;
 	}
@@ -125,7 +130,8 @@ p{
 
 	.group-1,
 	.group-3,
-	.group-5
+	.group-5,
+	.group-7
 	{
 		display:flex;
 		margin:auto;
@@ -133,12 +139,16 @@ p{
 		flex-direction:inherit;
 		// border-bottom:solid 0.1px #EAEAEA;
 		padding-bottom:0.5%;
+		.diary-box{
+		padding:0;
+		}
 		:first-child{
 			padding-right:0.5%;
 		}
-	.diary-box{
-		padding:1%;
-	}
+		:last-child{
+			padding-left:0.5%;
+		}
+
 	.card{
 		position:relative;
 		border-radius:0px;
@@ -175,11 +185,11 @@ p{
     	height:100%
     }
     .card-title{
-    	font-weight:600;
+    	font-weight:550;
    		display:flex;
     	max-height:48px;
 		align-items:flex-start;
-		font-size:1.1rem;
+		font-size:1rem;
 
     	&::before{
       content: '';

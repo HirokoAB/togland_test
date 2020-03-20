@@ -9,14 +9,14 @@ Template Name:Content-diary
 
     <!-- サブクエリに渡す配列を作成 -->
     <?php $args =  array( 
-        'posts_per_page' => 6,
+        'posts_per_page' => 8,
         'post_type' => 'diary',
         'order' => 'DESC',
         'tax_query' => array(
                               array(
                                 'taxonomy' =>'diary_cat',
                                 'field' => 'slug',
-                                'terms' => array('satoumi','satoyama','kurasi','atsumare')
+                                'terms' => array('satoumi','satoyama','kurasi','atsumare','kikaku')
                                     )
                              ) 
     );?>
@@ -31,14 +31,14 @@ Template Name:Content-diary
               <?php while ( $the_query->have_posts()) : ?>
                 <?php $the_query->the_post();?>
 
-                  <?php if ($pos_c === 3 ||$pos_c === 5 ){
+                  <?php if ($pos_c % 2 !== 0 ){
                   echo '</div>'."\n"."\n"."<div class=".'"'."group-$pos_c row".'"'." >";
                       }; ?>
 
         <div class="col-sm-6 diary-box">
 				<div class="card">
           <div class="row no-gutters">
-            <div class="card-left col-sm-5">
+            <div class="card-left col-sm-4">
 
     						<?php if (has_post_thumbnail()): ?>
     					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
@@ -48,7 +48,7 @@ Template Name:Content-diary
     				<?php endif; ?>
             </div>
 
-            <div class="card-right col-sm-7" >
+            <div class="card-right col-sm-8" >
                   <div class="card-body">
                      <?php
                     $term = wp_get_post_terms($post->ID,"diary_cat", array("fields"=>"ids") );

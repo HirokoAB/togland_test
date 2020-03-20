@@ -37,8 +37,11 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.diary-content .featured-box {
+.diary-content .fea-box > :first-child {
   padding-right: 1%;
+}
+
+.diary-content .fea-box > :last-child {
   padding-left: 1%;
 }
 
@@ -120,7 +123,8 @@ p {
 
 .diary-content-1 .group-1,
 .diary-content-1 .group-3,
-.diary-content-1 .group-5 {
+.diary-content-1 .group-5,
+.diary-content-1 .group-7 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,21 +137,31 @@ p {
   padding-bottom: 0.5%;
 }
 
+.diary-content-1 .group-1 .diary-box,
+.diary-content-1 .group-3 .diary-box,
+.diary-content-1 .group-5 .diary-box,
+.diary-content-1 .group-7 .diary-box {
+  padding: 0;
+}
+
 .diary-content-1 .group-1 :first-child,
 .diary-content-1 .group-3 :first-child,
-.diary-content-1 .group-5 :first-child {
+.diary-content-1 .group-5 :first-child,
+.diary-content-1 .group-7 :first-child {
   padding-right: 0.5%;
 }
 
-.diary-content-1 .group-1 .diary-box,
-.diary-content-1 .group-3 .diary-box,
-.diary-content-1 .group-5 .diary-box {
-  padding: 1%;
+.diary-content-1 .group-1 :last-child,
+.diary-content-1 .group-3 :last-child,
+.diary-content-1 .group-5 :last-child,
+.diary-content-1 .group-7 :last-child {
+  padding-left: 0.5%;
 }
 
 .diary-content-1 .group-1 .card,
 .diary-content-1 .group-3 .card,
-.diary-content-1 .group-5 .card {
+.diary-content-1 .group-5 .card,
+.diary-content-1 .group-7 .card {
   position: relative;
   border-radius: 0px;
   height: auto;
@@ -158,7 +172,8 @@ p {
 
 .diary-content-1 .group-1 .card-img,
 .diary-content-1 .group-3 .card-img,
-.diary-content-1 .group-5 .card-img {
+.diary-content-1 .group-5 .card-img,
+.diary-content-1 .group-7 .card-img {
   border-radius: 0px;
   width: 100%;
   max-height: 7rem;
@@ -168,7 +183,8 @@ p {
 
 .diary-content-1 .group-1 .diary_title,
 .diary-content-1 .group-3 .diary_title,
-.diary-content-1 .group-5 .diary_title {
+.diary-content-1 .group-5 .diary_title,
+.diary-content-1 .group-7 .diary_title {
   position: absolute;
   top: 0%;
   font-size: 0.7rem;
@@ -180,7 +196,8 @@ p {
 
 .diary-content-1 .group-1 .card-body,
 .diary-content-1 .group-3 .card-body,
-.diary-content-1 .group-5 .card-body {
+.diary-content-1 .group-5 .card-body,
+.diary-content-1 .group-7 .card-body {
   position: relative;
   padding: 1%;
   height: 100%;
@@ -188,8 +205,9 @@ p {
 
 .diary-content-1 .group-1 .card-title,
 .diary-content-1 .group-3 .card-title,
-.diary-content-1 .group-5 .card-title {
-  font-weight: 600;
+.diary-content-1 .group-5 .card-title,
+.diary-content-1 .group-7 .card-title {
+  font-weight: 550;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,12 +215,13 @@ p {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .diary-content-1 .group-1 .card-title::before,
 .diary-content-1 .group-3 .card-title::before,
-.diary-content-1 .group-5 .card-title::before {
+.diary-content-1 .group-5 .card-title::before,
+.diary-content-1 .group-7 .card-title::before {
   content: '';
   display: block;
   min-width: 1.06rem;
@@ -214,7 +233,8 @@ p {
 
 .diary-content-1 .group-1 .card-text,
 .diary-content-1 .group-3 .card-text,
-.diary-content-1 .group-5 .card-text {
+.diary-content-1 .group-5 .card-text,
+.diary-content-1 .group-7 .card-text {
   min-width: 27px;
   font-size: 0.8rem;
   min-height: 57px;
@@ -222,7 +242,8 @@ p {
 
 .diary-content-1 .group-1 .diary-date,
 .diary-content-1 .group-3 .diary-date,
-.diary-content-1 .group-5 .diary-date {
+.diary-content-1 .group-5 .diary-date,
+.diary-content-1 .group-7 .diary-date {
   position: absolute;
   font-size: 0.1rem;
   bottom: 1%;

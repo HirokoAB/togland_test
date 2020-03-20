@@ -3,7 +3,6 @@ Template Name: Archive-featured
 */
 ?>
 
-<div class="row">
   <?php $args =  array( 
         'posts_per_page' => '2',
         'post_type' => 'diary',
@@ -26,7 +25,7 @@ Template Name: Archive-featured
 		<?php while ( $the_query->have_posts()) : ?>
                 <?php $the_query->the_post();?>    
 
-<div class="col-lg-6 featured-box">
+<div class="col-lg-6">
  <div class="card">
 
       <?php if (has_post_thumbnail()): ?>
@@ -63,6 +62,7 @@ Template Name: Archive-featured
         
       <?php endif; ?>
 
-    </div>
+
+
 
 

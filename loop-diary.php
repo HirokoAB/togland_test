@@ -11,8 +11,11 @@
           <div class="article-container"> 
 
           <?php if (has_post_thumbnail()): ?>
-          
-                <?php the_post_thumbnail( '' , array( "class" => "diary-thumbnail col-12","id" => 'diary-thumbnail' ) ); ?>
+              <div id="wrapper">
+                <div>
+                <?php the_post_thumbnail( '' , array( "class" => "diary-thumbnail col-12-fill" ) ); ?>
+                </div>
+              </div>
 
             <?php else: ?>
 <!--                 <img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img">  -->         
