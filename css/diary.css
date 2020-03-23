@@ -16,7 +16,7 @@ h2, h3, h4, p, a {
 }
 
 a:hover,
-.link-to-archive p:hover {
+.link-to-archive p {
   text-decoration: underline;
   color: #0274b6;
 }
@@ -288,6 +288,40 @@ p {
   background: #cccccc;
   margin-bottom: 1%;
   margin-right: 5px;
+}
+
+.diary-content-1 .group-1 .diary_cat-8 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-8 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-8 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-8 .card-title::before {
+  content: '';
+  display: block;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  background: yellow;
+  margin-bottom: 1%;
+  margin-right: 5px;
+}
+
+.diary-content-1 .group-1 .diary_cat-9 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-9 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-9 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-9 .card-title::before {
+  background: blue;
+}
+
+.diary-content-1 .group-1 .diary_cat-10 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-10 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-10 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-10 .card-title::before {
+  background: red;
+}
+
+.diary-content-1 .group-1 .diary_cat-11 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-11 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-11 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-11 .card-title::before {
+  background: green;
 }
 
 .diary-content-1 .group-1 .card-text,

@@ -22,7 +22,7 @@ h2,h3,h4,p,a{
 }
 
 a:hover,
-.link-to-archive p:hover{
+.link-to-archive p{
 	text-decoration:underline;
 	color:#0274b6;
 }
@@ -166,6 +166,9 @@ p{
     }
 }
 
+
+
+
 	.card-text{
 		font-size:0.8rem;
 		max-height:57px;
@@ -263,6 +266,41 @@ p{
       margin-bottom: 1%;
       margin-right:5px;
     }
+}
+.diary_cat-8{
+	.card-title{
+		&::before{
+			content: '';
+      display: block;
+      min-width: 1.1rem;
+      height:1.1rem;
+      background: yellow;
+      margin-bottom: 1%;
+      margin-right:5px;
+			
+		}
+	}
+}
+.diary_cat-9{
+	.card-title{
+		&::before{
+			background: blue;
+		}
+	}
+}
+.diary_cat-10{
+	.card-title{
+		&::before{
+			background: red;
+		}
+	}
+}
+.diary_cat-11{
+	.card-title{
+		&::before{
+			background: green;
+		}
+	}
 }
 
 	.card-text{

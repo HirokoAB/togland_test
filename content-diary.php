@@ -68,7 +68,7 @@ Template Name:Content-diary
                     $name = $cat[0];
                   } ;?>
 
-                  <div class="diary_cat-<?php echo $id; ?> title-wrappar">
+                  <div class="diary_cat-<?php echo $id ?> title-wrappar">
                     
     					    <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
                   </div>
