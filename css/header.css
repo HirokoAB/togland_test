@@ -1,3 +1,9 @@
+@charset "UTF-8";
+body {
+  font-family: 'Noto Sans Japanese',"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #ffffff;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -41,7 +47,7 @@ header .header_container {
   padding-bottom: 0.6%;
 }
 
-header::before {
+header .header_container::before {
   content: '';
   display: block;
   height: 10px;
@@ -49,7 +55,7 @@ header::before {
   background: black;
 }
 
-header::after {
+header .header_container::after {
   content: '';
   display: block;
   height: 1px;
@@ -58,7 +64,7 @@ header::after {
   margin-bottom: 1%;
 }
 
-header .main_sub_title {
+header .header_container .main_sub_title {
   margin-top: 1%;
   margin-bottom: -1%;
   font-size: 0.8rem;
@@ -66,7 +72,7 @@ header .main_sub_title {
   color: #333333;
 }
 
-header .main_title {
+header .header_container .main_title {
   text-align: center;
   font-family: Times New Roman;
   font-size: 50px;
@@ -74,14 +80,14 @@ header .main_title {
   font-weight: 700;
   letter-spacing: -0.03em;
   width: 45%;
-  margin: -2px auto;
+  margin: auto;
 }
 
-header .main_title img {
+header .header_container .main_title img {
   width: 30vw;
 }
 
-header #menu-global_menu {
+header .header_container #menu-global_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,7 +100,7 @@ header #menu-global_menu {
   color: #333333;
 }
 
-header .menu-global_menu-container::before {
+header .header_container .menu-global_menu-container::before {
   content: '';
   display: block;
   height: 1px;

@@ -3,10 +3,12 @@
 
 $gray:#96A8B2;
 $navi:#2F4650;
-$color-kurashi:#F4DE00;
-$color-umi:#6AC2EF;
-$color-yama:#B3C551;
-$color-boshu:#CB3A48;
+$color-kurashi:#ff5ec1;
+$color-umi:#45c1ff;
+$color-yama:#78d600;
+$color-boshu:#ff8c21;
+$color-kikaku:#fed300;
+
 .row{
 	max-width:1100px;
 }
@@ -146,9 +148,11 @@ p{
     	position:absolute;
     	top:-38px;
     	font-weight:700;
+    	font-style:italic;
    		display:flex;
     	max-height:48px;
 		align-items:flex-start;
+		margin-left:1%;
 		
 		a{
 		color:white;	
@@ -163,8 +167,53 @@ p{
       background: #cccccc;
       margin-bottom: 1%;
       margin-right:5px;
+      transform:skewX(-20deg);
     }
 }
+
+    .diary_cat-8{
+	.card-title{
+		&::before{
+			content: '';
+      display: block;
+      min-width: 1.1rem;
+      height:1.1rem;
+      background: $color-yama;
+      margin-bottom: 1%;
+      margin-right:5px;
+			
+		}
+	}
+}
+.diary_cat-9{
+	.card-title{
+		&::before{
+			background: $color-umi;
+		}
+	}
+}
+.diary_cat-10{
+	.card-title{
+		&::before{
+			background: $color-kurashi;
+		}
+	}
+}
+.diary_cat-11{
+	.card-title{
+		&::before{
+			background: $color-boshu;
+		}
+	}
+}
+.diary_cat-14{
+	.card-title{
+		&::before{
+			background: $color-kikaku;
+		}
+	}
+}	
+
 
 
 
@@ -172,6 +221,7 @@ p{
 	.card-text{
 		font-size:0.8rem;
 		max-height:57px;
+	
 		
 	}
 
@@ -251,11 +301,13 @@ p{
     }
     .card-title{
     	font-weight:550;
+    	font-style:italic;
    		display:flex;
     	max-height:48px;
 		align-items:flex-start;
 		font-size:1rem;
 		margin-bottom:2%;
+		margin-left:1%;
 
     	&::before{
       content: '';
@@ -265,6 +317,7 @@ p{
       background: #cccccc;
       margin-bottom: 1%;
       margin-right:5px;
+      transform:skewX(-20deg);
     }
 }
 .diary_cat-8{
@@ -274,9 +327,11 @@ p{
       display: block;
       min-width: 1.1rem;
       height:1.1rem;
-      background: yellow;
+      background: $color-yama;
       margin-bottom: 1%;
       margin-right:5px;
+      transform:skewX(-15deg);
+      
 			
 		}
 	}
@@ -284,29 +339,37 @@ p{
 .diary_cat-9{
 	.card-title{
 		&::before{
-			background: blue;
+			background: $color-umi;
 		}
 	}
 }
 .diary_cat-10{
 	.card-title{
 		&::before{
-			background: red;
+			background: $color-kurashi;
 		}
 	}
 }
 .diary_cat-11{
 	.card-title{
 		&::before{
-			background: green;
+			background: $color-boshu;
 		}
 	}
 }
+.diary_cat-14{
+	.card-title{
+		&::before{
+			background: $color-kikaku;
+		}
+	}
+}	
 
 	.card-text{
 		min-width:27px;
 		font-size:0.8rem;
 		min-height:57px;
+		padding-left:1.2rem;
 	}
 
 	.diary-date{

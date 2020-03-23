@@ -42,8 +42,24 @@ Template Name: Archive-featured
 
 
       <div class="card-body">
+        <?php
+                    $term = wp_get_post_terms($post->ID,"diary_cat", array("fields"=>"ids") );
+                    $cat = wp_get_post_terms($post->ID,"diary_cat", array("fields"=>"names") );
+
+
+                   if($term[0] === 13 ){
+   
+                    $id = $term[1];
+                    $name = $cat[1];   
+                  }else{
+                    $id = $term[0];
+                    $name = $cat[0];
+                  } ;?>
+
+                  <div class="diary_cat-<?php echo $id ?> title-wrappar">
 
         <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
+      </div>
 
 
         <div class="card-text">
