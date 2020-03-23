@@ -1,0 +1,294 @@
+.archive-diary-container{
+
+	.article-container{
+		margin-top:3%;
+		&::after{
+	      content: '';
+	      display: block;
+	      height: 2px;
+	      width: 100%;
+	      margin-bottom: 3%;
+	      background:black;
+	}
+	.diary_cat{
+		font-size:0.8rem;
+    	display: inline-block;
+    	padding: 0.5% 0.7%;
+    	margin: 0.7% 0;
+    	color: white;
+    	border-radius: 0.05rem;
+	}
+	.diary_title{
+		font-size:1.5rem;
+		font-weight:500;
+	}
+	.diary-date{
+		margin-bottom:0;
+		font-size:0.8rem;
+		
+			}
+	#wrapper>div{
+		position:relative;
+		overflow:hidden;
+		
+		
+		&::before{
+			content:'';
+			display:block;
+			padding-top:61.5%;
+			
+		}
+	img{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		width:100%;
+		margin:auto;
+		
+
+	}
+	.diary-thumbnail{
+		object-fit:cover;
+	}
+	}	
+	.lower-upper{
+		display:flex;
+		align-items:center;
+		justify-content:space-between;		
+		
+	}
+	.card-text{
+		margin:1% 0;
+		font-size:1rem;
+		p{
+		margin-bottom: 2em;
+    	line-height: 1.7;
+    	letter-spacing:0.1rem;
+    	color:#333;
+		}
+		p>img{
+			margin:1% 0;
+			width:100%;
+			object-fit:cover;
+			
+			
+		}
+	}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $gray:#96A8B2;
+// $navi:#2F4650;
+// $color-kurashi:#F4DE00;
+// $color-umi:#6AC2EF;
+// $color-yama:#B3C551;
+// $color-boshu:#CB3A48;
+
+
+// h2,h3,h4,p,a{
+// 	color:#333333;
+// }
+
+// p{
+// 	text-align:justify;
+// }
+
+
+// .flex{
+// 		display:flex;	
+		
+// 		}
+// .diary-title-box{
+// 	justify-content:space-between;
+// 	align-items:flex-end;
+// 	border-bottom:solid 1px black;
+// 	margin-bottom:1rem;
+// 	p{
+// 		margin-bottom:0.5rem;
+// 	}
+
+// }
+
+// .diary-content{
+// 	.col-sm-6{
+// 		padding:0;
+// 	}
+// 	.card{
+// 		position:relative;
+// 		border-radius:0px;
+// 		height:auto;
+// 		max-height:35rem;
+// 		margin-bottom:2%;
+// 		padding-bottom:1rem;
+// 		border:none;
+// 		// border-bottom:0.5px solid #cccccc;	
+	
+// 	}
+// 	.card-img-top {	
+// 	border-radius:0px;
+// 	width:100%;
+// 	height:15rem;
+// 	object-fit:cover;
+
+// 	}
+
+	
+// 	.card_title{
+//     	position:absolute;
+//     	top:0%;
+//     	font-size:0.7rem;
+//     	box-sizing:border-box;
+//     	padding:0.4rem 0.6rem 0.4rem 0.6rem;
+//     	background-color:yellow;	
+//     }
+
+//     .card-body{
+//     	position:relative;
+//     	padding:20px 10px;
+//     }
+//     .card-title{
+//     	font-weight:700;
+//    		display:flex;
+//     	max-height:48px;
+// 		align-items:flex-start;
+
+//     	&::before{
+//       content: '';
+//       display: block;
+//       min-width: 2rem;
+//       height:2rem;
+//       background: #cccccc;
+//       margin-bottom: 1%;
+//       margin-right:5px;
+//     }
+// }
+
+// 	.card-text{
+// 		font-size:0.8rem;
+// 		max-height:57px;
+		
+// 	}
+
+// 	.diary-date{
+
+// 		position:absolute;
+// 		margin-bottom:0;
+//    		font-size:0.1rem;
+//     	bottom:0.2rem;
+//     	right:0.2rem;
+
+// }
+	
+// }
+
+// .diary-content-1{
+// 	border-top: solid 0.5px #EAEAEA;
+// 	padding-top:2rem;
+	
+
+// 	.group-1,
+// 	.group-3,
+// 	.group-5
+// 	{
+// 		display:flex;
+// 		margin:auto;
+// 		max-width:1100px;
+// 		flex-direction:inherit;
+// 		// border-bottom:solid 0.1px #EAEAEA;
+// 		padding-bottom:1rem;
+// 		:first-child{
+// 			padding-right:0.5%;
+// 		}
+// 	.col-sm-6{
+// 		padding:0;
+// 	}
+// 	.card{
+// 		position:relative;
+// 		border-radius:0px;
+// 		height:auto;
+// 		max-height:11rem;
+// 		// margin-bottom:1rem;
+// 		padding-bottom:0.2%;
+// 		border:none;
+// 		// border-right:solid 0.1px #EAEAEA;
+	
+// 	}
+// 	.card-img {	
+// 	border-radius:0px;
+// 	width:100%;
+// 	max-height:10.5rem;
+// 	object-fit:cover;
+
+// 	}
+
+	
+ 
+// 	.diary_title{
+//     	position:absolute;
+//     	top:0%;
+//     	font-size:0.7rem;
+//     	box-sizing:border-box;
+//     	padding:0.4rem 0.6rem 0.4rem 0.6rem;
+//     	background-color:yellow;	
+//     }
+
+//     .card-body{
+//     	position:relative;
+//     	padding:20px 10px;
+//     	height:100%
+//     }
+//     .card-title{
+//     	font-weight:600;
+//    		display:flex;
+//     	max-height:48px;
+// 		align-items:flex-start;
+// 		font-size:1.1rem;
+
+//     	&::before{
+//       content: '';
+//       display: block;
+//       min-width: 1.5rem;
+//       height:1.5rem;
+//       background: #cccccc;
+//       margin-bottom: 1%;
+//       margin-right:5px;
+//     }
+// }
+
+// 	.card-text{
+// 		min-width:27px;
+// 		font-size:0.8rem;
+// 			min-height:57px;
+// 	}
+
+// 	.diary-date{
+// 		position:absolute;
+//    		font-size:0.1rem;
+//     	bottom:0.2rem;
+//     	right:0.2rem;
+
+// }
+// }
+// }
+
+
+
+	
+
+
+

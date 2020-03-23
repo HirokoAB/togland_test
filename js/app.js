@@ -51,37 +51,37 @@
       $(".main-contant").css( 'margin-top' , biggestHeight );
   })
 
-  var property = window.getComputedStyle($('.card-title')[0], '::before').getPropertyValue('background-color');
-  var sheets = document.styleSheets,
-    sheet = sheets[13];
-    console.log(property);
-    console.log(sheets);
-    console.log(sheet);
+  // var property = window.getComputedStyle($('.card-title')[0], '::before').getPropertyValue('background-color');
+  // var sheets = document.styleSheets,
+  //   sheet = sheets[13];
+  //   console.log(property);
+  //   console.log(sheets);
+  //   console.log(sheet);
 
 
-  $(function() {
+  // $(function() {
 
-    if($(".card-title").parent().hasClass('daiary_cat-9')) {   // Webkit
-      sheet.insertRule('.diary-content-1 .group-5 .card-title::before { background:yellow; }', sheet.cssRules.length);
-    }
-    else if (sheet.addRule) {  // IE
-      sheet.addRule('.diary-content-1 .group-5 .card-title::before { background:yellow; }', -1);
-    }
-    else if ($(".card-title").parent().hasClass('daiary_cat-10')) {   // Webkit
-      sheet.insertRule('.diary-content-1 .group-3 .card-title::before { background:blue; }', sheet.cssRules.length);
-    }
-    else if (sheet.addRule) {  // IE
-      sheet.addRule('.diary-content-1 .group-3 .card-title::before { background:blue; }', -1);
-    }else if (
-    $(".card-title").parent().hasClass('daiary_cat-11')) {   // Webkit
-      sheet.insertRule('.diary-content-1 .card-title::before { background:green; }', sheet.cssRules.length);
-    }
-    else if (sheet.addRule) {  // IE
-      sheet.addRule('.diary-content-1 .card-title::before { background:green; }', -1);
-    }
+  //   if($(".card-title").parent().hasClass('diary_cat-9')) {   // Webkit
+  //     sheet.insertRule('.diary-content-1 .group-5 .card-title::before { background:yellow; }', sheet.cssRules.length);
+  //   }
+  //   else if (sheet.addRule) {  // IE
+  //     sheet.addRule('.diary-content-1 .group-5 .card-title::before { background:yellow; }', -1);
+  //   }
+  //   else if ($(".card-title").parent().hasClass('diary_cat-10')) {   // Webkit
+  //     sheet.insertRule('.diary-content-1 .group-3 .card-title::before { background:blue; }', sheet.cssRules.length);
+  //   }
+  //   else if (sheet.addRule) {  // IE
+  //     sheet.addRule('.diary-content-1 .group-3 .card-title::before { background:blue; }', -1);
+  //   }else if (
+  //   $(".card-title").parent().hasClass('diary_cat-11')) {   // Webkit
+  //     sheet.insertRule('.diary-content-1 .card-title::before { background:green; }', sheet.cssRules.length);
+  //   }
+  //   else if (sheet.addRule) {  // IE
+  //     sheet.addRule('.diary-content-1 .card-title::before { background:green; }', -1);
+  //   }
 
-    console.log(sheet.cssRules.length);
-  });
+  //   console.log(sheet.cssRules.length);
+  // });
 
 
 

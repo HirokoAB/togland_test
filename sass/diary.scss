@@ -7,11 +7,26 @@ $color-kurashi:#F4DE00;
 $color-umi:#6AC2EF;
 $color-yama:#B3C551;
 $color-boshu:#CB3A48;
-
+.row{
+	max-width:1100px;
+}
+.card-title{
+	line-height:1.7;
+	:first-line {
+  	line-height: 1;
+}
+}
 
 h2,h3,h4,p,a{
 	color:#333333;
 }
+
+a:hover,
+.link-to-archive p{
+	text-decoration:underline;
+	color:#0274b6;
+}
+
 
 p{
 	text-align:justify;
@@ -22,7 +37,7 @@ p{
 		display:flex;	
 		
 		}
-.diary-title-box{
+.title-box{
 	justify-content:space-between;
 	align-items:flex-end;
 	border-bottom:solid 1px black;
@@ -34,6 +49,15 @@ p{
 }
 
 .diary-content{
+	.fea-box{
+		>:first-child{
+		padding-right:1%;
+	}
+	>:last-child{
+		padding-left:1%;
+	}
+
+}
 	.col-sm-6{
 		padding:0;
 	}
@@ -48,13 +72,61 @@ p{
 		// border-bottom:0.5px solid #cccccc;	
 	
 	}
-	.card-img-top {	
-	border-radius:0px;
-	width:100%;
-	height:15rem;
-	object-fit:cover;
+
+	// .card-img-top {	
+	// border-radius:0px;
+	// width:100%;
+	// max-height:14rem;
+	// object-fit:cover;
+
+	// }
+		#wrapper>div{
+		position:relative;
+		overflow:hidden;
+		background: linear-gradient(#000000);
+		// background-color: #000000;
+		
+		
+		
+		&::before{
+			content:'';
+			display:block;
+			padding-top:70.7%;
+			
+			
+		}
+		:after {/*基本的に画像に疑似要素は付けられないので包括するボックスに加える。*/
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.55; /*下に配置する画像が見えるよう、疑似要素は透過しておく*/
+}
+.filter:after{
+	background-image: linear-gradient(45deg, #1199c4, #B10DC9);
+}
+
+	img{
+		position:absolute;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		width:100%;
+		margin:auto;
+		background: linear-gradient(#000000);
+		// opacity:0.7;
+		
+		
 
 	}
+}
+	.card-img-top{
+		object-fit:cover;
+		}
 
 	
 	.card_title{
@@ -68,24 +140,34 @@ p{
 
     .card-body{
     	position:relative;
-    	padding:20px 10px;
+        padding: 2% 0;
     }
     .card-title{
+    	position:absolute;
+    	top:-38px;
     	font-weight:700;
    		display:flex;
     	max-height:48px;
 		align-items:flex-start;
+		
+		a{
+		color:white;	
+		}
+		
 
     	&::before{
       content: '';
       display: block;
-      min-width: 2rem;
-      height:2rem;
+      min-width: 1.1rem;
+      height:1.1rem;
       background: #cccccc;
       margin-bottom: 1%;
       margin-right:5px;
     }
 }
+
+
+
 
 	.card-text{
 		font-size:0.8rem;
@@ -93,7 +175,7 @@ p{
 		
 	}
 
-	.daiary-date{
+	.diary-date{
 
 		position:absolute;
 		margin-bottom:0;
@@ -107,25 +189,30 @@ p{
 
 .diary-content-1{
 	border-top: solid 0.5px #EAEAEA;
-	padding-top:2rem;
+	padding-top:2rem!important;
 	
 
 	.group-1,
 	.group-3,
-	.group-5
+	.group-5,
+	.group-7
 	{
 		display:flex;
 		margin:auto;
 		max-width:1100px;
 		flex-direction:inherit;
 		// border-bottom:solid 0.1px #EAEAEA;
-		padding-bottom:1rem;
-		:first-child{
+		padding-bottom:2%;
+		.diary-box{
+		padding:0;
+		}
+		>:first-child{
 			padding-right:0.5%;
 		}
-	.col-sm-6{
-		padding:0;
-	}
+		>:last-child{
+			padding-left:0.5%;
+		}
+
 	.card{
 		position:relative;
 		border-radius:0px;
@@ -140,14 +227,15 @@ p{
 	.card-img {	
 	border-radius:0px;
 	width:100%;
-	max-height:10.5rem;
+	max-height:9rem;
+	margin-right:2%;
 	object-fit:cover;
 
 	}
 
 	
  
-	.daiary_title{
+	.diary_title{
     	position:absolute;
     	top:0%;
     	font-size:0.7rem;
@@ -158,39 +246,78 @@ p{
 
     .card-body{
     	position:relative;
-    	padding:20px 10px;
+    	padding:1%;
     	height:100%
     }
     .card-title{
-    	font-weight:600;
+    	font-weight:550;
    		display:flex;
     	max-height:48px;
 		align-items:flex-start;
-		font-size:1.1rem;
+		font-size:1rem;
+		margin-bottom:2%;
 
     	&::before{
       content: '';
       display: block;
-      min-width: 1.5rem;
-      height:1.5rem;
+      min-width: 1.06rem;
+      height:1.06rem;
       background: #cccccc;
       margin-bottom: 1%;
       margin-right:5px;
     }
 }
+.diary_cat-8{
+	.card-title{
+		&::before{
+			content: '';
+      display: block;
+      min-width: 1.1rem;
+      height:1.1rem;
+      background: yellow;
+      margin-bottom: 1%;
+      margin-right:5px;
+			
+		}
+	}
+}
+.diary_cat-9{
+	.card-title{
+		&::before{
+			background: blue;
+		}
+	}
+}
+.diary_cat-10{
+	.card-title{
+		&::before{
+			background: red;
+		}
+	}
+}
+.diary_cat-11{
+	.card-title{
+		&::before{
+			background: green;
+		}
+	}
+}
 
 	.card-text{
 		min-width:27px;
 		font-size:0.8rem;
-			min-height:57px;
+		min-height:57px;
 	}
 
-	.daiary-date{
+	.diary-date{
 		position:absolute;
    		font-size:0.1rem;
-    	bottom:0.2rem;
-    	right:0.2rem;
-
+   		
+    	bottom:1%;
+    	right:1%;
+    	
+    	margin-bottom:0;
+    	
 }
 }
 }

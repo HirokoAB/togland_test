@@ -1,6 +1,6 @@
 
 <?php  /*
-Template Name: Archive-boshu
+Template Name: Archive-featured
 */
 ?>
 
@@ -10,20 +10,20 @@ Template Name: Archive-boshu
 
     <!-- サブクエリに渡す配列を作成 -->
     <?php $args =  array( 
-        'posts_per_page' => '4',
+        'posts_per_page' => '2',
         'post_type' => 'diary',
         'order' => 'DESC',
         'tax_query' => array(
                               array(
                                 'taxonomy' =>'diary_cat',
                                 'field' => 'slug',
-                                'terms' => 'atsumare'
+                                'terms' => 'featured'
                                     )
                              ) 
     );?>
 
 <section class="boshu boshu_flex">
-  <h3 class="boshu_head">募集あれこれ</h3>
+  <h3 class="boshu_head">こちらの記事がおすすめです</h3>
     <div class="boshu_content">
   <!-- サブループを作成渡す配列は上記の内容 -->
   <?php $the_query = new WP_Query($args); ?>

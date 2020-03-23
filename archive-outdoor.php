@@ -79,4 +79,17 @@ Template Name: Archive-outdoor
 </main>
 
 
+
+<?php if(is_post_type_archive('outdoor')){
+
+  echo'アーカイブ';
+
+}else{
+
+  echo '違う';
+}
+
+   ?>
+
+
 <?php get_footer(); ?>

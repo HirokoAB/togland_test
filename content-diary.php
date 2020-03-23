@@ -1,5 +1,5 @@
 <?php  /*
-Template Name: Archive-daiary
+Template Name:Content-diary
 */
 ?>
 
@@ -9,14 +9,14 @@ Template Name: Archive-daiary
 
     <!-- サブクエリに渡す配列を作成 -->
     <?php $args =  array( 
-        'posts_per_page' => 6,
-        'post_type' => 'daiary',
+        'posts_per_page' => 8,
+        'post_type' => 'diary',
         'order' => 'DESC',
         'tax_query' => array(
                               array(
-                                'taxonomy' =>'daiary_cat',
+                                'taxonomy' =>'diary_cat',
                                 'field' => 'slug',
-                                'terms' => array('yamasato','umisato','kurasi','atsumare')
+                                'terms' => array('satoumi','satoyama','kurasi','atsumare','kikaku')
                                     )
                              ) 
     );?>
@@ -31,33 +31,51 @@ Template Name: Archive-daiary
               <?php while ( $the_query->have_posts()) : ?>
                 <?php $the_query->the_post();?>
 
-                  <?php if ($pos_c === 3 ||$pos_c === 5 ){
+                  <?php if ($pos_c % 2 !== 0 ){
                   echo '</div>'."\n"."\n"."<div class=".'"'."group-$pos_c row".'"'." >";
                       }; ?>
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 diary-box">
 				<div class="card">
           <div class="row no-gutters">
             <div class="card-left col-sm-5">
 
     						<?php if (has_post_thumbnail()): ?>
+                  <div id="wrapper">
+                    <div class="filter">
     					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
+                    </div>
+                  </div>
     					    <?php else: ?>
 
-    					        <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a>           
+    					        <!-- <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a> -->           
     				<?php endif; ?>
             </div>
 
             <div class="card-right col-sm-7" >
                   <div class="card-body">
-                  <?php $term = wp_get_post_terms($post->ID,"daiary_cat", array("fields"=>"ids") ); ?>
-                  <div class="daiary_cat-<?php echo $term[0]  ; ?> title-wrappar">
+                     <?php
+                    $term = wp_get_post_terms($post->ID,"diary_cat", array("fields"=>"ids") );
+                    $cat = wp_get_post_terms($post->ID,"diary_cat", array("fields"=>"names") );
+
+
+                   if($term[0] === 13 ){
+   
+                    $id = $term[1];
+                    $name = $cat[1];   
+                  }else{
+                    $id = $term[0];
+                    $name = $cat[0];
+                  } ;?>
+
+                  <div class="diary_cat-<?php echo $id ?> title-wrappar">
+                    
     					    <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
                   </div>
 
                   <div class="card-text">
                   <?php the_excerpt('...'); ?>
-                  <p class="daiary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p>
+                  <p class="diary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p>
                   </div>
 
 

@@ -14,7 +14,7 @@ function myscripts(){
 	wp_enqueue_script( 'yycountdown.min.js', get_template_directory_uri() . '/lib/yycountdown/js/jquery.yycountdown.min.js');
 	wp_enqueue_script( 'owl.carousel.js', get_template_directory_uri() . '/lib/assets/js/owl.carousel.js' );
 	wp_enqueue_script( 'owl.app.js', get_template_directory_uri() . '/lib/assets/js/owl.app.js' );
-	wp_enqueue_script( 'daiary.js',get_template_directory_uri() . '/js/daiary.js' );
+	wp_enqueue_script( 'diary.js',get_template_directory_uri() . '/js/diary.js' );
 }
 
 
@@ -24,7 +24,7 @@ wp_enqueue_style( 'style.css', get_template_directory_uri() . '/css/style.css', 
 wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css' );
 wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
-wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
+wp_enqueue_style( 'diary.css',get_template_directory_uri() . '/css/diary.css' );
 
 
 
@@ -98,11 +98,11 @@ wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' 
 	}
 	add_action( 'wp_enqueue_scripts', 'my_styles' );
 
-		function daiary_style(){
-		if(is_page('daiary')){
+		function diary_style(){
+		if(is_page('diary')){
 		   
 
 
 	}
 }
-	add_action( 'wp_enqueue_scripts' , 'daiary_style' );?>
+	add_action( 'wp_enqueue_scripts' , 'diary_style' );?>

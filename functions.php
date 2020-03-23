@@ -9,8 +9,9 @@
 // JSファイルのエンキュー///
 
 function myscripts(){
-
-		wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js', array(), '1.0.0', true );
+		wp_enqueue_script( 'jquery.min.js','https://code.jquery.com/jquery-3.3.1.slim.min.js',array(),'3.3.1', true);
+		wp_enqueue_script( 'popper.js','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',array(),'1.14.7', true );
+		wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js', array('popper.js'), '1.0.0', true );
 		wp_enqueue_script( 'app.js', get_template_directory_uri() . '/js/app.js',array(),
     		false,
     		true );
@@ -30,9 +31,9 @@ function myscripts(){
     		true);
 
 
-	}elseif(is_page( 'daiary' ) || is_post_type_archive( 'daiary' )){
-			wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
-			wp_enqueue_script( 'daiary.js',get_template_directory_uri() . '/js/daiary.js',
+	}elseif(is_page( 174 )){
+			// wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
+			wp_enqueue_script( 'diary.js',get_template_directory_uri() . '/js/diary.js',
 			array(),
     		false,
     		true
@@ -58,13 +59,14 @@ function mystyle(){
 			wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css' );
 			wp_enqueue_style( 'bootstrap.min.css', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css' );
 			wp_enqueue_style( 'header.css', get_template_directory_uri() . '/css/header.css' );
+			wp_enqueue_style( '404.css', get_template_directory_uri() . '/css/404.css' );
 
 	if(is_home() || is_page( 14 ) || is_singular('outdoor')) {
 			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 			wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
 			wp_enqueue_style( 'outdoor_style.css', get_template_directory_uri() . '/css/outdoor_style.css', array(), '1.0.3' );
-	}elseif(is_post_type_archive( 'daiary' )){
-			wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
+	}elseif(is_page('174')){
+			wp_enqueue_style( 'archive-diary.css',get_template_directory_uri() . '/css/archive-diary.css' );
 	}elseif(is_page('192')){
 			wp_enqueue_style( 'content.css',get_template_directory_uri() . '/css/content.css' );
 	}elseif(is_page('196')){
@@ -73,7 +75,10 @@ function mystyle(){
 		   wp_enqueue_style( 'index_style.css',get_template_directory_uri() . '/css/index_style.css' );
 		   wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 		   wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
-		   wp_enqueue_style( 'daiary.css',get_template_directory_uri() . '/css/daiary.css' );
+		   wp_enqueue_style( 'diary.css',get_template_directory_uri() . '/css/diary.css' );
+	}elseif(is_singular('diary')){
+			wp_enqueue_style( 'single-diary.css',get_template_directory_uri() . '/css/single-diary.css' );
+
 	}
 
 	else{
@@ -112,13 +117,13 @@ function create_post_type() {
 /////////////////////////////////////////
 
 
-function create_pts_daiary() {
+function create_pts_diary() {
 
 	/**
 	 * Post Type: ダイアリー.
 	 */
 
-	register_post_type( "daiary", array(
+	register_post_type( "diary", array(
 		"label" =>"ダイアリー",
 		"labels" => array(
 							"name" => "ダイアリー", 
@@ -143,14 +148,13 @@ function create_pts_daiary() {
 		"show_in_nav_menus" => true,		
 		"show_in_rest" => true,
 		"supports" => array( "title", "editor", "thumbnail","page-attributes","author","excerpt" ),
-		"taxonomies" => array("daiary_cat","umisato","itonami",
-			"boshu","featured"),
+		"taxonomies" => array("diary_cat")
 		)
 	);
 
 	register_taxonomy(
-		"daiary_cat",
-		"daiary",
+		"diary_cat",
+		"diary",
 		array(
 				"label" => "ダイアリーのカテゴリー",
 				"labels" => array(
@@ -165,16 +169,15 @@ function create_pts_daiary() {
 				"show_in_menu" => true,
 				"show_in_nav_menus" => true,
 				"query_var" => true,
-				"rewrite" => array( 'slug' => 'tpdaiary',),
 				"show_admin_column" => true,
 				"show_in_rest" => true,
-				"rest_base" => "daiary_cat",
+				"rest_base" => "diary_cat",
 				"show_in_quick_edit" => false,
 		)
 	);
 
 }
-add_action( 'init', 'create_pts_daiary');
+add_action( 'init', 'create_pts_diary');
 
 
 
@@ -185,7 +188,7 @@ add_action( 'init', 'create_pts_daiary');
    	
 
 add_theme_support('post-thumbnails');
-add_image_size('top-thumbnail', 100, 300);
+add_image_size('top-thumbnail', 100, 1000);
 
 
 
@@ -208,7 +211,7 @@ function resize_at_upload( $file ) {
  
 	if ( $file['type'] == 'image/jpeg' OR $file['type'] == 'image/gif' OR $file['type'] == 'image/png') {
  
-		$w = 300;
+		$w =1000;
 		$h = 0;
  
 		$image = wp_get_image_editor( $file['file'] );
@@ -268,16 +271,16 @@ add_filter('excerpt_more','new_excerpt_more',9999);
 //カスタム投稿のタクソノミーとタームをURLに反映させる
 function myUrlRewrite($rules){
 $myRule = array();
-$myRule['tpdaiary/([^/]+)/?$'] = 'index.php?daiary_cat[1]';
-$myRule['tpdaiary/([^/]+)/([^/]+)?$'] = 'index.php?daiary_cat[2]';
+$myRule['tpdiary/([^/]+)/?$'] = 'index.php?diary_cat[1]';
+$myRule['tpdiary/([^/]+)/([^/]+)?$'] = 'index.php?diary_cat[2]';
 return array_merge( $myRule, $rules );
 }
 add_action('rewrite_rules_array', 'myUrlRewrite' );
 
 function myPostTypeLink($link, $post ) {
-if ( $post->post_type == 'daiary' ) {
-if ( $cats = get_the_terms( $post->ID, 'tpdaiary' ) ) {	
-$link = str_replace( '%tpdaiary%', current( $cats )->slug, $link );
+if ( $post->post_type == 'diary' ) {
+if ( $cats = get_the_terms( $post->ID, 'tpdiary' ) ) {	
+$link = str_replace( '%tpdiary%', current( $cats )->slug, $link );
 }
 }
 return $link;
@@ -316,6 +319,79 @@ function limit_category_select() {
 <?php
 }
 
+///////////////////////////////////////
+// カスタムボックスの追加
+///////////////////////////////////////
+add_action('admin_menu', 'add_redirect_custom_box');
+if ( !function_exists( 'add_redirect_custom_box' ) ):
+function add_redirect_custom_box(){
+
+  //リダイレクト
+  add_meta_box( 'singular_redirect_settings', 'リダイレクト', 'redirect_custom_box_view', 'post', 'side' );
+  add_meta_box( 'singular_redirect_settings', 'リダイレクト', 'redirect_custom_box_view', 'page', 'side' );
+}
+endif;
+
+///////////////////////////////////////
+// リダイレクト
+///////////////////////////////////////
+if ( !function_exists( 'redirect_custom_box_view' ) ):
+function redirect_custom_box_view(){
+  $redirect_url = get_post_meta(get_the_ID(),'redirect_url', true);
+
+  echo '<label for="redirect_url">リダイレクトURL</label>';
+  echo '<input type="text" name="redirect_url" size="20" value="'.esc_attr(stripslashes_deep(strip_tags($redirect_url))).'" placeholder="https://" style="width: 100%;">';
+  echo '<p class="howto">このページに訪れるユーザーを設定したURLに301リダイレクトします。</p>';
+}
+endif;
+
+add_action('save_post', 'redirect_custom_box_save_data');
+if ( !function_exists( 'redirect_custom_box_save_data' ) ):
+function redirect_custom_box_save_data(){
+  $id = get_the_ID();
+  //リダイレクトURL
+  if ( isset( $_POST['redirect_url'] ) ){
+    $redirect_url = $_POST['redirect_url'];
+    $redirect_url_key = 'redirect_url';
+    add_post_meta($id, $redirect_url_key, $redirect_url, true);
+    update_post_meta($id, $redirect_url_key, $redirect_url);
+  }
+}
+endif;
+
+//リダイレクトURLの取得
+if ( !function_exists( 'get_singular_redirect_url' ) ):
+function get_singular_redirect_url(){
+  return trim(get_post_meta(get_the_ID(), 'redirect_url', true));
+}
+endif;
+
+//リダイレクト処理
+if ( !function_exists( 'redirect_to_url' ) ):
+function redirect_to_url($url){
+  header( "HTTP/1.1 301 Moved Permanently" );
+  header( "location: " . $url  );
+  exit;
+}
+endif;
+
+//URLの正規表現
+define('URL_REG_STR', '(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)');
+define('URL_REG', '/'.URL_REG_STR.'/');
+
+//リダイレクト
+add_action( 'wp','wp_singular_page_redirect', 0 );
+if ( !function_exists( 'wp_singular_page_redirect' ) ):
+function wp_singular_page_redirect() {
+  //リダイレクト
+  if (is_singular() && $redirect_url = get_singular_redirect_url()) {
+    //URL形式にマッチする場合
+    if (preg_match(URL_REG, $redirect_url)) {
+      redirect_to_url($redirect_url);
+    }
+  }
+}
+endif;
 
 
 
@@ -335,6 +411,7 @@ function limit_category_select() {
 define('BLOG', 14);
 define('HOME',84);
 define('issue',196);
+define('diary',174);
 
 
 

@@ -15,10 +15,16 @@
 
 <body>
 	<header>
+		
 	<div class="header_container">
-	 <h3 class="main_sub_title">戸倉ネイチャーパークの最新情報をお届けするWEBサイト</h3>			
-    <div class="main_title"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tg-np-logo.svg" usemap="" alt="" /></div>
-    <?php wp_nav_menu( $args ); ?>
+		<div class="header-right">
+			<?php 
+			$date = new DateTime('now');
+			echo $date->format('Y年m月d日'); ?>
+		</div>	
+		 <h3 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h3>			
+	    <div class="main_title"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tg-np-logo.svg" usemap="" alt="" /></div>
+	    <?php wp_nav_menu( $args ); ?>
     </div>
 
 	</header>

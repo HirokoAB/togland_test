@@ -1,0 +1,345 @@
+@charset "UTF-8";
+.row {
+  max-width: 1100px;
+}
+
+.card-title {
+  line-height: 1.7;
+}
+
+.card-title :first-line {
+  line-height: 1;
+}
+
+h2, h3, h4, p, a {
+  color: #333333;
+}
+
+a:hover,
+.link-to-archive p {
+  text-decoration: underline;
+  color: #0274b6;
+}
+
+p {
+  text-align: justify;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title-box {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-bottom: solid 1px black;
+  margin-bottom: 1rem;
+}
+
+.title-box p {
+  margin-bottom: 0.5rem;
+}
+
+.diary-content .fea-box > :first-child {
+  padding-right: 1%;
+}
+
+.diary-content .fea-box > :last-child {
+  padding-left: 1%;
+}
+
+.diary-content .col-sm-6 {
+  padding: 0;
+}
+
+.diary-content .card {
+  position: relative;
+  border-radius: 0px;
+  height: auto;
+  max-height: 35rem;
+  margin-bottom: 2%;
+  padding-bottom: 1rem;
+  border: none;
+}
+
+.diary-content #wrapper > div {
+  position: relative;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000));
+  background: -webkit-linear-gradient(#000000);
+  background: linear-gradient(#000000);
+}
+
+.diary-content #wrapper > div::before {
+  content: '';
+  display: block;
+  padding-top: 70.7%;
+}
+
+.diary-content #wrapper > div :after {
+  /*基本的に画像に疑似要素は付けられないので包括するボックスに加える。*/
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.55;
+  /*下に配置する画像が見えるよう、疑似要素は透過しておく*/
+}
+
+.diary-content #wrapper > div .filter:after {
+  background-image: -webkit-linear-gradient(45deg, #1199c4, #B10DC9);
+  background-image: linear-gradient(45deg, #1199c4, #B10DC9);
+}
+
+.diary-content #wrapper > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000));
+  background: -webkit-linear-gradient(#000000);
+  background: linear-gradient(#000000);
+}
+
+.diary-content .card-img-top {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.diary-content .card_title {
+  position: absolute;
+  top: 0%;
+  font-size: 0.7rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  background-color: yellow;
+}
+
+.diary-content .card-body {
+  position: relative;
+  padding: 2% 0;
+}
+
+.diary-content .card-title {
+  position: absolute;
+  top: -38px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 48px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.diary-content .card-title a {
+  color: white;
+}
+
+.diary-content .card-title::before {
+  content: '';
+  display: block;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  background: #cccccc;
+  margin-bottom: 1%;
+  margin-right: 5px;
+}
+
+.diary-content .card-text {
+  font-size: 0.8rem;
+  max-height: 57px;
+}
+
+.diary-content .diary-date {
+  position: absolute;
+  margin-bottom: 0;
+  font-size: 0.1rem;
+  bottom: 0.2rem;
+  right: 0.2rem;
+}
+
+.diary-content-1 {
+  border-top: solid 0.5px #EAEAEA;
+  padding-top: 2rem !important;
+}
+
+.diary-content-1 .group-1,
+.diary-content-1 .group-3,
+.diary-content-1 .group-5,
+.diary-content-1 .group-7 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  max-width: 1100px;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+  -ms-flex-direction: inherit;
+  flex-direction: inherit;
+  padding-bottom: 2%;
+}
+
+.diary-content-1 .group-1 .diary-box,
+.diary-content-1 .group-3 .diary-box,
+.diary-content-1 .group-5 .diary-box,
+.diary-content-1 .group-7 .diary-box {
+  padding: 0;
+}
+
+.diary-content-1 .group-1 > :first-child,
+.diary-content-1 .group-3 > :first-child,
+.diary-content-1 .group-5 > :first-child,
+.diary-content-1 .group-7 > :first-child {
+  padding-right: 0.5%;
+}
+
+.diary-content-1 .group-1 > :last-child,
+.diary-content-1 .group-3 > :last-child,
+.diary-content-1 .group-5 > :last-child,
+.diary-content-1 .group-7 > :last-child {
+  padding-left: 0.5%;
+}
+
+.diary-content-1 .group-1 .card,
+.diary-content-1 .group-3 .card,
+.diary-content-1 .group-5 .card,
+.diary-content-1 .group-7 .card {
+  position: relative;
+  border-radius: 0px;
+  height: auto;
+  max-height: 11rem;
+  padding-bottom: 0.2%;
+  border: none;
+}
+
+.diary-content-1 .group-1 .card-img,
+.diary-content-1 .group-3 .card-img,
+.diary-content-1 .group-5 .card-img,
+.diary-content-1 .group-7 .card-img {
+  border-radius: 0px;
+  width: 100%;
+  max-height: 9rem;
+  margin-right: 2%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.diary-content-1 .group-1 .diary_title,
+.diary-content-1 .group-3 .diary_title,
+.diary-content-1 .group-5 .diary_title,
+.diary-content-1 .group-7 .diary_title {
+  position: absolute;
+  top: 0%;
+  font-size: 0.7rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  background-color: yellow;
+}
+
+.diary-content-1 .group-1 .card-body,
+.diary-content-1 .group-3 .card-body,
+.diary-content-1 .group-5 .card-body,
+.diary-content-1 .group-7 .card-body {
+  position: relative;
+  padding: 1%;
+  height: 100%;
+}
+
+.diary-content-1 .group-1 .card-title,
+.diary-content-1 .group-3 .card-title,
+.diary-content-1 .group-5 .card-title,
+.diary-content-1 .group-7 .card-title {
+  font-weight: 550;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 48px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-size: 1rem;
+  margin-bottom: 2%;
+}
+
+.diary-content-1 .group-1 .card-title::before,
+.diary-content-1 .group-3 .card-title::before,
+.diary-content-1 .group-5 .card-title::before,
+.diary-content-1 .group-7 .card-title::before {
+  content: '';
+  display: block;
+  min-width: 1.06rem;
+  height: 1.06rem;
+  background: #cccccc;
+  margin-bottom: 1%;
+  margin-right: 5px;
+}
+
+.diary-content-1 .group-1 .diary_cat-8 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-8 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-8 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-8 .card-title::before {
+  content: '';
+  display: block;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  background: yellow;
+  margin-bottom: 1%;
+  margin-right: 5px;
+}
+
+.diary-content-1 .group-1 .diary_cat-9 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-9 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-9 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-9 .card-title::before {
+  background: blue;
+}
+
+.diary-content-1 .group-1 .diary_cat-10 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-10 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-10 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-10 .card-title::before {
+  background: red;
+}
+
+.diary-content-1 .group-1 .diary_cat-11 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-11 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-11 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-11 .card-title::before {
+  background: green;
+}
+
+.diary-content-1 .group-1 .card-text,
+.diary-content-1 .group-3 .card-text,
+.diary-content-1 .group-5 .card-text,
+.diary-content-1 .group-7 .card-text {
+  min-width: 27px;
+  font-size: 0.8rem;
+  min-height: 57px;
+}
+
+.diary-content-1 .group-1 .diary-date,
+.diary-content-1 .group-3 .diary-date,
+.diary-content-1 .group-5 .diary-date,
+.diary-content-1 .group-7 .diary-date {
+  position: absolute;
+  font-size: 0.1rem;
+  bottom: 1%;
+  right: 1%;
+  margin-bottom: 0;
+}

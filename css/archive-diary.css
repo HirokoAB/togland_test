@@ -1,0 +1,88 @@
+.archive-diary-container .article-container {
+  margin-top: 3%;
+}
+
+.archive-diary-container .article-container::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-bottom: 3%;
+  background: black;
+}
+
+.archive-diary-container .article-container .diary_cat {
+  font-size: 0.8rem;
+  display: inline-block;
+  padding: 0.5% 0.7%;
+  margin: 0.7% 0;
+  color: white;
+  border-radius: 0.05rem;
+}
+
+.archive-diary-container .article-container .diary_title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.archive-diary-container .article-container .diary-date {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.archive-diary-container .article-container #wrapper > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-diary-container .article-container #wrapper > div::before {
+  content: '';
+  display: block;
+  padding-top: 61.5%;
+}
+
+.archive-diary-container .article-container #wrapper > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+}
+
+.archive-diary-container .article-container #wrapper > div .diary-thumbnail {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.archive-diary-container .article-container .lower-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.archive-diary-container .article-container .card-text {
+  margin: 1% 0;
+  font-size: 1rem;
+}
+
+.archive-diary-container .article-container .card-text p {
+  margin-bottom: 2em;
+  line-height: 1.7;
+  letter-spacing: 0.1rem;
+  color: #333;
+}
+
+.archive-diary-container .article-container .card-text p > img {
+  margin: 1% 0;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
