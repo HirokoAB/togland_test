@@ -137,13 +137,16 @@ p {
   position: absolute;
   top: -38px;
   font-weight: 700;
+  font-style: italic;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-height: 48px;
+  overflow: hidden;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  margin-left: 1%;
 }
 
 .diary-content .card-title a {
@@ -158,6 +161,34 @@ p {
   background: #cccccc;
   margin-bottom: 1%;
   margin-right: 5px;
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.diary-content .diary_cat-8 .card-title::before {
+  content: '';
+  display: block;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  background: #78d600;
+  margin-bottom: 1%;
+  margin-right: 5px;
+}
+
+.diary-content .diary_cat-9 .card-title::before {
+  background: #45c1ff;
+}
+
+.diary-content .diary_cat-10 .card-title::before {
+  background: #ff5ec1;
+}
+
+.diary-content .diary_cat-11 .card-title::before {
+  background: #ff8c21;
+}
+
+.diary-content .diary_cat-14 .card-title::before {
+  background: #fed300;
 }
 
 .diary-content .card-text {
@@ -266,15 +297,18 @@ p {
 .diary-content-1 .group-5 .card-title,
 .diary-content-1 .group-7 .card-title {
   font-weight: 550;
+  font-style: italic;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   max-height: 48px;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
   font-size: 1rem;
   margin-bottom: 2%;
+  margin-left: 1%;
 }
 
 .diary-content-1 .group-1 .card-title::before,
@@ -288,6 +322,8 @@ p {
   background: #cccccc;
   margin-bottom: 1%;
   margin-right: 5px;
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
 }
 
 .diary-content-1 .group-1 .diary_cat-8 .card-title::before,
@@ -298,30 +334,39 @@ p {
   display: block;
   min-width: 1.1rem;
   height: 1.1rem;
-  background: yellow;
+  background: #78d600;
   margin-bottom: 1%;
   margin-right: 5px;
+  -webkit-transform: skewX(-15deg);
+  transform: skewX(-15deg);
 }
 
 .diary-content-1 .group-1 .diary_cat-9 .card-title::before,
 .diary-content-1 .group-3 .diary_cat-9 .card-title::before,
 .diary-content-1 .group-5 .diary_cat-9 .card-title::before,
 .diary-content-1 .group-7 .diary_cat-9 .card-title::before {
-  background: blue;
+  background: #45c1ff;
 }
 
 .diary-content-1 .group-1 .diary_cat-10 .card-title::before,
 .diary-content-1 .group-3 .diary_cat-10 .card-title::before,
 .diary-content-1 .group-5 .diary_cat-10 .card-title::before,
 .diary-content-1 .group-7 .diary_cat-10 .card-title::before {
-  background: red;
+  background: #ff5ec1;
 }
 
 .diary-content-1 .group-1 .diary_cat-11 .card-title::before,
 .diary-content-1 .group-3 .diary_cat-11 .card-title::before,
 .diary-content-1 .group-5 .diary_cat-11 .card-title::before,
 .diary-content-1 .group-7 .diary_cat-11 .card-title::before {
-  background: green;
+  background: #ff8c21;
+}
+
+.diary-content-1 .group-1 .diary_cat-14 .card-title::before,
+.diary-content-1 .group-3 .diary_cat-14 .card-title::before,
+.diary-content-1 .group-5 .diary_cat-14 .card-title::before,
+.diary-content-1 .group-7 .diary_cat-14 .card-title::before {
+  background: #fed300;
 }
 
 .diary-content-1 .group-1 .card-text,
@@ -331,6 +376,8 @@ p {
   min-width: 27px;
   font-size: 0.8rem;
   min-height: 57px;
+  overflow: hidden;
+  padding-left: 1.2rem;
 }
 
 .diary-content-1 .group-1 .diary-date,

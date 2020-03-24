@@ -10,7 +10,7 @@ Archive-diary
 
 
 
-<div class="main archive-diary-container col-8 ml-auto">
+<div class="main archive-diary-container col-lg-8 ml-auto">
 
 <?php $args =  array( 
         'posts_per_page' =>10,
@@ -37,7 +37,7 @@ include('loop-diary.php');
 
 
 
-<div class="side col-2 ml-auto">
+<div class="side col-lg-2 ml-auto">
 
   <?php the_post(); ?>
     

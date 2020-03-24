@@ -1,10 +1,10 @@
 // $('.cat-9').css('background', 'Yellow');
 
 
-var property = window.getComputedStyle($('.cat-9 > .diary_date')[0], '::before').getPropertyValue('background-color');
-console.log(property);
-var color = 'rgba(12,12,12)';
-property = color;
+// var property = window.getComputedStyle($('.cat-9 > .diary_date')[0], '::before').getPropertyValue('background-color');
+// console.log(property);
+// var color = 'rgba(12,12,12)';
+// property = color;
 
 // console.log(property);  // 疑似要素取得
 
@@ -14,9 +14,11 @@ $(".card-body").children('p').addClass('card-text');
 
 $(".group-1").children('.card').addClass('col-6');
 $(".group-3").children('.card').addClass('col-4');
-$('.diary_cat-9').css('background', 'blue');
-$('.diary_cat-10').css('background', 'green');
-$('.diary_cat-11').css('background', '#ED0909');
+$('.diary_cat-8').css('background', '#78d600');
+$('.diary_cat-9').css('background', '#45c1ff');
+$('.diary_cat-10').css('background', '#ff5ec1');
+$('.diary_cat-11').css('background', '#ff8c21');
+$('.diary_cat-11').css('background', '#fed300');
 
 
 $(function(){
