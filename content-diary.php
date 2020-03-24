@@ -36,7 +36,7 @@ Template Name:Content-diary
                       }; ?>
 
         <div class="col-sm-6 diary-box">
-				<div class="card">
+				<!-- <div class="card"> -->
           <div class="row no-gutters">
             <div class="card-left col-sm-5">
 
@@ -89,7 +89,7 @@ Template Name:Content-diary
 
         <?php $pos_c++; ?>
                     
-    </div>
+    <!-- </div> -->
     </div>
 
 <?php endwhile; ?>

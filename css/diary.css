@@ -142,6 +142,7 @@ p {
   display: -ms-flexbox;
   display: flex;
   max-height: 48px;
+  overflow: hidden;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -300,6 +301,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   max-height: 48px;
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -374,6 +376,7 @@ p {
   min-width: 27px;
   font-size: 0.8rem;
   min-height: 57px;
+  overflow: hidden;
   padding-left: 1.2rem;
 }
 

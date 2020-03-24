@@ -151,6 +151,7 @@ p{
     	font-style:italic;
    		display:flex;
     	max-height:48px;
+    	overflow: hidden;
 		align-items:flex-start;
 		margin-left:1%;
 		
@@ -303,6 +304,7 @@ p{
     	font-weight:550;
     	font-style:italic;
    		display:flex;
+   		overflow: hidden;
     	max-height:48px;
 		align-items:flex-start;
 		font-size:1rem;
@@ -369,6 +371,7 @@ p{
 		min-width:27px;
 		font-size:0.8rem;
 		min-height:57px;
+		overflow: hidden;
 		padding-left:1.2rem;
 	}
 
