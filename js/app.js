@@ -40,16 +40,79 @@
   //indexTOPのマップの高さを取得するためのコード
   //マップペースの高さをとって,about_containerのマージンにする
 
-  $(function(){
+  function get_map_height(){
+
+    $(document).ready(function(){
       var biggestHeight = "0";
       $(".map_base *").each(function(){
           if ($(this).height() > biggestHeight ) {
               biggestHeight = $(this).height()
-              console.log('lkjhgj');
           }
       });
       $(".main-contant").css( 'margin-top' , biggestHeight );
-  })
+      });
+  }
+
+$(window).resize( get_map_height );
+
+
+  
+
+        var h = '<div class="menu_under">' 
+      +'<div class="title-box">' 
+      + '<div  class="flex title">' 
+      + '<h2 style="font-size:1.5rem;color:black;" class="contents_subtitle subtitle">'
+      + 'Naturepark contents list'
+      + '</h2>'
+      + '<p style="font-size:5px;">'
+      + 'ネイチャーパークの施設一覧'
+      + '</p>'
+      + '</div>'
+      + '</div>'
+      + '<ul class="content-list">'
+      + '<li>神割キャンプ場'
+      + '</li>'
+      + '<li>'
+      + 'たみ子の海パック'
+      + '</li>'
+      + '<li>'
+      + '志津川自然の家'
+      + '</li>'
+      + '<li>'
+      + '波谷の森山学校'
+      + '</li>'
+      + '<li>'
+      + '南三陸町ネイチャーセンター'
+      + '</li>'
+      + '<li>'
+      + '漁業体験'
+      + '</li>'
+      + '<li>'
+      + '南三陸・海のビジターセンター'
+      + '</li>'
+      + '<li>'
+      + 'おきなくらExperience Explorer Leaders'
+      + '</li>'
+      + '</ul>'
+      + '</div>';
+      console.log(h);
+
+  console.log('hogehoge');
+  document.getElementById('nav-content').insertAdjacentHTML("beforeend",h);
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
 
   // var property = window.getComputedStyle($('.card-title')[0], '::before').getPropertyValue('background-color');
   // var sheets = document.styleSheets,

@@ -373,7 +373,7 @@ area {
 
 @media screen and (max-width: 834px){
    .map_container img {
-    width:80vw;
+    width:90vw;
   } 
 }
 //ipad環境のブレイクポイント 
@@ -394,10 +394,20 @@ area {
     margin: auto;
   }
 
-    .map_base > img{
-    // width:350px;
+    .map {
+    margin-bottom:5%;
   }
+    .diary_subtitle{
+      font-size:1.5rem; 
+      margin-bottom:0;
+      +p {
+        display:none;
+        margin-bottom:0;
+      }
+      
 
+
+}
 }
 
 

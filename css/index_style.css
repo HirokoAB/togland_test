@@ -366,7 +366,7 @@ area {
 
 @media screen and (max-width: 834px) {
   .map_container img {
-    width: 80vw;
+    width: 90vw;
   }
 }
 
@@ -381,6 +381,17 @@ area {
 @media screen and (max-width: 480px) {
   .map_container {
     margin: auto;
+  }
+  .map {
+    margin-bottom: 5%;
+  }
+  .diary_subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  .diary_subtitle + p {
+    display: none;
+    margin-bottom: 0;
   }
 }
 
