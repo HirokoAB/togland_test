@@ -1,5 +1,8 @@
 $border:solid 0.3px #cccccc;
-
+body {
+  font-family: 'Noto Sans Japanese',"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #ffffff;
+}
 
 
 a{ 
@@ -36,12 +39,20 @@ a:hover
 
 
 header{
-
+		
+	&::before{
+	  content: '';
+	  display: block;
+	  height: 10px;
+	  width: 100vw;
+	  background: black;
+		  
 	a,p,li{
 	
 	color:#333333;
 		
 	}
+}
 	
 	
 	.header_container{
@@ -50,13 +61,6 @@ header{
 		margin:auto;
 		padding-bottom:0.6%;
 		
-		
-			&::before{
-		  content: '';
-		  display: block;
-		  height: 10px;
-		  width: 100vw;
-		  background: black;
 		}
 
 				&::after{
@@ -114,28 +118,55 @@ header{
 			
 		
 }
-}
+
 
 
 @media screen and (max-width:769px) {
 	header{
+				&::before{
+				display:none;
+				}
+					&::after{
+			display:none;
+		}
+
 		.main_sub_title{
 		font-size:0.6rem;
+
 
 	}
 	#menu-global_menu{
 		font-size:0.5rem;
 	}
+
 	
 }
+	.main_container{
+			margin-top:55px;
+		}
 }
 
 
 // mobileの記述
 
 .mobile_header_container{
-	position:relative;
-	height:57px;
+	position:fixed;
+	top:0px;
+	box-sizing:border-box;
+	z-index:90;
+	background-color:#ffffff;
+	height:50px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.3);
+  	transition: .3s;
+  	margin-bottom:5%;
+  	&::before{
+	  content: '';
+	  display: block;
+	  height: 2px;
+	  width: 100vw;
+	  background: black;
+  		
+  	}
 	.header_image{
 
 		background-image:url('../img/tg-np-logo.svg');
@@ -150,9 +181,23 @@ header{
     		height: 0;
     		margin: 0;
 	}
-
+//バンバーガーメニューの記述
 	#nav-drawer {
-  position: relative;
+  position: absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  top:12px;
+  left:8px;
+  &::after{
+  	content:'MENU';
+  	display:block;
+  	font-size:9px;
+  	margin-top:-1px;
+  	
+
+  	
+  }
 }
 
 /*チェックボックス等は非表示に*/
@@ -166,15 +211,16 @@ header{
   width: 30px;
   height: 22px;
   vertical-align: middle;
+  margin-left:2px;
+  margin-bottom:0.5px;
 }
 
 /*ハンバーガーアイコンをCSSだけで表現*/
 #nav-open span, #nav-open span:before, #nav-open span:after {
   position: absolute;
-  height: 3px;/*線の太さ*/
+  height: 2.5px;/*線の太さ*/
   width: 25px;/*長さ*/
-  border-radius: 3px;
-  background: #555;
+  background: black;
   display: block;
   content: '';
   cursor: pointer;
@@ -207,14 +253,67 @@ header{
   top: 0;
   left: 0;
   z-index: 9999;/*最前面に*/
-  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 330px;/*最大幅（調整してください）*/
+  width: 70%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width:300px;/*最大幅（調整してください）*/
   height: 100%;
   background: #fff;/*背景色*/
   transition: .3s ease-in-out;/*滑らかに表示*/
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);/*左に隠しておく*/
+  padding-left:3%;
+  padding-top:2%;
+  
+  a {
+  	margin-bottom:2px;
+  	&::after{
+  		content:'';
+  		display:block;
+  		width:100%;
+  		height:0.5px;
+  		background-color:#cccccc;
+
+  	}
+  }
+  .menu_under{
+	margin-top:30px;
+  }
+  .content-list{
+  	margin-top:30px;
+  }
+  .title-box{
+  	border:none;
+  }
+  .title{
+  	position:relative;
+  	h2{
+  		font-size:1.5rem;
+  		color:black; 
+  		position:absolute;
+  		top:-2px;
+  		&::after{
+  			content:'';
+  			display:block;
+  			width:100vw;
+  			overflow:hidden;
+  			height:1px;
+  			background:black;
+  			
+  		}
+  	}
+  	p{
+  		position:relative;
+  		bottom:-25px;
+  		margin-top:2%;
+  		font-size:0.3rem;
+  	}
+  	}
+
+
+  .contents_subtitle{
+  	visibility:visible
+  }
 }
+
 
 /*チェックが入ったらもろもろ表示*/
 #nav-input:checked ~ #nav-close {

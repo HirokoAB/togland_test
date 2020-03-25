@@ -146,7 +146,7 @@ p {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-left: 1%;
+  padding-left: 1%;
 }
 
 .diary-content .card-title a {
@@ -322,8 +322,6 @@ p {
   background: #cccccc;
   margin-bottom: 1%;
   margin-right: 5px;
-  -webkit-transform: skewX(-20deg);
-  transform: skewX(-20deg);
 }
 
 .diary-content-1 .group-1 .diary_cat-8 .card-title::before,
@@ -337,8 +335,6 @@ p {
   background: #78d600;
   margin-bottom: 1%;
   margin-right: 5px;
-  -webkit-transform: skewX(-15deg);
-  transform: skewX(-15deg);
 }
 
 .diary-content-1 .group-1 .diary_cat-9 .card-title::before,
@@ -389,4 +385,11 @@ p {
   bottom: 1%;
   right: 1%;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .link-to-archive p {
+    margin-bottom: 1px;
+    text-decoration: none;
+  }
 }

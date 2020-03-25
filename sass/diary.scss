@@ -153,7 +153,7 @@ p{
     	max-height:48px;
     	overflow: hidden;
 		align-items:flex-start;
-		margin-left:1%;
+		padding-left:1%;
 		
 		a{
 		color:white;	
@@ -319,7 +319,7 @@ p{
       background: #cccccc;
       margin-bottom: 1%;
       margin-right:5px;
-      transform:skewX(-20deg);
+      // transform:skewX(-20deg);
     }
 }
 .diary_cat-8{
@@ -332,7 +332,7 @@ p{
       background: $color-yama;
       margin-bottom: 1%;
       margin-right:5px;
-      transform:skewX(-15deg);
+      // transform:skewX(-15deg);
       
 			
 		}
@@ -387,6 +387,17 @@ p{
 }
 }
 }
+
+@media screen and (max-width: 480px) {
+  
+.link-to-archive{
+        p {
+          margin-bottom:1px;
+          text-decoration:none;
+      }
+    }
+}
+
 
 
 

@@ -37,6 +37,35 @@
 
 				<!-- 	<div class="row"> -->
 					<!-- <div class="col-lg-12"> -->
+				<!-- モバイルの時のみ表示する内容 -->
+<!-- 				<?php if(wp_is_mobile() ): ?>
+				<div class="title-box">	
+				<div  class="flex title">	
+				<h2 style="font-size:1.5rem;" class="contents_subtitle subtitle">NaturePark Content</h2>
+				<p style="font-size:5px;">ネイチャーパークの施設一覧</p>
+				</div>
+				</div>
+	
+				<ul class="content-list">
+					<li>神割キャンプ場</li>
+					<li>たみ子の海パック</li>
+					<li>志津川自然の家</li>
+					<li>波谷の森山学校</li>
+					<li>南三陸町ネイチャーセンター</li>
+					<li>漁業体験</li>
+					<li>南三陸・海のビジターセンター</li>
+					<li>おきなくらExperience Explorer Leaders</li>
+				</ul>
+
+
+
+
+				<?php else :?>
+
+
+
+
+				<?php endif ;?> -->
 
 				<section class="diary">
 					<div class="row">
@@ -198,14 +227,18 @@
 	</main>
 			
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>	
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.rwdImageMaps.min.js"></script>
 <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script> -->
 
 <script>
-        $(document).ready(function(e) {
-  $('img[usemap]').rwdImageMaps();
+$(document).ready(function(){
+    $(window).resize();
 });
+$('img[usemap]').rwdImageMaps();
+//         $(document).ready(function(e) {
+//   $('img[usemap]').rwdImageMaps();
+// });
 
 
 </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,15 +27,13 @@
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label id="nav-open" for="nav-input"><span></span></label>
       <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <?php wp_nav_menu( array(
-      								'container' => false,
+      <?php wp_nav_menu( array(	'container' => false,
+      							 'menu_id' => 'nav-content'
       								) ); ?>
+			</ul>
       
  </div>
-			
-
-			
-		</div>
+</div>
 
 
 
@@ -48,9 +46,9 @@
 	<div class="header_container">
 		<div class="">	
 		<div class="header-right">
-			<?php 
+			<!-- <?php 
 			$date = new DateTime('now');
-			echo $date->format('Y年m月d日'); ?>
+			echo $date->format('Y年m月d日'); ?> -->
 		</div>	
 		 <h3 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h3>			
 	    <div class="main_title"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tg-np-logo.svg" usemap="" alt="" /></div>
