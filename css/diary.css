@@ -388,6 +388,9 @@ p {
 }
 
 @media screen and (max-width: 480px) {
+  .diary-content #wrapper > div::before {
+    padding-top: 50%;
+  }
   .link-to-archive p {
     margin-bottom: 1px;
     text-decoration: none;

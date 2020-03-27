@@ -49,6 +49,10 @@ area {
   text-align: left !important;
 }
 
+.np-container {
+  margin-top: 60px;
+}
+
 .map_wrappar {
   width: 100vw;
   height: auto;

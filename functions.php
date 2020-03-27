@@ -45,8 +45,15 @@ function myscripts(){
     		wp_enqueue_script( 'owl_front.app.js', get_template_directory_uri() . '/lib/assets/js/owl_front.app.js',array(),
     		false,
     		true);
-	}
-};
+    		
+	// }elseif(is_page( 277 )){
+	// 		// wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
+	// 		wp_enqueue_script( 'fisherman.js',get_template_directory_uri() . '/js/fisherman.js',
+	// 		array(),
+ //    		false,
+ //    		true
+ //   			 );
+}};
 add_action( 'wp_enqueue_scripts' , 'myscripts' );
 
 
@@ -79,8 +86,9 @@ function mystyle(){
 	}elseif(is_singular('diary')){
 			wp_enqueue_style( 'single-diary.css',get_template_directory_uri() . '/css/single-diary.css' );
 
+	}elseif(is_post_type_archive('ryousi')){
+			wp_enqueue_style( 'fisherman.css',get_template_directory_uri() . '/css/fisherman.css' );
 	}
-
 	else{
 		var_dump('なんか違うみたいです!!');
 	}
@@ -113,7 +121,7 @@ function create_post_type() {
 
 
 //////////////////////////////////////////
-//////カスタム投稿タイプのUIに関する記述////////
+////////カスタム投稿タイプに関する記述//////////
 /////////////////////////////////////////
 
 
@@ -180,6 +188,54 @@ function create_pts_diary() {
 add_action( 'init', 'create_pts_diary');
 
 
+// 	function cptui_register_my_cpts_slider() {
+
+// 	/**
+// 	 * Post Type: スライダー画像の新規投稿.
+// 	 */
+
+// 	$labels = array(
+// 		"name" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
+// 		"singular_name" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
+// 		"menu_name" => __( "画像変更", "custom-post-type-ui" ),
+// 		"all_items" => __( "スライダー一覧", "custom-post-type-ui" ),
+// 		"add_new_item" => __( "スライダー新規追加", "custom-post-type-ui" ),
+// 		"new_item" => __( "新規スライダー", "custom-post-type-ui" ),
+// 		"view_item" => __( "一覧を表示", "custom-post-type-ui" ),
+// 		"search_items" => __( "スライダー投稿画像の検索", "custom-post-type-ui" ),
+// 		"not_found" => __( "画像の投稿はまだありません", "custom-post-type-ui" ),
+// 		"not_found_in_trash" => __( "ゴミ箱内には何もありません", "custom-post-type-ui" ),
+// 	);
+
+// 	$args = array(
+// 		"label" => __( "スライダー画像の新規投稿", "custom-post-type-ui" ),
+// 		"labels" => $labels,
+// 		"description" => "TOP画面のスライダー画像を変更するためのUI",
+// 		"public" => true,
+// 		"publicly_queryable" => true,
+// 		"show_ui" => true,
+// 		"delete_with_user" => false,
+// 		"show_in_rest" => true,
+// 		"rest_base" => "",
+// 		"rest_controller_class" => "WP_REST_Posts_Controller",
+// 		"has_archive" => true,
+// 		"show_in_menu" => true,
+// 		"show_in_nav_menus" => true,
+// 		"exclude_from_search" => false,
+// 		"capability_type" => "post",
+// 		"map_meta_cap" => true,
+// 		"hierarchical" => false,
+// 		"rewrite" => array( "slug" => "slider", "with_front" => true ),
+// 		"query_var" => true,
+// 		"supports" => array( "title", "revisions","thumbnail","editor" ),
+// 	);
+
+// 	register_post_type( "slider", $args );
+// }
+
+// add_action( 'init', 'cptui_register_my_cpts_slider' );
+
+
 
 
 
@@ -231,6 +287,15 @@ function resize_at_upload( $file ) {
 }
  
 add_action( 'wp_handle_upload', 'resize_at_upload' );
+
+
+
+//本文中の画像切り取りのためにクラスを付与///
+add_filter('get_image_tag_class', function($class){
+  return $class . ' to_wrap';
+});
+
+
 
 /////////////////タイトルに表示される文字数の設定//////////////////////////////////
 

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.fisherman_container *, .fisherman_container *::after, .fisherman_container *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fisherman_container .col-md-3 {
+  max-width: 22.87%;
+}
+
+.fisherman_container .photo_box .row .fisherman_img {
+  position: relative;
+  border: solid 1px #EAE8E8;
+  margin: 7.5px 7.5px 7.5px 7.5px;
+}
+
+.fisherman_container .photo_box .row .fisherman_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.fisherman_container .photo_box .row .fisherman_name {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
+  background-color: #ffffff;
+}
+
+.fisherman_container .photo_box .row .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* 絶対位置指定 */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  /* マスクを表示しない */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* マスクは半透明 */
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.fisherman_container .photo_box .row .caption {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 30px auto 0px auto;
+  text-align: center;
+  padding-top: 30%;
+  color: #fff;
+}
+
+.fisherman_container .photo_box .row .fisherman_img:hover .mask {
+  opacity: 1;
+}

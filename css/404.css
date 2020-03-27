@@ -86,3 +86,49 @@
     transform: translateX(-150px);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .non_container .row .non_box {
+    width: 80%;
+    margin: auto;
+  }
+  .non_container .row .non_box p:first-child {
+    margin-bottom: 10px;
+  }
+  .non_container .row .non_box .non-message:first-child {
+    margin-bottom: 10px;
+  }
+  .non_container .row .non_box .non-message p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .non_container .row .tako {
+    top: 70px;
+    width: 10vw;
+  }
+  .non_container .row .kokugan {
+    width: 15vw;
+    left: 30px;
+    bottom: 40px;
+  }
+  @-webkit-keyframes tako {
+    0% {
+      -webkit-transform: translateX(200px);
+      transform: translateX(200px);
+    }
+    100% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+    }
+  }
+  @keyframes tako {
+    0% {
+      -webkit-transform: translateX(200px);
+      transform: translateX(200px);
+    }
+    100% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+    }
+  }
+}
