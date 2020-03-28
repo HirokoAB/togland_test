@@ -30,10 +30,12 @@
       <?php wp_nav_menu( array(	'container' => false,
       							 'menu_id' => 'nav-content'
       								) ); ?>
-			</ul>
       
  </div>
-</div>
+			
+
+			
+		</div>
 
 
 

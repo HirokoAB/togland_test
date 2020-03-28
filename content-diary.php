@@ -35,7 +35,7 @@ Template Name:Content-diary
                   echo '</div>'."\n"."\n"."<div class=".'"'."group-$pos_c row".'"'." >";
                       }; ?>
 
-        <div class="col-sm-6 diary-box">
+        <div class="col-sm-6 col-6 diary-box">
 				<!-- <div class="card"> -->
           <div class="row no-gutters">
             <div class="card-left col-sm-5">

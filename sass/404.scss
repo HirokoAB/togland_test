@@ -86,7 +86,54 @@
   transform: translateX(-150px);
   }
 }
+
+@media screen and (max-width: 480px) {
+	.non_container{
+		.row{
+
+			.non_box{
+		width:80%;
+		margin:auto;
+		p:first-child{
+			margin-bottom:10px;
+		}
+			.non-message{
+				&:first-child{
+					margin-bottom:10px;
+				}
+			p{
+				font-size:2rem;
+				text-align: center;
+			}
+		}
+	}
+		
+		.tako{
+			top:70px;
+			width:10vw;
+		}
+		.kokugan{
+			width:15vw;
+			left:30px;
+			bottom:40px;	
+		}
+				@keyframes tako {
+	  0% {
+	  transform: translateX(200px);
+
+	  		}
+
+	  100% {
+	  transform: translateX(-50px);
+	  		}		
+								}
+			}
 	
+}
+}  
+
+
+
 
 	
 

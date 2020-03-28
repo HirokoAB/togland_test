@@ -53,6 +53,9 @@
       });
   }
 
+
+
+
 $(window).resize( get_map_height );
 
 
@@ -64,7 +67,7 @@ $(window).resize( get_map_height );
       + '<h2 style="font-size:1.5rem;color:black;" class="contents_subtitle subtitle">'
       + 'Naturepark contents list'
       + '</h2>'
-      + '<p style="font-size:5px;">'
+      + '<p>'
       + 'ネイチャーパークの施設一覧'
       + '</p>'
       + '</div>'

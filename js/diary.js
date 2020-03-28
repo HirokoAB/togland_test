@@ -44,47 +44,10 @@ $(function(){
 
 });
 
-// $(window).on('load', function(){
-//   //ページ全体が読み込まれた時の処理
-
-//   var hieght = "0";
-//       $(".diary-thumbnail").each(function(){
-//         var height = $(".diary-thumbnail").width()*0.61;
-//         console.log( height );
-//         $(".diary-thumbnail").css( 'height' , height );
-
-//       });
-//     });
-
-  // $(function(){
-  //     var height = "";
-  //     $(".diary-thumbnail *").each(function(){
-  //         if ($(this).height() > height ) {
-  //             height = $(this).width()*0.5;
-  //             console.log('lkjhgj');
-  //         }
-  //     });
-  //     $(".diary-thumbnail").css( 'height' , height );
-  // })
 
 
+var test = $('.to_wrap');
+$(test).wrapAll('<div id="wrapper"><div></div></div>');
 
-// var property = window.getComputedStyle($('.card-title')[0], '::before').getPropertyValue('background-color');
-//   var sheets = document.styleSheets,
-//     sheet = sheets[10];
-//     console.log(property);
-//     console.log(sheets);
-//     console.log(sheet);
+console.log(test);
 
-
-//   $(function() {
-
-//     if($(".card-title").parent().hasClass('diary_cat-9')) {   // Webkit
-//       sheet.insertRule('.diary-content-1 .card-title::before{ background:yellow }', sheet.cssRules.length);
-//     }
-//     else if (sheet.addRule) {  // IE
-//       sheet.addRule('.diary-content-1 .card-title::before{ background:yellow }', -1);
-//     }
-
-//     console.log(sheet.cssRules.length);
-//   });
