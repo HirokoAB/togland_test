@@ -1,4 +1,13 @@
 @charset "UTF-8";
+.diary {
+  margin-top: 20px;
+}
+
+.diary .row .col-lg-10 {
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
 .row {
   max-width: 1100px;
 }
@@ -134,10 +143,7 @@ p {
 }
 
 .diary-content .card-title {
-  position: absolute;
-  top: -38px;
   font-weight: 700;
-  font-style: italic;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +156,7 @@ p {
 }
 
 .diary-content .card-title a {
-  color: white;
+  color: #000;
 }
 
 .diary-content .card-title::before {
@@ -161,8 +167,6 @@ p {
   background: #cccccc;
   margin-bottom: 1%;
   margin-right: 5px;
-  -webkit-transform: skewX(-20deg);
-  transform: skewX(-20deg);
 }
 
 .diary-content .diary_cat-8 .card-title::before {
@@ -192,7 +196,7 @@ p {
 }
 
 .diary-content .card-text {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-height: 57px;
 }
 
@@ -381,18 +385,46 @@ p {
 .diary-content-1 .group-5 .diary-date,
 .diary-content-1 .group-7 .diary-date {
   position: absolute;
-  font-size: 0.1rem;
+  font-size: 0.7rem;
   bottom: 1%;
   right: 1%;
   margin-bottom: 0;
 }
 
 @media screen and (max-width: 480px) {
+  .diary .row .col-lg-10 {
+    background-color: #ffffff;
+    margin-top: 20px;
+  }
+  .diary .row .col-lg-10 .diary-container {
+    margin-top: 22px;
+  }
+  .diary-content {
+    margin-top: 30px;
+  }
   .diary-content #wrapper > div::before {
     padding-top: 50%;
   }
   .link-to-archive p {
     margin-bottom: 1px;
     text-decoration: none;
+    font-size: 9px;
+  }
+  .diary-content-1 {
+    padding-top: 16px;
+  }
+  .diary-content-1 .group-1 .card-text > :first-child,
+  .diary-content-1 .group-3 .card-text > :first-child,
+  .diary-content-1 .group-5 .card-text > :first-child,
+  .diary-content-1 .group-7 .card-text > :first-child {
+    display: none;
+    height: auto;
+  }
+  .diary-content-1 .group-1 .card-text > :last-child,
+  .diary-content-1 .group-3 .card-text > :last-child,
+  .diary-content-1 .group-5 .card-text > :last-child,
+  .diary-content-1 .group-7 .card-text > :last-child {
+    right: 0;
+    bottom: auto;
   }
 }

@@ -85,6 +85,12 @@
   font-size: 1rem;
 }
 
+.archive-diary-container .article-container .card-text::after {
+  content: url("../img/text_aft_1.svg");
+  height: 10px;
+  width: 30px;
+}
+
 .archive-diary-container .article-container .card-text p {
   margin-bottom: 2em;
   line-height: 1.7;

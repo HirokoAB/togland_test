@@ -66,7 +66,7 @@ Template Name: Archive-featured
           <?php the_excerpt('...'); ?>
         </div>
 
-        <p class="diary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p>
+        <!-- <p class="diary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p> -->
 
       </div>
   </div>

@@ -32,4 +32,3 @@ include('loop-fisherman.php');
 </div>
 
 <?php  get_footer();?>
-

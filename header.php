@@ -19,22 +19,24 @@
 		<?php if(wp_is_mobile() ): ?>
 
 		<div class="mobile_header_container">
+		
 			<h2 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h2>
 			<div class="header_image"><h1 class="mobile_main_title">
 				TOGURA NATURE PARK TIMES
 			</h1></div>
-<div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-      <label id="nav-open" for="nav-input"><span></span></label>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <?php wp_nav_menu( array(	'container' => false,
-      							 'menu_id' => 'nav-content'
-      								) ); ?>
-      
- </div>
-			
+			<div id="nav-drawer">
+			      <input id="nav-input" type="checkbox" class="nav-unshown">
+			      <label id="nav-open" for="nav-input"><span></span></label>
+			      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+			      <?php wp_nav_menu( array(	'container' => false,
+			      							 'menu_id' => 'nav-content'
+			      								) ); ?>
+			      
+			 </div>
+			 <div class="header-right">
+			 	<img class="img-link-to-about"src="<?php echo get_template_directory_uri(); ?>/img/ask.svg" alt="ネイチャーパークとは何か？を説明するページへの遷移アイコン">
+			 </div>
 
-			
 		</div>
 
 

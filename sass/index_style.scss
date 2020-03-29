@@ -1,5 +1,7 @@
 html {
   overflow: auto;
+  background-color: #F7F7F7;
+
 }
 
 body {
@@ -38,14 +40,13 @@ area {
 
 .subtitle{
   color:black;
-  font-family: escrow-compressed,serif;
-  font-weight: 600;
+  font-weight: 550;
   font-style: normal;
   text-align:left !important;
 
 }
 .np-container{
-  margin-top:60px;
+  margin-top:50px;
 }
 
 .map_wrappar {
@@ -58,12 +59,6 @@ area {
   left:0;
   right:0;
   margin:auto;
-    // ::before {
-    // content:''; 
-    // display:block; 
-    // padding-top:100%;
-    // }
-  
 }
 
 .map_container {
@@ -393,15 +388,20 @@ area {
 }
 //モバイル端末のレスポンシブ
 @media screen and (max-width: 480px) {
+  body {
+  background-color: #F7F7F7;
+
+}
   .map_container {
     margin: auto;
   }
 
+
     .map {
     margin-bottom:5%;
   }
-    .diary_subtitle{
-      font-size:1.5rem; 
+    .subtitle{
+      font-size:1rem; 
       margin-bottom:0;
       +p {
         display:none;
@@ -438,6 +438,7 @@ area {
 
 .aside{
       border-left:solid 0.3px #cccccc;
+      margin-top:20px;
   }
 .page_container{
   .page-title-box{
