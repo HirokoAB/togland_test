@@ -37,6 +37,10 @@ a:hover {
   border-top: solid 3px black;
 }
 
+header {
+  background-color: #ffffff;
+}
+
 header::before {
   content: '';
   display: block;

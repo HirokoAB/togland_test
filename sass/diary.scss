@@ -12,7 +12,7 @@ $color-kikaku:#fed300;
 .diary{
 	margin-top:20px;
 	.row{
-		.col-lg-10{
+		.col-lg-9{
 			background-color:#ffffff;
 			margin-top:20px;
 }
@@ -391,7 +391,7 @@ p{
 
 @media screen and (max-width: 480px) {
 	.diary .row{
-		.col-lg-10 {
+		.col-lg-9 {
     		background-color: #ffffff;
     		margin-top: 20px;
     		.diary-container{

@@ -1,0 +1,17 @@
+.contact_container .contact-title-box {
+  margin: 50px auto;
+  border-bottom: none;
+  text-align: center;
+}
+
+.contact_container .contact-title-box .page_subtitle {
+  border-bottom: solid 4px black;
+}
+
+.contact_container .contact-title-box .title h2 {
+  font-size: 2rem;
+}
+
+.contact_container .contact-title-box .title h2 p {
+  font-size: 1rem;
+}

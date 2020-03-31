@@ -1,0 +1,176 @@
+
+body{
+
+	background-color:#F1F9FB;
+	
+}
+.np-container{
+	margin-top:-2px
+}
+.page_about_container{
+
+	background-color:#ffffff;
+	padding-top:79px;
+	padding-bottom:90px;
+
+	h2{
+		font-weight:600;
+	}
+	p{
+	color:#545B63;
+	margin:62px auto 62px auto;
+	font-size:1.25rem;
+	line-height:1.7;
+	text-align:justify;
+	}
+
+	.about_main_title{
+		margin:auto;
+		margin-bottom:0px;
+	}
+	.title-box{
+	justify-content:space-between;
+	align-items:flex-end;
+	border-bottom:solid 5px black;
+	}
+
+	.about_upper{
+		>:first-child{
+			margin-top:22px;
+		}
+	}
+	p{
+		margin:40px auto 40px auto;
+	}
+
+	.about_middle,
+	.about_row{
+		margin-top:100px;
+		.title{
+			border:none;
+				}
+		.about_subtitle{
+			margin-top:-20px;
+			&::after{
+				content:'';
+				display:block;
+				width:53.5%;
+				height:0.3rem;
+				background-color:black;
+			}
+		}
+		
+			p{
+				margin-left:0;
+				margin-top:20px;
+			}
+		}
+		
+		.bk-color{
+			background-color:#FFF6DF;
+		}
+
+
+	.about_row{
+		.about_subtitle{
+			text-align:right;
+			&::after{
+				position:absolute;
+				right:0;
+				width:70%;
+			}
+		}
+		p{
+			margin-right:0;
+			}		
+		.bk-color{
+		background-color:#EAF0D5;
+			}
+		}
+
+
+	.link-to-home{
+		margin:auto;
+		font-weight:600;
+		margin-top:100px;
+		
+		
+		a{
+			:hover{
+			color: #0274b6;
+				}	
+			}
+
+		p{
+			text-align:center;
+			color:black;
+			font-size:2rem;
+			:hover{
+			color: #0274b6;
+				}
+			}	
+		}
+
+
+
+	
+
+
+
+
+  .owl-carousel {
+  	padding:0;
+  	.owl-item {
+  		  	margin-right:0;
+  		  	}
+  		img {
+  			width:100%;
+  			object-fit:cover;
+				}
+	.owl-dots{
+			display:none;
+			}			
+
+		}
+
+
+}
+
+@media screen and (max-width: 480px) {
+			body{
+			  background-color: #F7F7F7;
+		}
+	.page_about_container{
+		
+		:not(.about_upper > img ){
+			z-index:1;
+		}
+		.about_upper p,
+		.about_middle{
+			background-color: #ffffff;
+		}
+
+		.title-box{
+			border-bottom:solid 1px black;
+		}
+		.about_main_title{
+			margin:0;
+			}
+
+		p{
+			font-size:16px;
+		}
+		h2{
+			font-size:1.25rem;
+			font-weight:500;
+		}
+
+		.about_middle .about_subtitle,
+		.about_row .about_subtitle{
+			&::after{
+				height:1px;
+				width:100%;
+			}
+		}
+	}
+}

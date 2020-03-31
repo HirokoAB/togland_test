@@ -7,6 +7,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.typekit.net/teh8fnv.css">
+	<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 	
 	
 <?php wp_head(); ?>
@@ -34,7 +35,7 @@
 			      
 			 </div>
 			 <div class="header-right">
-			 	<img class="img-link-to-about"src="<?php echo get_template_directory_uri(); ?>/img/ask.svg" alt="ネイチャーパークとは何か？を説明するページへの遷移アイコン">
+			 	<a href="<?php echo get_permalink( ABOUT );?>"><img class="img-link-to-about"src="<?php echo get_template_directory_uri(); ?>/img/ask.svg" alt="ネイチャーパークとは何か？を説明するページへの遷移アイコン"></a>
 			 </div>
 
 		</div>

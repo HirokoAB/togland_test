@@ -50,7 +50,7 @@ area {
 }
 
 .np-container {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .map_wrappar {
@@ -400,24 +400,6 @@ area {
     display: none;
     margin-bottom: 0;
   }
-}
-
-.about_container .about_upper {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.about_container .guide_to_np {
-  text-align: end;
-}
-
-.about_container .owl-carousel .owl-item img {
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .aside {

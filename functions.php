@@ -16,7 +16,7 @@ function myscripts(){
     		false,
     		true );
 
-	if(is_home() || is_post_type_archive( 'outdoor' )){
+	if(is_home() || is_post_type_archive( 'outdoor')){
 			wp_enqueue_script( 'jquery-1.10.2.min.js', get_template_directory_uri() . '/lib/yycountdown/js/jquery-1.10.2.min.js',array(),
     		false,
     		true);
@@ -38,11 +38,20 @@ function myscripts(){
     		false,
     		true
    			 );
-	}elseif(is_front_page()){
+	}elseif(is_page('228')){
+
 			wp_enqueue_script( 'owl.carousel.js', get_template_directory_uri() . '/lib/assets/js/owl.carousel.js',array(),
     		false,
     		true);
-    		wp_enqueue_script( 'owl_front.app.js', get_template_directory_uri() . '/lib/assets/js/owl_front.app.js',array(),
+    		wp_enqueue_script( 'about.js', get_template_directory_uri() . '/js/about.js',array(),
+    		false,
+    		true);
+    }elseif(is_page('399')){
+
+			wp_enqueue_script( 'jq', "https://code.jquery.com/jquery-1.12.4.min.js",array(),
+    		false,
+    		true);
+    		wp_enqueue_script( 'lightbox.js', "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js",array(),
     		false,
     		true);
     		
@@ -55,6 +64,7 @@ function myscripts(){
  //   			 );
 }};
 add_action( 'wp_enqueue_scripts' , 'myscripts' );
+
 
 
 // CSSファイルのエンキュー///
@@ -88,8 +98,18 @@ function mystyle(){
 
 	}elseif(is_post_type_archive('ryousi')){
 			wp_enqueue_style( 'fisherman.css',get_template_directory_uri() . '/css/fisherman.css' );
-	}
-	else{
+	}elseif(is_page('228')){
+			wp_enqueue_style( 'about.css',get_template_directory_uri() . '/css/about.css' );
+			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
+			wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
+			wp_enqueue_style( 'animate.css', get_template_directory_uri() . '/css/animate.css' );
+
+	}elseif(is_page('226')){
+			wp_enqueue_style( 'contact.css',get_template_directory_uri() . '/css/contact.css' );
+	}elseif(is_page('399')){
+			wp_enqueue_style( 'lightbox.css','https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css' );
+			
+	}else{
 		var_dump('なんか違うみたいです!!');
 	}
 };
@@ -477,6 +497,8 @@ define('BLOG', 14);
 define('HOME',84);
 define('issue',196);
 define('diary',174);
+define('ABOUT',228);
+
 
 
 

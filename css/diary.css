@@ -3,7 +3,7 @@
   margin-top: 20px;
 }
 
-.diary .row .col-lg-10 {
+.diary .row .col-lg-9 {
   background-color: #ffffff;
   margin-top: 20px;
 }
@@ -392,11 +392,11 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-  .diary .row .col-lg-10 {
+  .diary .row .col-lg-9 {
     background-color: #ffffff;
     margin-top: 20px;
   }
-  .diary .row .col-lg-10 .diary-container {
+  .diary .row .col-lg-9 .diary-container {
     margin-top: 22px;
   }
   .diary-content {
