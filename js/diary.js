@@ -46,8 +46,12 @@ $(function(){
 
 
 
-var test = $('.to_wrap');
-$(test).wrapAll('<div id="wrapper"><div></div></div>');
+var diary_img = $('.to_wrap');
 
-console.log(test);
+for( var img of diary_img ){
+  $(img).wrapAll('<div id="wrapper"><div></div></div>');
+}
+
+
+console.log(diary_img);
 

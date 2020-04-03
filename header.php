@@ -7,34 +7,43 @@
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.typekit.net/teh8fnv.css">
+	<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 	
 	
 <?php wp_head(); ?>
 	<title>遊びがまなびに変わる場所戸倉ネイチャーパークWEBサイト</title>
 </head>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v6.0&appId=2170113293291453&autoLogAppEvents=1"></script>
 
 <body>
+
+
 	<header>
 		
-		<?php if(wp_is_mobile() ): ?>
+		<?php if(wp_is_mobile() || is_page( '399' )): ?>
 
 		<div class="mobile_header_container">
-			<h2 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h2>
-			<div class="header_image"><h1 class="mobile_main_title">
-				TOGURA NATURE PARK TIMES
-			</h1></div>
-<div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-      <label id="nav-open" for="nav-input"><span></span></label>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <?php wp_nav_menu( array(	'container' => false,
-      							 'menu_id' => 'nav-content'
-      								) ); ?>
-      
- </div>
-			
 
-			
+		<div class="header_box">
+			<h2 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h2>
+			<div class="header_image">
+				<h1 class="mobile_main_title">TOGURA NATURE PARK TIMES</h1>
+			</div>
+			<div id="nav-drawer">
+			      <input id="nav-input" type="checkbox" class="nav-unshown">
+			      <label id="nav-open" for="nav-input"><span></span></label>
+			      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+			      <?php wp_nav_menu( array(	'container' => false,
+			      							 'menu_id' => 'nav-content'
+			      								) ); ?>
+			      
+			 </div>
+			 <div class="header-right">
+			 	<a href="<?php echo get_permalink( ABOUT );?>"><img class="img-link-to-about"src="<?php echo get_template_directory_uri(); ?>/img/ask.svg" alt="ネイチャーパークとは何か？を説明するページへの遷移アイコン"></a>
+			 </div>
+		</div>	 
+
 		</div>
 
 

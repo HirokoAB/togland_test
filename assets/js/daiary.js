@@ -14,7 +14,3 @@ property = color;
 
 
 console.log(property);  // 疑似要素取得
-
-
-
-git 

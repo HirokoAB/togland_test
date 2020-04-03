@@ -16,7 +16,7 @@ function myscripts(){
     		false,
     		true );
 
-	if(is_home() || is_post_type_archive( 'outdoor' )){
+	if(is_home() || is_post_type_archive( 'outdoor')){
 			wp_enqueue_script( 'jquery-1.10.2.min.js', get_template_directory_uri() . '/lib/yycountdown/js/jquery-1.10.2.min.js',array(),
     		false,
     		true);
@@ -31,18 +31,27 @@ function myscripts(){
     		true);
 
 
-	}elseif(is_page( 174 )){
+	}elseif(is_post_type_archive( 'diary' )){
 			// wp_enqueue_script( 'jquery.min.js',get_template_directory_uri	().'/lib/assets/js/jquery.min.js');
 			wp_enqueue_script( 'diary.js',get_template_directory_uri() . '/js/diary.js',
 			array(),
     		false,
     		true
    			 );
-	}elseif(is_front_page()){
+	}elseif(is_page('228')){
+
 			wp_enqueue_script( 'owl.carousel.js', get_template_directory_uri() . '/lib/assets/js/owl.carousel.js',array(),
     		false,
     		true);
-    		wp_enqueue_script( 'owl_front.app.js', get_template_directory_uri() . '/lib/assets/js/owl_front.app.js',array(),
+    		wp_enqueue_script( 'about.js', get_template_directory_uri() . '/js/about.js',array(),
+    		false,
+    		true);
+    }elseif(is_page('399')){
+
+			wp_enqueue_script( 'jq', "https://code.jquery.com/jquery-1.12.4.min.js",array(),
+    		false,
+    		true);
+    		wp_enqueue_script( 'lightbox.js', "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js",array(),
     		false,
     		true);
     		
@@ -57,6 +66,7 @@ function myscripts(){
 add_action( 'wp_enqueue_scripts' , 'myscripts' );
 
 
+
 // CSSファイルのエンキュー///
 
 
@@ -66,13 +76,14 @@ function mystyle(){
 			wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css' );
 			wp_enqueue_style( 'bootstrap.min.css', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css' );
 			wp_enqueue_style( 'header.css', get_template_directory_uri() . '/css/header.css' );
+			wp_enqueue_style( 'footer.css', get_template_directory_uri() . '/css/footer.css' );
 			wp_enqueue_style( '404.css', get_template_directory_uri() . '/css/404.css' );
 
 	if(is_home() || is_page( 14 ) || is_singular('outdoor')) {
 			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
 			wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
 			wp_enqueue_style( 'outdoor_style.css', get_template_directory_uri() . '/css/outdoor_style.css', array(), '1.0.3' );
-	}elseif(is_page('174')){
+	}elseif(is_post_type_archive('diary')){
 			wp_enqueue_style( 'archive-diary.css',get_template_directory_uri() . '/css/archive-diary.css' );
 	}elseif(is_page('192')){
 			wp_enqueue_style( 'content.css',get_template_directory_uri() . '/css/content.css' );
@@ -88,8 +99,20 @@ function mystyle(){
 
 	}elseif(is_post_type_archive('ryousi')){
 			wp_enqueue_style( 'fisherman.css',get_template_directory_uri() . '/css/fisherman.css' );
-	}
-	else{
+	}elseif(is_singular('ryousi')){
+			wp_enqueue_style( 'single_fisherman.css',get_template_directory_uri() . '/css/single_fisherman.css' );
+	}elseif(is_page('228')){
+			wp_enqueue_style( 'about.css',get_template_directory_uri() . '/css/about.css' );
+			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
+			wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/lib/assets/css/owl.theme.default.css' );
+			wp_enqueue_style( 'animate.css', get_template_directory_uri() . '/css/animate.css' );
+
+	}elseif(is_page('226')){
+			wp_enqueue_style( 'contact.css',get_template_directory_uri() . '/css/contact.css' );
+	}elseif(is_page('399')){
+			wp_enqueue_style( 'lightbox.css',get_template_directory_uri() . '/css/phenorogie.css'  );
+			wp_enqueue_style( 'phenorogie.css','https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css' );
+	}else{
 		var_dump('なんか違うみたいです!!');
 	}
 };
@@ -311,7 +334,7 @@ function my_the_title($title, $id) {
 /////////////////抜粋に表示される文字数の設定//////////////////////////////////
 
 function twpp_change_excerpt_length( $length ) {
-  $length = 50;
+  $length = 69;
 
   if ( is_category('diary') || is_tax('diary') ) {
     $length = 27;
@@ -477,6 +500,8 @@ define('BLOG', 14);
 define('HOME',84);
 define('issue',196);
 define('diary',174);
+define('ABOUT',228);
+
 
 
 
@@ -486,18 +511,6 @@ define('diary',174);
 
 
 ;?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

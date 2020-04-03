@@ -22,7 +22,8 @@ get_header(); ?>
 				
 		</div>
 	</div>
-</div>	
+</div>
+<p style="font-size:6px;">イラストレーション：Yumiko Hatakeyama</p>	
 
 </section>
 <?php 

@@ -60,3 +60,12 @@
 .fisherman_container .photo_box .row .fisherman_img:hover .mask {
   opacity: 1;
 }
+
+@media screen and (max-width: 480px) {
+  .fisherman_container {
+    margin-top: 70px;
+  }
+  .fisherman_container .photo_box .row .fisherman_img {
+    margin: 0;
+  }
+}

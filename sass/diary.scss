@@ -9,6 +9,17 @@ $color-yama:#78d600;
 $color-boshu:#ff8c21;
 $color-kikaku:#fed300;
 
+.diary{
+	margin-top:20px;
+	.row{
+		.col-lg-9{
+			background-color:#ffffff;
+			margin-top:20px;
+}
+		}
+	}
+
+
 .row{
 	max-width:1100px;
 }
@@ -71,25 +82,15 @@ p{
 		margin-bottom:2%;
 		padding-bottom:1rem;
 		border:none;
-		// border-bottom:0.5px solid #cccccc;	
+
 	
 	}
 
-	// .card-img-top {	
-	// border-radius:0px;
-	// width:100%;
-	// max-height:14rem;
-	// object-fit:cover;
-
-	// }
-		#wrapper>div{
+	#wrapper>div{
 		position:relative;
 		overflow:hidden;
 		background: linear-gradient(#000000);
-		// background-color: #000000;
-		
-		
-		
+
 		&::before{
 			content:'';
 			display:block;
@@ -145,10 +146,10 @@ p{
         padding: 2% 0;
     }
     .card-title{
-    	position:absolute;
-    	top:-38px;
+    	// position:absolute;
+    	// top:-38px;
     	font-weight:700;
-    	font-style:italic;
+    	// font-style:italic;
    		display:flex;
     	max-height:48px;
     	overflow: hidden;
@@ -156,7 +157,7 @@ p{
 		padding-left:1%;
 		
 		a{
-		color:white;	
+		color:#000;	
 		}
 		
 
@@ -168,7 +169,7 @@ p{
       background: #cccccc;
       margin-bottom: 1%;
       margin-right:5px;
-      transform:skewX(-20deg);
+      // transform:skewX(-20deg);
     }
 }
 
@@ -220,7 +221,7 @@ p{
 
 
 	.card-text{
-		font-size:0.8rem;
+		font-size:0.9rem;
 		max-height:57px;
 	
 		
@@ -377,7 +378,7 @@ p{
 
 	.diary-date{
 		position:absolute;
-   		font-size:0.1rem;
+   		font-size:0.7rem;
    		
     	bottom:1%;
     	right:1%;
@@ -389,7 +390,20 @@ p{
 }
 
 @media screen and (max-width: 480px) {
+	.diary .row{
+		.col-lg-9 {
+    		background-color: #ffffff;
+    		margin-top: 20px;
+    		.diary-container{
+				margin-top:22px;
+			}
+			}
+
+			
+
+	} 
 	.diary-content{
+		margin-top:30px;
 			#wrapper>div{
 				&::before{
 					padding-top:50%;	
@@ -401,9 +415,28 @@ p{
         p {
           margin-bottom:1px;
           text-decoration:none;
+          font-size:9px;
       }
     }
-
+.diary-content-1{
+	padding-top:16px;
+	.group-1,
+	.group-3,
+	.group-5,
+	.group-7{
+		.card-text{
+			>:first-child{
+			display:none;
+			height:auto;
+			}
+			>:last-child{
+				right:0;
+				bottom:auto;
+			}
+			
+		}
+	}
+}
 }
 
 

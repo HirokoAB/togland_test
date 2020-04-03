@@ -1,7 +1,6 @@
 @charset "UTF-8";
 body {
   font-family: 'Noto Sans Japanese',"游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  background-color: #ffffff;
 }
 
 a {
@@ -35,17 +34,14 @@ a:hover {
 
 .diary, .about-naturepark {
   border-bottom: solid 0.3px #cccccc;
+  border-top: solid 3px black;
 }
 
-header::before {
-  content: '';
-  display: block;
-  height: 10px;
-  width: 100vw;
-  background: black;
+header {
+  background-color: #ffffff;
 }
 
-header::before a, header::before p, header::before li {
+header a, header p, header li {
   color: #333333;
 }
 
@@ -148,8 +144,12 @@ header .menu-global_menu-container::before {
   header #menu-global_menu {
     font-size: 0.5rem;
   }
-  .main_container {
-    margin-top: 55px;
+}
+
+@media screen and (max-width: 480px) {
+  .diary, .about-naturepark {
+    border-bottom: none;
+    border-top: none;
   }
 }
 
@@ -354,4 +354,15 @@ header .menu-global_menu-container::before {
   /*中身を表示（右へスライド）*/
   -webkit-box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile_header_container .header-right {
+  position: absolute;
+  top: 3.6px;
+  right: 6px;
+  /* left: 10px;*/
+}
+
+.mobile_header_container .header-right .img-link-to-about {
+  height: 40px;
 }

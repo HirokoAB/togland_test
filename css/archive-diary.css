@@ -61,6 +61,8 @@
   right: 0;
   width: 100%;
   margin: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .archive-diary-container .article-container #wrapper > div .diary-thumbnail {
@@ -83,6 +85,12 @@
 .archive-diary-container .article-container .card-text {
   margin: 1% 0;
   font-size: 1rem;
+}
+
+.archive-diary-container .article-container .card-text::after {
+  content: url("../img/text_aft_1.svg");
+  height: 10px;
+  width: 30px;
 }
 
 .archive-diary-container .article-container .card-text p {
