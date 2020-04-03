@@ -83,12 +83,12 @@
 								<div class="row content_box">
 								<div class="page-title-box title-box">
 									<div  class="flex title">	
-											<h2 class="page_subtitle subtitle">戸倉地区	の四季歴</h2>
+											<h2 class="page_subtitle subtitle">戸倉地区の季節歴</h2>
 									</div>
 								</div>
 									
 									<ul class="content_list">
-										<li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/banner_nature.png" alt="">
+										<a href="<?php get_template_part('page','phenorogie'); ?>"><li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/banner_nature.png" alt=""></a>
 											<p class="card-text">地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます。</p>
 										</li>
 										</ul>

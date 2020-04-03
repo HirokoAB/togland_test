@@ -41,15 +41,7 @@ header {
   background-color: #ffffff;
 }
 
-header::before {
-  content: '';
-  display: block;
-  height: 10px;
-  width: 100vw;
-  background: black;
-}
-
-header::before a, header::before p, header::before li {
+header a, header p, header li {
   color: #333333;
 }
 

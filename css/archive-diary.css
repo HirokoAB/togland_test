@@ -61,6 +61,8 @@
   right: 0;
   width: 100%;
   margin: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .archive-diary-container .article-container #wrapper > div .diary-thumbnail {

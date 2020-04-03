@@ -1,0 +1,80 @@
+
+.footer_container{
+	border-top: solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
+	padding:20px;
+	margin-bottom:70px;
+	
+	li,p,a{
+		font-size:0.8125rem;
+	}
+
+	a{
+		display:block;
+	}
+
+
+	p,.font-origin{
+		font-weight:600;
+	}
+
+	.footer_upper{
+		 margin: 0 auto 20px auto;
+	}
+
+	h1{
+		visibility: hidden;
+		font-size:2rem;
+	}
+	.footer_upper{
+		display:flex;
+		align-items:center;
+		justify-content:center;
+			.footer_logo{
+		background-image:url('../img/tg-np-logo.svg');
+		background-repeat:no-repeat;
+		background-position:center;
+		height:100%;
+	}
+	.sns_logo{
+		display:flex;
+		>div{
+			margin-right:2px;
+		}
+	 img {
+		height:2rem;
+		}
+		
+	
+	.twitter_img{ 
+		height:2.2rem;
+	}
+
+	}
+		
+	}
+
+	
+	.footer_menu{
+		display:flex;
+		margin:auto;
+		}
+		
+		li{
+		list-style-type:none;
+		margin-bottom:3px;
+		menu{
+			display:block;
+		}
+	}
+	
+	.fb_share{
+		display:inline;
+	}
+
+	@media(min-width: 414px){
+  a[href^="tel:"]{
+    pointer-events: none;
+  }
+}
+}

@@ -76,6 +76,7 @@ function mystyle(){
 			wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css' );
 			wp_enqueue_style( 'bootstrap.min.css', get_template_directory_uri() . '/lib/bootstrap-4.3.1-dist/css/bootstrap.min.css' );
 			wp_enqueue_style( 'header.css', get_template_directory_uri() . '/css/header.css' );
+			wp_enqueue_style( 'footer.css', get_template_directory_uri() . '/css/footer.css' );
 			wp_enqueue_style( '404.css', get_template_directory_uri() . '/css/404.css' );
 
 	if(is_home() || is_page( 14 ) || is_singular('outdoor')) {
@@ -98,6 +99,8 @@ function mystyle(){
 
 	}elseif(is_post_type_archive('ryousi')){
 			wp_enqueue_style( 'fisherman.css',get_template_directory_uri() . '/css/fisherman.css' );
+	}elseif(is_singular('ryousi')){
+			wp_enqueue_style( 'single_fisherman.css',get_template_directory_uri() . '/css/single_fisherman.css' );
 	}elseif(is_page('228')){
 			wp_enqueue_style( 'about.css',get_template_directory_uri() . '/css/about.css' );
 			wp_enqueue_style( 'owl.carousel.css', get_template_directory_uri() . '/lib/assets/css/owl.carousel.css' );
@@ -107,8 +110,8 @@ function mystyle(){
 	}elseif(is_page('226')){
 			wp_enqueue_style( 'contact.css',get_template_directory_uri() . '/css/contact.css' );
 	}elseif(is_page('399')){
-			wp_enqueue_style( 'lightbox.css','https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css' );
-			
+			wp_enqueue_style( 'lightbox.css',get_template_directory_uri() . '/css/phenorogie.css'  );
+			wp_enqueue_style( 'phenorogie.css','https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css' );
 	}else{
 		var_dump('なんか違うみたいです!!');
 	}

@@ -46,18 +46,18 @@ header{
 
 	background-color:#ffffff;
 		
-	&::before{
-	  content: '';
-	  display: block;
-	  height: 10px;
-	  width: 100vw;
-	  background: black;
+	// &::before{
+	//   content: '';
+	//   display: block;
+	//   height: 10px;
+	//   width: 100vw;
+	//   background: black;
 		  
 	a,p,li{
 	
 	color:#333333;
 		
-	}
+	// }
 }
 	
 	

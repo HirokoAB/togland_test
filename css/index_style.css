@@ -386,6 +386,9 @@ area {
   body {
     background-color: #F7F7F7;
   }
+  .np-container {
+    margin-top: 90px;
+  }
   .map_container {
     margin: auto;
   }

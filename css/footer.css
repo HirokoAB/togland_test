@@ -1,0 +1,90 @@
+.footer_container {
+  border-top: solid 1px #cccccc;
+  border-bottom: solid 1px #cccccc;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+
+.footer_container li, .footer_container p, .footer_container a {
+  font-size: 0.8125rem;
+}
+
+.footer_container a {
+  display: block;
+}
+
+.footer_container p, .footer_container .font-origin {
+  font-weight: 600;
+}
+
+.footer_container .footer_upper {
+  margin: 0 auto 20px auto;
+}
+
+.footer_container h1 {
+  visibility: hidden;
+  font-size: 2rem;
+}
+
+.footer_container .footer_upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer_container .footer_upper .footer_logo {
+  background-image: url("../img/tg-np-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+.footer_container .footer_upper .sns_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer_container .footer_upper .sns_logo > div {
+  margin-right: 2px;
+}
+
+.footer_container .footer_upper .sns_logo img {
+  height: 2rem;
+}
+
+.footer_container .footer_upper .sns_logo .twitter_img {
+  height: 2.2rem;
+}
+
+.footer_container .footer_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.footer_container li {
+  list-style-type: none;
+  margin-bottom: 3px;
+}
+
+.footer_container li menu {
+  display: block;
+}
+
+.footer_container .fb_share {
+  display: inline;
+}
+
+@media (min-width: 414px) {
+  .footer_container a[href^="tel:"] {
+    pointer-events: none;
+  }
+}

@@ -14,11 +14,11 @@
           if($loop->have_posts() ): while($loop->have_posts()) : $loop->the_post();?>
 
    <li class="col-6 col-md-3 fisherman_img">
-              <a href="<?php the_permalink(); ?>"><img src="<?php echo $cfs->get( 'ryousi_img' ); ?>" alt=""/></a>
-                <p class="fisherman_name"><?php echo $cfs->get( 'ryousi_name' ) ?></p>
-                    <div class="mask">
+              <img src="<?php echo $cfs->get( 'ryousi_img' ); ?>" alt=""/>
+                <p class="fisherman_name"><?php echo $cfs->get( 'ryousi_name_e' ) ?></p></a>
+                    <a href="<?php the_permalink(); ?>"><div class="mask">
                       <p class="caption"><?php echo $cfs->get( 'ryousi_ship' ) ?></p>
-                    </div>
+                    </div></a>
             </li>
 
              <?php endwhile; ?>
