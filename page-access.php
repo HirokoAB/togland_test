@@ -97,20 +97,7 @@ Template Name: page-access
                 <iframe src="https://www.google.com/maps/d/embed?mid=13S1IgYvGb4SYbzbMfU2rWJl2v2UzwlZw" width="1100" height="660"></iframe>
 
 
-             <!--  <script src="https://maps.google.com/maps/api/js?key=AIzaSyDr4YjtfkcOSFE4mDrba-u5tB39KGbs-_4&language=ja"></script>
-
-                <div id="map"　style="height:40vh;"></div>
-
-                <script>
-                var MyLatLng = new google.maps.LatLng(38.644162, 141.474853);
-                var Options = {
-                 zoom: 15,      //地図の縮尺値
-                 center: MyLatLng,    //地図の中心座標
-                 mapTypeId: 'roadmap'   //地図の種類
-                };
-                var map = new google.maps.Map(document.getElementById('map'), Options);
-                </script>
-            </div>  -->
+<!--  -->
           </div>   
 
 
