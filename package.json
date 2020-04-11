@@ -1,0 +1,22 @@
+{
+  "name": "outdoorfes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "sass": "^1.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
