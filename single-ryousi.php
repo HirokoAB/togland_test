@@ -29,8 +29,8 @@ Template Name: sigle-fisherman
                                                                   ; } ?>
       <dt>漁師になったきっかけ</dt><dd class="fm_inspire"><?php echo $cfs->get( 'ryousi_inspire' ) ?></dd>
       <dt>漁師以外にやってみたい職業</dt><dd class="fm_job"><?php echo $cfs->get( 'ryousi_another_job' ) ?></dd>
-      <dt>最近で一番ヤバいと思ったこと</dt><dd class="fm_crisis"><?php echo $cfs->get( 'ryousi_crisis' ) ?></dd>
-      <dt>最近で一うれしかったこと</dt><dd class="fm_happy"><?php echo $cfs->get( 'ryousi_happy' ) ?></dd>
+      <dt>今までで1番ヤバいと思ったこと</dt><dd class="fm_crisis"><?php echo $cfs->get( 'ryousi_crisis' ) ?></dd>
+      <dt>今までで1番うれしかったこと</dt><dd class="fm_happy"><?php echo $cfs->get( 'ryousi_happy' ) ?></dd>
       <dt>最近ドキドキワクワクしたこと</dt><dd class="fm_excite"><?php echo $cfs->get( 'ryousi_excite' ) ?></dt>
       <dt>漁師になってよかったと思うこと</dt><dd class="fm_good"><?php echo $cfs->get( 'ryousi_good' ) ?></dd>
       <dt>漁師になって辛いと思うこと</dt><dd class="fm_hard"><?php echo $cfs->get( 'ryousi_hard' ) ?></dd>

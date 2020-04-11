@@ -18,6 +18,7 @@ a:hover
 
 .np-container{
 	margin:auto;
+	min-height: calc(100vh - 270px);//footerの高さが30px,main-contentのマージンを考えて50pxに//
 
 	.row{
 		padding:1px;
@@ -187,6 +188,9 @@ header{
 // mobileの記述
 
 .mobile_header_container{
+	.header_box{
+		
+
 	position:fixed;
 	top:0px;
 	box-sizing:border-box;
@@ -373,7 +377,7 @@ header{
 }
 
 }
-
+}
 
 
 

@@ -1,22 +1,13 @@
-setInterval("goFlash()",9000);
+setInterval("goFlash()",100);
 
 function goFlash() {
     $('.keybox').addClass('vertical_sec');
-    setTimeout("removeFlash()",500);
+    setTimeout("removeFlash()",100);
 }
 
 function removeFlash() {
     $('.keybox').removeClass('vertical_sec');
 }
-
-//吹き出しの記述　クエリですが//
-$(function () {
-  $('.key').hover(function() {
-    $(this).next('p').show();
-  }, function(){
-    $(this).next('p').hide();
-  });
-});
 
 
 

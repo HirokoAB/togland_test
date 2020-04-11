@@ -18,9 +18,9 @@ Template Name: Archive-ryousi
       <p>
         戸倉地区の豊穣の海を支える漁師の皆さんに、インタビューをしてみました。どんな漁業を営んでいますか？好きな食べ物は？など。クリックすると詳細画面に遷移します。是非チェックしてみてください。(順不同)
       </p>
-      <!-- <div class="page_nation">
-        <p class=""><b><a href="">フェノロジーカレンダーへ</a></b></p>
-      </div> -->
+      <div class="page_nation">
+        <p class=""><b><a href="<?php echo get_permalink( PHENOROGIE ); ?>">フェノロジーカレンダーへ</a></b></p>
+      </div>
     </div>
 
     <ul class="photo_box">
@@ -49,11 +49,10 @@ include('loop-fisherman.php');
         漁師名鑑
       </h2>
       <p>
-        戸倉地区の海の恵みを支える漁師の皆さん。豊穣の海は彼らに支えられています。
-        クリックすると詳細ページへ遷移します。
+        戸倉地区の豊穣の海を支える漁師の皆さんに、インタビューをしてみました。どんな漁業を営んでいますか？好きな食べ物は？など。クリックすると詳細画面に遷移します。是非チェックしてみてください。(順不同)
       </p>
       <div class="page_nation">
-        <p class=""><b><a href="">フェノロジーカレンダーへ</a></b></p>
+        <p class=""><b><a href="<?php echo get_permalink( PHENOROGIE ); ?>">フェノロジーカレンダーへ</a></b></p>
       </div>
     </div>
   </div>

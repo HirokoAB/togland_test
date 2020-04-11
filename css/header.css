@@ -15,6 +15,7 @@ a:hover {
 
 .np-container {
   margin: auto;
+  min-height: calc(100vh - 270px);
 }
 
 .np-container .row {
@@ -153,7 +154,7 @@ header .menu-global_menu-container::before {
   }
 }
 
-.mobile_header_container {
+.mobile_header_container .header_box {
   position: fixed;
   top: 0px;
   -webkit-box-sizing: border-box;
@@ -174,7 +175,7 @@ header .menu-global_menu-container::before {
   /*チェックが入ったらもろもろ表示*/
 }
 
-.mobile_header_container::before {
+.mobile_header_container .header_box::before {
   content: '';
   display: block;
   height: 2px;
@@ -182,20 +183,20 @@ header .menu-global_menu-container::before {
   background: black;
 }
 
-.mobile_header_container .header_image {
+.mobile_header_container .header_box .header_image {
   background-image: url("../img/tg-np-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
 }
 
-.mobile_header_container h1, .mobile_header_container h2 {
+.mobile_header_container .header_box h1, .mobile_header_container .header_box h2 {
   visibility: hidden;
   height: 0;
   margin: 0;
 }
 
-.mobile_header_container #nav-drawer {
+.mobile_header_container .header_box #nav-drawer {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,18 +212,18 @@ header .menu-global_menu-container::before {
   left: 8px;
 }
 
-.mobile_header_container #nav-drawer::after {
+.mobile_header_container .header_box #nav-drawer::after {
   content: 'MENU';
   display: block;
   font-size: 9px;
   margin-top: -1px;
 }
 
-.mobile_header_container .nav-unshown {
+.mobile_header_container .header_box .nav-unshown {
   display: none;
 }
 
-.mobile_header_container #nav-open {
+.mobile_header_container .header_box #nav-open {
   display: inline-block;
   width: 30px;
   height: 22px;
@@ -231,7 +232,7 @@ header .menu-global_menu-container::before {
   margin-bottom: 0.5px;
 }
 
-.mobile_header_container #nav-open span, .mobile_header_container #nav-open span:before, .mobile_header_container #nav-open span:after {
+.mobile_header_container .header_box #nav-open span, .mobile_header_container .header_box #nav-open span:before, .mobile_header_container .header_box #nav-open span:after {
   position: absolute;
   height: 2.5px;
   /*線の太さ*/
@@ -243,15 +244,15 @@ header .menu-global_menu-container::before {
   cursor: pointer;
 }
 
-.mobile_header_container #nav-open span:before {
+.mobile_header_container .header_box #nav-open span:before {
   bottom: -8px;
 }
 
-.mobile_header_container #nav-open span:after {
+.mobile_header_container .header_box #nav-open span:after {
   bottom: -16px;
 }
 
-.mobile_header_container #nav-close {
+.mobile_header_container .header_box #nav-close {
   display: none;
   /*はじめは隠しておく*/
   position: fixed;
@@ -267,7 +268,7 @@ header .menu-global_menu-container::before {
   transition: .3s ease-in-out;
 }
 
-.mobile_header_container #nav-content {
+.mobile_header_container .header_box #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
@@ -291,38 +292,38 @@ header .menu-global_menu-container::before {
   padding-top: 2%;
 }
 
-.mobile_header_container #nav-content li {
+.mobile_header_container .header_box #nav-content li {
   margin-bottom: 10px;
 }
 
-.mobile_header_container #nav-content li > a {
+.mobile_header_container .header_box #nav-content li > a {
   padding: 0px 6px 6px 0px;
 }
 
-.mobile_header_container #nav-content .menu_under {
+.mobile_header_container .header_box #nav-content .menu_under {
   margin-top: 30px;
 }
 
-.mobile_header_container #nav-content .content-list {
+.mobile_header_container .header_box #nav-content .content-list {
   margin-top: 30px;
 }
 
-.mobile_header_container #nav-content .title-box {
+.mobile_header_container .header_box #nav-content .title-box {
   border: none;
 }
 
-.mobile_header_container #nav-content .title {
+.mobile_header_container .header_box #nav-content .title {
   position: relative;
 }
 
-.mobile_header_container #nav-content .title h2 {
+.mobile_header_container .header_box #nav-content .title h2 {
   font-size: 1.5rem;
   color: black;
   position: absolute;
   top: -2px;
 }
 
-.mobile_header_container #nav-content .title h2::after {
+.mobile_header_container .header_box #nav-content .title h2::after {
   content: '';
   display: block;
   width: 100vw;
@@ -331,24 +332,24 @@ header .menu-global_menu-container::before {
   background: black;
 }
 
-.mobile_header_container #nav-content .title p {
+.mobile_header_container .header_box #nav-content .title p {
   position: relative;
   bottom: -25px;
   margin-top: 2%;
   font-size: 0.7rem;
 }
 
-.mobile_header_container #nav-content .contents_subtitle {
+.mobile_header_container .header_box #nav-content .contents_subtitle {
   visibility: visible;
 }
 
-.mobile_header_container #nav-input:checked ~ #nav-close {
+.mobile_header_container .header_box #nav-input:checked ~ #nav-close {
   display: block;
   /*カバーを表示*/
   opacity: .5;
 }
 
-.mobile_header_container #nav-input:checked ~ #nav-content {
+.mobile_header_container .header_box #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   /*中身を表示（右へスライド）*/
@@ -356,13 +357,13 @@ header .menu-global_menu-container::before {
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 
-.mobile_header_container .header-right {
+.mobile_header_container .header_box .header-right {
   position: absolute;
   top: 3.6px;
   right: 6px;
   /* left: 10px;*/
 }
 
-.mobile_header_container .header-right .img-link-to-about {
+.mobile_header_container .header_box .header-right .img-link-to-about {
   height: 40px;
 }

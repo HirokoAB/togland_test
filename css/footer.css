@@ -1,8 +1,10 @@
 .footer_container {
+  max-height: 300px;
   border-top: solid 1px #cccccc;
   border-bottom: solid 1px #cccccc;
   padding: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 5px;
+  margin-top: 70px;
 }
 
 .footer_container li, .footer_container p, .footer_container a {
@@ -41,25 +43,46 @@
 .footer_container .footer_upper .footer_logo {
   background-image: url("../img/tg-np-logo.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   height: 100%;
+  margin-left: -1%;
 }
 
-.footer_container .footer_upper .sns_logo {
+.footer_container .footer_upper .sns_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.footer_container .footer_upper .sns_logo > div {
+.footer_container .footer_upper .sns_box p {
+  margin-bottom: 0px;
+}
+
+.footer_container .footer_upper .sns_box > div {
   margin-right: 2px;
 }
 
-.footer_container .footer_upper .sns_logo img {
+.footer_container .footer_upper .sns_box .sns_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer_container .footer_upper .sns_box img {
   height: 2rem;
 }
 
-.footer_container .footer_upper .sns_logo .twitter_img {
+.footer_container .footer_upper .sns_box .twitter_img {
   height: 2.2rem;
 }
 

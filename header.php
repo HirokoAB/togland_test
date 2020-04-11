@@ -11,7 +11,7 @@
 	
 	
 <?php wp_head(); ?>
-	<title>遊びがまなびに変わる場所戸倉ネイチャーパークWEBサイト</title>
+	<title>あそびがまなびにかわる場所戸倉ネイチャーパークWEBサイト</title>
 </head>
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v6.0&appId=2170113293291453&autoLogAppEvents=1"></script>
@@ -27,9 +27,9 @@
 
 		<div class="header_box">
 			<h2 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h2>
-			<div class="header_image">
+			<a href="<?php echo home_url();?>"><div class="header_image">
 				<h1 class="mobile_main_title">TOGURA NATURE PARK TIMES</h1>
-			</div>
+			</div></a>
 			<div id="nav-drawer">
 			      <input id="nav-input" type="checkbox" class="nav-unshown">
 			      <label id="nav-open" for="nav-input"><span></span></label>
@@ -62,7 +62,7 @@
 			echo $date->format('Y年m月d日'); ?> -->
 		</div>	
 		 <h3 class="main_sub_title">住んでよし訪れてよしの戸倉地区WEB新聞</h3>			
-	    <div class="main_title"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tg-np-logo.svg" usemap="" alt="" /></div>
+	    <div class="main_title"><a href="<?php echo home_url();?>"><img class="" src="<?php echo get_template_directory_uri(); ?>/img/tg-np-logo.svg" usemap="" alt="" /></a></div>
 	    <?php wp_nav_menu( $args ); ?>
     </div>
     </div>

@@ -1,9 +1,11 @@
 
 .footer_container{
+	max-height:300px;
 	border-top: solid 1px #cccccc;
 	border-bottom:solid 1px #cccccc;
 	padding:20px;
-	margin-bottom:70px;
+	margin-bottom:5px;
+	margin-top:70px;
 	
 	li,p,a{
 		font-size:0.8125rem;
@@ -33,13 +35,23 @@
 			.footer_logo{
 		background-image:url('../img/tg-np-logo.svg');
 		background-repeat:no-repeat;
-		background-position:center;
+		background-position:left;
 		height:100%;
+		margin-left:-1%;
 	}
-	.sns_logo{
+	.sns_box{
 		display:flex;
+		flex-direction:column;
+		align-items:center;
+		p{
+			margin-bottom:0px;
+		}
 		>div{
 			margin-right:2px;
+		}
+		.sns_logo{
+			display:flex;
+			align-items:center;
 		}
 	 img {
 		height:2rem;
@@ -49,6 +61,7 @@
 	.twitter_img{ 
 		height:2.2rem;
 	}
+
 
 	}
 		
