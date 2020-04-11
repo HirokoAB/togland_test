@@ -38,7 +38,7 @@
           } ;?>
 
           <div>
-              <p class="diary_cat-<?php echo $id ?> diary_cat"><?php echo $name ; ?></p>
+              <a name="here"><p class="diary_cat-<?php echo $id ?> diary_cat"><?php echo $name ; ?></p></a>
           </div>
 
           <div class="lower">

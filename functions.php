@@ -112,6 +112,8 @@ function mystyle(){
 	}elseif(is_page('399')){
 			wp_enqueue_style( 'lightbox.css',get_template_directory_uri() . '/css/phenorogie.css'  );
 			wp_enqueue_style( 'phenorogie.css','https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css' );
+	}elseif(is_page('232')){
+			wp_enqueue_style( 'access.css',get_template_directory_uri() . '/css/access.css' );	
 	}else{
 		var_dump('なんか違うみたいです!!');
 	}
@@ -209,6 +211,22 @@ function create_pts_diary() {
 
 }
 add_action( 'init', 'create_pts_diary');
+
+function twpp_change_sort_order( $query ) {
+
+	if ( is_admin() ||  $query->is_main_query() ) {
+
+    return;
+  }
+  if ( $query->is_post_type_archive('ryousi') ) {
+
+
+  	 $query->set( 'order', 'ASC' );
+     $query->set( 'orderby', 'date' );
+
+  }
+}
+add_action( 'pre_get_posts', 'twpp_change_sort_order' );
 
 
 // 	function cptui_register_my_cpts_slider() {
@@ -500,6 +518,7 @@ define('BLOG', 14);
 define('HOME',84);
 define('issue',196);
 define('diary',174);
+define('ABOUT',228);
 define('ABOUT',228);
 
 

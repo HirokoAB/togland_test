@@ -1,0 +1,152 @@
+.page_access_container{
+	p{
+		font-size:1.25rem;
+		text-align:justify;
+	}
+	.access_subtitle{
+		margin-bottom:50px;
+	}
+	margin-top:70px;
+.main{
+	
+}
+
+
+	.title{
+			border:none;
+				}
+		.access_subtitle{
+			font-weight:600;
+			&::after{
+				content:'';
+				display:block;
+				width:100%;
+				height:0.3rem;
+				background-color:black;
+			}
+		}
+
+
+		.access_middle{
+			margin-top:125px;
+			.bd_u{
+			&::after{
+				content:'';
+				display:block;
+				width:100%;
+				height:1px;
+				background-color:#cccccc;
+				margin-top:57px;
+				margin-bottom:57px;
+			}	
+			}
+			
+			}
+
+			
+			.kocha_title{
+				&::after{
+					width:50%;
+				}
+			}
+
+			.access_kocha,
+			.card{
+				background-color:transparent;
+				text-align:center;
+				justify-content:center;
+				border:none;
+				
+				img{
+					object-fit:cover;
+					border-radius: 50%;
+					width:11.25rem;
+					height:11.2rem;
+					margin:auto;
+			}
+
+
+			.card-body{
+				padding:0;
+				margin-top:1rem;
+				.card-title{
+				border-bottom: solid 2px #cccccc;
+				font-size:1.2rem;
+				font-weight:600;
+				padding-bottom:3px;
+				margin-bottom:0px;
+				
+				}
+				a{
+					font-size:0.8rem;
+
+				}
+				
+		}
+	}
+
+		.car,
+		.public{
+			margin-top:40px;
+			.access_subtitle{
+				&::after{
+					width:24%;
+				}
+			}
+			img{
+				box-sizing:border-box;
+				border:solid 0.5px #cccccc;	
+				padding-top:0.2px;
+				padding-bottom:0.2px;
+			}
+		}	
+			.public{
+				.access_subtitle{
+				&::after{
+					width:39%;
+				}	
+		}
+		.ac_link{
+			margin-top:21px;
+			margin-bottom:2px;
+			&::after{
+					width:100%;
+					height:1px;
+					background-color:#cccccc;
+				}	
+			
+		}
+		.access_li{
+			justify-content:start;
+		}
+		.link-li{
+			display:flex;
+			justify-content:space-between;
+			font-size:1rem;
+		}
+
+	
+}
+.g_map{
+			margin-top:70px;
+			&::after{
+					width:100%;
+				}
+					
+		}
+		#map{
+				height:50vh;
+				}
+}
+
+		.link-to-home{
+			margin:70px auto;
+			font-weight:600;
+			font-size:1.5rem;	
+			
+			p{
+				text-align:center;
+
+			}
+		}
+

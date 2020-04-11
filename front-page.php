@@ -29,8 +29,8 @@
 							<area onFocus="this.blur();" shape="rect" coords="797,282,987,374" href="https://www.town.minamisanriku.miyagi.jp/index.cfm/8,0,39,390,html" alt="南三陸町ネイチャーセンターホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="528,428,726,522" href="http://kawatouminovisitorcenter.jp/umi/index.html" alt="海のビジターセンターホームページへ遷移" target="_blank" />
 							<area onFocus="this.blur();" shape="rect" coords="565,567,753,678" href="https://o-eels.org/" alt="おきなくらイールズホームページへ遷移" target="_blank" />
-							<area onFocus="this.blur();" shape="rect" coords="565,567,753,678" href="#" alt="漁業体験" target="__blank" />
-							<area onFocus="this.blur();" shape="rect" coords="278,577,429,674" href="#" alt="釣り体験" target="_blank" />
+							<area onFocus="this.blur();" shape="rect" coords="565,567,753,678" href="" alt="漁業体験" target="__blank" />
+							<area onFocus="this.blur();" shape="rect" coords="278,577,429,674" href="" alt="釣り体験" target="_blank" />
 							<area onFocus="this.blur();" shape="poly" coords="25,541,28,540,165,488,220,513,228,588,231,653,201,676,94,685,34,635,26,545,26,545" href="<?php echo get_permalink( HOME );?> "alt="" target="_blank"/>
 						</map>
 				</section>
@@ -98,7 +98,7 @@
 									</div>
 								</div>	
 								<ul class="content_list">	
-										<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/banner_ryousi.png" alt="">
+										<li class="card"><a href="http://localhost:8080/wordpress/ryousi"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/banner_ryousi.png" alt=""></a>
 											<p class="card-text">海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
 										</li>
 								</ul>
@@ -108,7 +108,7 @@
 									</div>
 								</div>	
 								<ul class="content_list">			
-										<li class="card"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/page_thumbnail.png" alt="">
+										<li class="card"><a href="<?php echo get_template_directory_uri(); ?>/img/togurakkomap.pdf" target="_blank"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/togurakko.png" alt=""></a>
 											<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
 										</li>
 								</ul>

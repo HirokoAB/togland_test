@@ -25,13 +25,13 @@ Template Name: page-Phenology
     <div class="photo_box col-md-6">
       
 
-      <a href="<?php echo get_template_directory_uri(); ?>/img/phenorogie_s.jpg" data-lightbox="test" data-title="戸倉地区の生活季節歴　1枚目"/>
+      <a href="<?php echo get_template_directory_uri(); ?>/img/pheno_1100.jpg" data-lightbox="test" data-title="戸倉地区の生活季節歴　1枚目"/>
       <img class=""src="<?php echo get_template_directory_uri(); ?>/img/phenorogie_s.jpg" alt="フェノロジーカレンダー2枚目">
       </a>
     </div>
   
     <div class="photo_box col-md-6">
-      <a href="<?php echo get_template_directory_uri(); ?>/img/phenorogie_1_s.jpg" data-lightbox="test" data-title="戸倉地区の生活季節歴　2枚目"/>
+      <a href="<?php echo get_template_directory_uri(); ?>/img/phenorogie_1_b.jpg" data-lightbox="test" data-title="戸倉地区の生活季節歴　2枚目"/>
       <img class=""src="<?php echo get_template_directory_uri(); ?>/img/phenorogie_1_s.jpg" alt="フェノロジーカレンダー">
       </a>
       
