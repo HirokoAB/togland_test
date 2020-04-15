@@ -123,6 +123,10 @@ area {
   padding-bottom: 1rem;
 }
 
+.np-container .aside .subtitle {
+  font-size: 1.25rem;
+}
+
 .diary-title_upper {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -131,6 +135,11 @@ area {
 
 .link-to-archive {
   font-size: 0.7rem;
+}
+
+.link-bottom {
+  position: absolute;
+  right: 0;
 }
 
 .shake {

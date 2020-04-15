@@ -5,10 +5,9 @@ Template Name: Archive
 
 <?php get_header(); ?>
 <!-- サブクエリに渡す配列を作成 -->
-  <!-- <?php $args =  array( 
-      'posts_per_page' =>,
-      'post_type' =>,
-  );?> -->
+<?php $args =  array( 
+      'posts_per_page' =>5,
+  );?>
 
 
 <!-- サブループを作成渡す配列は上記の内容 -->

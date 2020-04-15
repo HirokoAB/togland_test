@@ -2,10 +2,13 @@
 <footer>
 	<div class="footer_container  container">
 
-			<!-- <div class=""> -->
-			<div class="footer_upper row">
+			<div class="row"> 
+			<div class="footer_upper col-lg-8 col-md-10 justify-content-between">
 
-					<div class="footer_logo"><h1>TOGURA NATUREPARK TIMES</h1></div>
+
+
+					<div class="footer_logo"><a href="<?php echo home_url();?>"><h1>TOGURA NATUREPARK TIMES</h1></a></div>
+
 						<div class="sns_box">
 							<p>シェアはこちらから</p>
 							<div class="sns_logo">
@@ -20,49 +23,73 @@
 						</div>
 
 		</div>
+		</div>
 
-			<menu class="footer_menu row">
-				<div class="col-md-5 col-md-offset-2 offset-md-2 row">
-					<div class="col-6">
-				<li class="">
-					<p><a class=font_origin  href="<?php echo get_permalink(  );?>">戸倉ネイチャーパークとは</a></p>
-
-				</li>
-
-				
-				<li>
-					<p>▼NatureParkDiary</p>
-					<menu>
-						<li><a href="<?php echo get_permalink( diary );?>" >ダイアリー一覧</a></li>
-<!-- 						<li><a href="">海里ダイアリー</a></li>
-						<li><a href="">山里ダイアリー</a></li>
-						<li><a href="">暮らしのダイアリー</a></li>
-						<li><a href="">こんな体験、あんな企画</a></li>
-						<li><a href="">募集あれこれ</a></li> -->
-					</menu>
-				</li>
-				</div>
-
-				<div class="col-6">
-				<li class="">
-					<p>▼ネイチャーパークの魅力</p>
-					<menu>
-						<li><a href="<?php echo esc_url( home_url() )."/phenology"; ?>">戸倉里海里山カレンダー</a></li>
-						<li><!-- <a href="<?php echo esc_url( home_url() )."/ryousi"; ?>"> -->漁師名鑑<!-- </a> --></li>
-						<li><a href="<?php echo get_template_directory_uri(); ?>/img/togurakkomap.pdf">戸倉っこマップ</a></li>
-					</menu>
-				</li>
+			<menu class="footer_menu row justify-content-center">
 
 
-				<li>
-					<a href="<?php echo get_permalink( ACCESS );?>" ><p>▼ネイチャーパークを訪れる</p></a>
-					<menu>
-						<li><a href="<?php echo get_template_directory_uri(); ?>/img/koccha.pdf" target="_blank">こっちゃもよらいんでば</a></li>
-					</menu>
-				</li>
-			</div>
-			</div>
-			<div class="col-md-3">
+				<div class="col-lg-8 col-md-10 justify-content-between row">
+
+				<!-- <div class="col-md-5 col-md-offset-2 offset-md-2 row"> -->
+					
+
+					<div class="col-md-4">
+
+
+
+
+
+						<li class="list-box">
+							<p>▼Naturepark Diary</p>
+							<menu>
+								<li><a href="<?php echo get_permalink( diary );?>" >ダイアリー一覧</a></li>
+		<!-- 						<li><a href="">海里ダイアリー</a></li>
+								<li><a href="">山里ダイアリー</a></li>
+								<li><a href="">暮らしのダイアリー</a></li>
+								<li><a href="">こんな体験、あんな企画</a></li>
+								<li><a href="">募集あれこれ</a></li> -->
+							</menu>
+						</li>
+
+						<li class="list-box">
+							<p>▼ネイチャーパークの魅力</p>
+							<menu>
+								<li><a href="<?php echo esc_url( home_url() )."/phenology"; ?>">戸倉里海里山カレンダー</a></li>
+								<li><!-- <a href="<?php echo esc_url( home_url() )."/ryousi"; ?>"> -->漁師名鑑<!-- </a> --></li>
+								<li><a href="<?php echo get_template_directory_uri(); ?>/img/togurakkomap.pdf">戸倉っこマップ</a></li>
+							</menu>
+						</li>
+
+						
+						
+					</div>
+
+					
+
+
+
+
+					<div class="col-md-4">
+						
+						<li class="list-box">
+							<p><a class=font_origin  href="<?php echo get_permalink( ABOUT );?>">ネイチャーパークとは</a></p>
+
+						</li>
+
+
+
+						<li class="list-box">
+							<a href="<?php echo get_permalink( ACCESS );?>" ><p>▼ネイチャーパークを訪れる</p></a>
+							<menu>
+								<li><a href="<?php echo get_template_directory_uri(); ?>/img/koccha.pdf" target="_blank">こっちゃもよらいんでば</a></li>
+							</menu>
+						</li>
+					</div>
+
+
+
+
+			<div class="col-md-4">
 				<li>
 					<p>お問い合わせ先</p>
 					<menu>
@@ -73,8 +100,12 @@
 				</menu>
 				</li>
 			</div>
+
+
+		</div>	
+		</div>
 				
-			</menu>
+		</menu>
 
 		</div>
 		

@@ -3,9 +3,9 @@ Template Name:Content-diary
 */
 ?>
 
+  <?php include('loop_ids.php'); ?>
 
 
- 
 
     <!-- サブクエリに渡す配列を作成 -->
     <?php $args =  array( 
@@ -31,6 +31,24 @@ Template Name:Content-diary
               <?php while ( $the_query->have_posts()) : ?>
                 <?php $the_query->the_post();?>
 
+
+
+              <?php 
+                $answer = array_search( get_the_ID(), $post_array );
+
+                if( floor ( $answer / 8 ) == 0 ){
+
+                      $pagenum_link = '';
+                      
+                      }else{
+                        $pagenum = floor( $answer / 8 ) + 1 .'/';
+                        $pagenum = '/page/'. $pagenum;
+
+                      }
+                
+                ?>
+
+
                   <?php if ($pos_c % 2 !== 0 ){
                   echo '</div>'."\n"."\n"."<div class=".'"'."group-$pos_c row".'"'." >";
                       }; ?>
@@ -43,7 +61,10 @@ Template Name:Content-diary
     						<?php if (has_post_thumbnail()): ?>
                   <div id="wrapper">
                     <div class="filter">
-    					    	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
+    					    	<a href="<?php echo esc_url( home_url( '/' ). $pagenum .'diary' ); ?>#post-<?php the_ID(); ?>">
+
+                      <?php the_post_thumbnail( '' , array( 'class' => 'card-img') ); ?></a>
+                    
                     </div>
                   </div>
     					    <?php else: ?>
@@ -51,6 +72,8 @@ Template Name:Content-diary
     					        <!-- <a href="<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img"></a> -->           
     				<?php endif; ?>
             </div>
+
+            <a href="<?php echo esc_url( home_url( '/' ).'diary' ); ?>#post-<?php the_ID(); ?>"></a>
 
             <div class="card-right col-sm-7" >
                   <div class="card-body">
@@ -68,10 +91,11 @@ Template Name:Content-diary
                     $name = $cat[0];
                   } ;?>
 
-                  <div class="diary_cat-<?php echo $id ?> title-wrappar">
+                  <a href="<?php echo esc_url( home_url( '/' ).'diary' ); ?>#post-<?php the_ID(); ?>"><div class="diary_cat-<?php echo $id ?> title-wrappar">
                     
-    					    <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
+    					    <?php the_title( '<h5 class="card-title">','</h5>' ); ?>
                   </div>
+                </a>
 
                   <div class="card-text">
                   <?php the_excerpt('...'); ?>

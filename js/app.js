@@ -35,6 +35,19 @@ $(window).resize( get_map_height );
   //マップペースの高さをとって,about_containerのマージンにする
 
 
+// TOPから記事一覧へ遷移する際のスムーススクロール
+jQuery(function(){
+   jQuery('a[href^="#here"]').click(function() {
+      var speed = 800;
+      var href= jQuery(this).attr("href");
+      var target = jQuery(href == "#here" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+
+
 
 
 

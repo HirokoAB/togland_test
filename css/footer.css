@@ -1,5 +1,4 @@
 .footer_container {
-  max-height: 300px;
   border-top: solid 1px #cccccc;
   border-bottom: solid 1px #cccccc;
   padding: 20px;
@@ -17,6 +16,7 @@
 
 .footer_container p, .footer_container .font-origin {
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .footer_container .footer_upper {
@@ -91,6 +91,34 @@
   display: -ms-flexbox;
   display: flex;
   margin: auto;
+}
+
+.footer_container .footer_menu div {
+  padding: 0px;
+}
+
+.footer_container .footer_menu div :first-child {
+  padding-left: 0px;
+}
+
+.footer_container .footer_menu div :last-child {
+  padding-right: 0px;
+}
+
+.footer_container .footer_menu .list-box {
+  margin-bottom: 1rem;
+}
+
+.footer_container .footer_menu .list-box menu li {
+  padding-left: 1rem;
+}
+
+.footer_container .footer_menu .list-box li li {
+  padding-left: 1rem;
+}
+
+.footer_container .footer_menu:last-child > li > menu > li {
+  margin-right: 0;
 }
 
 .footer_container li {

@@ -5,6 +5,7 @@
 .page_access_container p {
   font-size: 1.25rem;
   text-align: justify;
+  line-height: 1.7;
 }
 
 .page_access_container .access_subtitle {
@@ -31,6 +32,10 @@
   margin-top: 125px;
 }
 
+.page_access_container .access_middle .kocha_title {
+  margin-left: 15px;
+}
+
 .page_access_container .access_middle .bd_u::after {
   content: '';
   display: block;
@@ -41,10 +46,6 @@
   margin-bottom: 57px;
 }
 
-.page_access_container .kocha_title::after {
-  width: 50%;
-}
-
 .page_access_container .access_kocha,
 .page_access_container .card {
   background-color: transparent;
@@ -52,17 +53,16 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border: none;
 }
 
 .page_access_container .access_kocha img,
 .page_access_container .card img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 50%;
   width: 11.25rem;
   height: 11.2rem;
-  margin: auto;
 }
 
 .page_access_container .access_kocha .card-body,
@@ -90,22 +90,16 @@
   margin-top: 40px;
 }
 
-.page_access_container .car .access_subtitle::after,
-.page_access_container .public .access_subtitle::after {
-  width: 24%;
-}
-
 .page_access_container .car img,
 .page_access_container .public img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: solid 0.5px #cccccc;
-  padding-top: 0.2px;
   padding-bottom: 0.2px;
 }
 
-.page_access_container .public .access_subtitle::after {
-  width: 39%;
+.page_access_container .public img {
+  padding-top: 0.5px;
 }
 
 .page_access_container .public .ac_link {
@@ -135,7 +129,12 @@
   font-size: 1rem;
 }
 
+.page_access_container .gmap_body {
+  height: 50vh;
+}
+
 .page_access_container .g_map {
+  margin-top: 70px;
   margin-top: 70px;
 }
 
@@ -155,4 +154,20 @@
 
 .link-to-home p {
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    font-size: 16px !important;
+  }
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  h5 {
+    font-size: 0.9rem;
+  }
+  .link-li li a {
+    font-size: 0.7rem;
+  }
 }
