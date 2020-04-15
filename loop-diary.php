@@ -10,17 +10,7 @@
 
           <div class="article-container"> 
 
-          <?php if (has_post_thumbnail()): ?>
-              <div id="wrapper">
-                <div>
-                <?php the_post_thumbnail( '' , array( "class" => "diary-thumbnail col-12-fill" ) ); ?>
-                </div>
-              </div>
 
-            <?php else: ?>
-<!--                 <img src="<?php echo get_template_directory_uri()."/img/daiay_cont.png"; ?>" alt="" class="card-img">  -->         
-            
-          <?php endif; ?>
 
 
 
@@ -38,7 +28,7 @@
           } ;?>
 
           <div>
-              <a name="here"><p class="diary_cat-<?php echo $id ?> diary_cat"><?php echo $name ; ?></p></a>
+              <a id="post-<?php the_ID(); ?>"><p class="diary_cat-<?php echo $id ?> diary_cat"><?php echo $name ; ?></p></a>
           </div>
 
           <div class="lower">
@@ -49,12 +39,21 @@
             <p class="diary-date" datetime="<?php echo get_the_date( 'Y-m-d' ); ?>"><?php echo get_the_date('yy.m.d'); ?></p>
             </div>
 
+            <?php if (has_post_thumbnail()): ?>
+              <div id="wrapper">
+                <div>
+                <?php the_post_thumbnail( '' , array( "class" => "diary-thumbnail col-12-fill" ) ); ?>
+                </div>
+              </div>  
+            
+         <?php endif; ?> 
+
+
           <div class="card-text">
             <?php the_content() ;?>
           </div>
 
           </div>
-  
             
           </div>  
         <?php endwhile; ?>

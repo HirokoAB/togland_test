@@ -29,31 +29,33 @@
 	}
 
 	.link-to-home{
-		margin:auto;
-		font-size:1.25rem;
 		display:flex;
 		flex-direction:column;
 		justify-content:center;
-		align-items:center;
-		a{
+			margin:70px auto;
+			font-weight:600;
+			font-size:1.5rem;	
 			
-			
+			p{
+				text-align:center;
+
+			}
 		}
 		
 		p{
 			text-align:center;
 			margin-top:50px;
-			&::after{
-				content:'';
-				height:6px;
-				width:70px;
-				display:block;
-				background-color:black;
+			// &::after{
+			// 	content:'';
+			// 	height:6px;
+			// 	width:70px;
+			// 	display:block;
+			// 	background-color:black;
 				
-			}
+			// }
 		}
 	}
-}
+
 
 
 

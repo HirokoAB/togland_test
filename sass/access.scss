@@ -2,6 +2,8 @@
 	p{
 		font-size:1.25rem;
 		text-align:justify;
+		line-height:1.7;
+
 	}
 	.access_subtitle{
 		margin-bottom:50px;
@@ -29,6 +31,9 @@
 
 		.access_middle{
 			margin-top:125px;
+			.kocha_title{
+				margin-left:15px;
+			}
 			.bd_u{
 			&::after{
 				content:'';
@@ -43,27 +48,21 @@
 			
 			}
 
-			
-			.kocha_title{
-				&::after{
-					width:50%;
-				}
-			}
 
 			.access_kocha,
 			.card{
 				background-color:transparent;
 				text-align:center;
 				justify-content:center;
+				align-items: center;
 				border:none;
 				
 				img{
-					object-fit:cover;
-					border-radius: 50%;
+
 					width:11.25rem;
 					height:11.2rem;
-					margin:auto;
 			}
+
 
 
 			.card-body{
@@ -88,24 +87,17 @@
 		.car,
 		.public{
 			margin-top:40px;
-			.access_subtitle{
-				&::after{
-					width:24%;
-				}
-			}
 			img{
 				box-sizing:border-box;
 				border:solid 0.5px #cccccc;	
-				padding-top:0.2px;
 				padding-bottom:0.2px;
 			}
 		}	
 			.public{
-				.access_subtitle{
-				&::after{
-					width:39%;
-				}	
-		}
+				img{
+					padding-top:0.5px;
+				}
+				
 		.ac_link{
 			margin-top:21px;
 			margin-bottom:2px;
@@ -127,8 +119,12 @@
 
 	
 }
+.gmap_body{
+			height:50vh; 
+		}	
 .g_map{
-			margin-top:70px;
+	margin-top:70px;
+		margin-top:70px;
 			&::after{
 					width:100%;
 				}
@@ -149,4 +145,30 @@
 
 			}
 		}
+
+		@media screen and (max-width: 480px) {
+
+		p{
+			font-size:16px!important;
+		}
+		h2{
+			font-size:1.25rem;
+			font-weight:600;	
+		
+		}
+		h5{
+			font-size:0.9rem;
+		} 
+		.link-li{
+			li{
+				a{
+					font-size:0.7rem;					
+					
+				}
+			}
+
+		}
+		
+
+	}
 

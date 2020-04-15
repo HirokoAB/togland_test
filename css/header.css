@@ -34,7 +34,6 @@ a:hover {
 }
 
 .diary, .about-naturepark {
-  border-bottom: solid 0.3px #cccccc;
   border-top: solid 3px black;
 }
 
@@ -98,7 +97,7 @@ header #menu-global_menu {
 }
 
 header #menu-global_menu li:first-child > a {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 
 header #menu-global_menu > li + li::after {
@@ -112,7 +111,7 @@ header #menu-global_menu > li + li::after {
 }
 
 header #menu-global_menu > li + li a {
-  padding: 20px;
+  padding: 10px;
 }
 
 header #menu-global_menu > li + li:last-child > a {

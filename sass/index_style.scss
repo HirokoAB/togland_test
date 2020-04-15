@@ -119,6 +119,13 @@ area {
   border-bottom:solid 1px #cccccc;
   padding-bottom:1rem;
 }
+.np-container{
+  .aside{
+    .subtitle{
+      font-size:1.25rem;
+    }
+  }
+}
 
 ///////////////////////////////////////////////////////
 //////////////TOPページのdiaryの調整//////////////////////
@@ -131,6 +138,10 @@ area {
   .link-to-archive{
     font-size:0.7rem;
   }
+  .link-bottom{
+    position: absolute;
+    right: 0;
+}
 
 
 

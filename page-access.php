@@ -23,23 +23,25 @@ Template Name: page-access
   </div>
 
 
-        <div class="row access_middle justify-content-center">
-          <div class="col-md-8 bd_u">
-
-            <div class="title-box title">
+        <div class="row access_middle ">
+          <div class="title-box title offset-md-2">
               <h2 class="access_subtitle subtitle kocha_title">こちらはいかがですか？</h2>
             </div>
-        <div class="row justify-content-center">
+          <div class="col-md-8 offset-md-2 bd_u">
+
+            
+        <div class="row">
           <p class="col-md-8 ">
         戸倉地区が位置する南三陸町とお隣の石巻市旧河北町と旧北上町、登米市旧津山町を通る県道197 号線・国道398号線沿いのドライブガイドです。三陸道が開通してから、通る機会が少なくなった一般道の魅力が詰まっています。この機会に下道をゆっくり観光しながらお越しください。
           </p> 
       
           <div class="access_kocha col-md-4"> 
             <div class="card" >
-                 <img src="<?php echo get_template_directory_uri(); ?>/img/kotcha.jpg" alt="南三陸町戸倉地区までの交通手段を表したイラスト">
+
+                 <a href="<?php echo get_template_directory_uri(); ?>/img/koccha.pdf"  target="_blank"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/kotcha_bk.jpg" alt="南三陸町戸倉地区までの交通手段を表したイラスト"></a>
                 <div class="card-body">
                 <h5 class="card-title">こっちゃも寄らいんでば</h5>
-                <a href="<?php echo get_template_directory_uri(); ?>/img/koccha.pdf" class="btn" target="_blank">ダウンロード</a>
+                <a href="<?php echo get_template_directory_uri(); ?>/img/koccha.pdf"  target="_blank">ダウンロード</a>
               </div>
             </div> 
             </div>
@@ -48,41 +50,38 @@ Template Name: page-access
       </div> 
 
 
-        <div class="bk-color car">
+        <div class="bk-color car row">
             <div class="title-box title">
                 <h2 class="access_subtitle subtitle">車でお越しの場合</h2>
             </div>
-            <div class="row justify-content-center">
-            <div class="col-xs-8">
-                <img class="col-12"src="<?php echo get_template_directory_uri(); ?>/img/car_map.png" alt="南三陸町戸倉地区までの交通手段を表したイラスト">
+
+            <div class="col-lg-8 col-md-11 ml-auto">
+                <img class="col-12" src="<?php echo get_template_directory_uri(); ?>/img/car_map.png" alt="南三陸町戸倉地区までの交通手段を表したイラスト">
             </div>
-            </div>   
+
         
       </div>
 
 
-        <div class="bk-color public">
+        <div class="bk-color public row">
             <div class="title-box title">
                 <h2 class="access_subtitle subtitle">公共交通機関を利用する場合</h2>
             </div>
-            <div class="row  justify-content-center">
-            <div class="col-xs-8">
+
+            <div class="col-lg-8 col-md-11 ml-auto">
                 <img class="col-12" src="<?php echo get_template_directory_uri(); ?>/img/public_map.png" alt="南三陸町戸倉地区までの交通手段を表したイラスト">
-            </div>
-            <div class="access_li">
-              <h5 class="access_subtitle subtitle ac_link">詳細な時刻に関しましては以下のリンク先にてご確認ください</h5>
 
-            <ul class="link-li">
-              <li><a href="http://www.jreast.co.jp/"　target="_blank">JR東日本WEBサイト</a></li>
-              <li><a href="https://www.jreast.co.jp/railway/train/brt/pdf/data_kesennuma.pdf" target="_blank">BRT時刻表</a></li>
-              <li><a href="https://www.town.minamisanriku.miyagi.jp/index.cfm/7,6734,c,html/6734/5.pdf" target="_blank">南三陸町町内バス時刻表</a></li>
-            </ul>      
+                <div class="access_li">
+                  <h5 class="access_subtitle subtitle ac_link">詳細な時刻に関しましては以下のリンク先にてご確認ください</h5>
+
+                  <ul class="link-li">
+                    <li><a href="http://www.jreast.co.jp/"　target="_blank">JR東日本WEBサイト</a></li>
+                    <li><a href="https://www.jreast.co.jp/railway/train/brt/pdf/data_kesennuma.pdf" target="_blank">BRT時刻表</a></li>
+                    <li><a href="https://www.town.minamisanriku.miyagi.jp/index.cfm/7,6734,c,html/6734/5.pdf" target="_blank">南三陸町町内バス時刻表</a></li>
+                  </ul>
+                </div>
+             </div>
         </div>
-      </div>
-      </div>
-      
-      
-
 
 
 
@@ -94,10 +93,8 @@ Template Name: page-access
           
               <div class="col-12">
 
-                <iframe src="https://www.google.com/maps/d/embed?mid=13S1IgYvGb4SYbzbMfU2rWJl2v2UzwlZw" width="1100" height="660"></iframe>
+                <iframe class="gmap_body" src="https://www.google.com/maps/d/embed?mid=13S1IgYvGb4SYbzbMfU2rWJl2v2UzwlZw" width="100%"></iframe>
 
-
-<!--  -->
           </div>   
 
 

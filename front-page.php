@@ -48,7 +48,7 @@
 								<div class="diary-title-box flex title-box">
 									<div class="diary-title_upper title flex">
 										<div  class="flex title">	
-										<h2 class="diary_subtitle subtitle">NaturePark Diary</h2>
+										<h2 class="diary_subtitle subtitle">Naturepark Diary</h2>
 										<p>ネイチャーパークの日々の出来事をゆるりとご報告</p>
 										</div>
 									</div>	
@@ -75,41 +75,44 @@
 									
 								</div>
 							</div>
+							<div class="link-to-archive link-bottom">
+										<a href="<?php echo get_permalink( diary );?> "><p><strong>→ 一覧ページはこちら</strong></p></a>
+							</div>
 						</div>
 
 					
-						<div class="col-lg-3 aside">
+						<div class="col-lg-3 col-md-12 aside">
 							<div class="page_container">
 								<div class="row content_box">
 								<div class="page-title-box title-box">
 									<div  class="flex title">	
-											<h2 class="page_subtitle subtitle">戸倉地区の季節歴</h2>
+											<h2 class="page_subtitle subtitle">戸倉地区の季節暦</h2>
 									</div>
 								</div>
 									
 									<ul class="content_list">
-										<a href="<?php get_template_part('page','phenorogie'); ?>"><li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/banner_nature.png" alt=""></a>
-											<p class="card-text">地域の自然と人の営みを表した生活四季歴です。自然と人の営みの繋がりををひと目で見ていただけます。</p>
+										<a href="<?php echo get_permalink( PHENOROGIE ); ?>"><li class="card"><img class="card-img-top"src="<?php echo get_template_directory_uri(); ?>/img/banner_nature.png" alt=""></a>
+											<p class="card-text">地域の自然と人の営みを表した生活四季暦です。自然と人の営みの繋がりををひと目で見ていただけます。</p>
 										</li>
 										</ul>
 								<div class="page-title-box title-box">
 									<div  class="flex title">	
-											<h2 class="page_subtitle subtitle">海を支える人たち</h2>
+											<h2 class="page_subtitle subtitle">戸倉地区の青年漁師</h2>
 									</div>
 								</div>	
 								<ul class="content_list">	
-										<li class="card"><a href="http://localhost:8080/wordpress/ryousi"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/banner_ryousi.png" alt=""></a>
+										<li class="card"><a href="<?php echo esc_url( home_url( '/' ) ).'ryousi'; ?>"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/banner_ryousi.png" alt=""></a>
 											<p class="card-text">海の恵みをもたらしてくれるイケメン漁師さんたちを名鑑に。</p>
 										</li>
 								</ul>
 								<div class="page-title-box title-box">
 									<div  class="flex title">	
-											<h2 class="page_subtitle subtitle">地元の人が知る戸倉の魅力</h2>
+											<h2 class="page_subtitle subtitle">戸倉地区の風土地図</h2>
 									</div>
 								</div>	
 								<ul class="content_list">			
 										<li class="card"><a href="<?php echo get_template_directory_uri(); ?>/img/togurakkomap.pdf" target="_blank"><img class="card-img-top" src="<?php echo get_template_directory_uri(); ?>/img/togurakko.png" alt=""></a>
-											<p>地元の人が知る戸倉の情報を南三陸町内の宮司さんが地図にしました。手書きの柔かなイラスト が素敵な地図です</p>
+											<p>戸倉の集落の名前や位置、施設や言い伝えなどを(一社)復興みなさん会さんが地図に表されました。</p>
 										</li>
 								</ul>
 								</div>

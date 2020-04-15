@@ -114,6 +114,8 @@ function mystyle(){
 			wp_enqueue_style( 'phenorogie.css','https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css' );
 	}elseif(is_page('232')){
 			wp_enqueue_style( 'access.css',get_template_directory_uri() . '/css/access.css' );	
+	}elseif(is_search()){
+			wp_enqueue_style( 'search.css',get_template_directory_uri() . '/css/search.css' );
 	}else{
 		var_dump('なんか違うみたいです!!');
 	}
@@ -208,9 +210,13 @@ function create_pts_diary() {
 				"show_in_quick_edit" => false,
 		)
 	);
+add_rewrite_rule('diary/([^/]+)/?$', 'index.php?diary_cat=$matches[1]', 'top');
 
 }
 add_action( 'init', 'create_pts_diary');
+
+
+//漁師名鑑の表示順序を変更する記述
 
 function twpp_change_sort_order( $query ) {
 
@@ -285,7 +291,7 @@ add_action( 'pre_get_posts', 'twpp_change_sort_order' );
    	
 
 add_theme_support('post-thumbnails');
-add_image_size('top-thumbnail', 100, 1000);
+add_image_size('top-thumbnail', 400, 700);
 
 
 
@@ -308,7 +314,7 @@ function resize_at_upload( $file ) {
  
 	if ( $file['type'] == 'image/jpeg' OR $file['type'] == 'image/gif' OR $file['type'] == 'image/png') {
  
-		$w =1000;
+		$w =700;
 		$h = 0;
  
 		$image = wp_get_image_editor( $file['file'] );
@@ -375,24 +381,24 @@ add_filter('excerpt_more','new_excerpt_more',9999);
 
 
 //カスタム投稿のタクソノミーとタームをURLに反映させる
-function myUrlRewrite($rules){
-$myRule = array();
-$myRule['tpdiary/([^/]+)/?$'] = 'index.php?diary_cat[1]';
-$myRule['tpdiary/([^/]+)/([^/]+)?$'] = 'index.php?diary_cat[2]';
-return array_merge( $myRule, $rules );
-}
-add_action('rewrite_rules_array', 'myUrlRewrite' );
+// function myUrlRewrite($rules){
+// $myRule = array();
+// $myRule['tpdiary/([^/]+)/?$'] = 'index.php?diary_cat[1]';
+// $myRule['tpdiary/([^/]+)/([^/]+)?$'] = 'index.php?diary_cat[2]';
+// return array_merge( $myRule, $rules );
+// }
+// add_action('rewrite_rules_array', 'myUrlRewrite' );
 
-function myPostTypeLink($link, $post ) {
-if ( $post->post_type == 'diary' ) {
-if ( $cats = get_the_terms( $post->ID, 'tpdiary' ) ) {	
-$link = str_replace( '%tpdiary%', current( $cats )->slug, $link );
-}
-}
-return $link;
-}
-add_filter('post_type_link', 'myPostTypeLink', 10, 2 );
-add_filter('post_link', 'myPostTypeLink', 10, 2 );
+// function myPostTypeLink($link, $post ) {
+// if ( $post->post_type == 'diary' ) {
+// if ( $cats = get_the_terms( $post->ID, 'tpdiary' ) ) {	
+// $link = str_replace( '%tpdiary%', current( $cats )->slug, $link );
+// }
+// }
+// return $link;
+// }
+// add_filter('post_type_link', 'myPostTypeLink', 10, 2 );
+// add_filter('post_link', 'myPostTypeLink', 10, 2 );
 
 
 
@@ -498,6 +504,16 @@ function wp_singular_page_redirect() {
   }
 }
 endif;
+
+
+//検索フォームのカテゴリを指定する
+function SearchFilter($query) {
+  if ($query->is_search) {
+    $query->set('post_type', 'diary');
+  }
+return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
 
 
 

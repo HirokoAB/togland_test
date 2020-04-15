@@ -18,7 +18,7 @@ Template Name: sigle-fisherman
 
       <dt>お名前</dt><dd class="fm_name"><?php echo $cfs->get( 'ryousi_name' ) ?></dd>      
       <dt>生年月日</dt><dd class="fm_birth"><?php echo date( 'Y年 m月 d日',strtotime($cfs->get ('ryousi_birth'))  ) ?></dd>
-      <dt>趣味</dt><dd class="fm_fav"><?php echo $cfs->get( 'ryousi_fav' ) ?></dd>
+      <dt>趣味・特技</dt><dd class="fm_fav"><?php echo $cfs->get( 'ryousi_fav' ) ?></dd>
       <dt>漁師歴</dt><dd class="fm_ex"><?php echo $cfs->get( 'ryousi_year_of_ex' ) ?>年</dd>
       <dt>好きな食べ物</dt><dd class="fm_food"><?php echo $cfs->get( 'ryousi_food' ) ?></dd>
       <dt>船の名前</dt><dd class="fm_ship"><?php echo $cfs->get( 'ryousi_ship' ) ?></dd>

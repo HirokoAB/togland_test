@@ -19,7 +19,6 @@ a:hover
 .np-container{
 	margin:auto;
 	min-height: calc(100vh - 270px);//footerの高さが30px,main-contentのマージンを考えて50pxに//
-
 	.row{
 		padding:1px;
 		
@@ -35,7 +34,7 @@ a:hover
 	}
 
 	.diary,.about-naturepark{
-		border-bottom:$border; 
+		// border-bottom:$border; 
 		border-top: solid 3px black;
 		
 	}
@@ -106,7 +105,7 @@ header{
 	#menu-global_menu{
 					li:first-child{
 				>a{
-					padding-right:20px;
+					padding-right:10px;
 				}
 			}
 		>li+li{
@@ -120,7 +119,7 @@ header{
 		   border-right: 1px solid #585858
 		  }
 			a{
-				padding:20px;
+				padding:10px;
 			}
 
 			&:last-child{

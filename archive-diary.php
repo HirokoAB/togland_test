@@ -10,10 +10,10 @@ Archive-diary
 
 
 
-<div class="main archive-diary-container col-lg-8 ml-auto">
+<div class="main archive-diary-container col-lg-7 ml-auto">
 
 <?php $args =  array( 
-        'posts_per_page' =>5,
+        'posts_per_page' =>8,
         'post_type' => 'diary',
         'order' => 'DESC',
         "paged" => $paged,
@@ -21,59 +21,45 @@ Archive-diary
                               array(
                                 'taxonomy' =>'diary_cat',
                                 'field' => 'slug',
-                                 'terms' => array('satoumi','satoyama','kurasi','atsumare')
+                                 'terms' => array('satoumi','satoyama','kurasi','atsumare','kikaku')
                                     )
                              ) 
     );?>
-
 
 <?php
 include('loop-diary.php');
 ?>
 
 
-
 </div>
 
 
 
-<div class="side col-lg-2 ml-auto">
+<div class="side col-lg-2 offset-lg-1">
 
-<!--   <?php the_post(); ?>
-    
+
+  <!--  <?php the_post(); ?> -->
+
+    <div class="bk_g">  
     <?php get_search_form(); ?>
+    </div>
     
-    <h6>カテゴリー別アーカイブ:</h6>
-    <ul>
-       <?php wp_list_categories(array(
+   <!--  <h6>カテゴリー別</h6>
+    <ul> -->
+       <!-- <?php wp_list_categories(array(
     'taxonomy' => 'diary_cat', // タクソノミーの指定
     'title_li' => '', // リストの外側に表示されるタイトルを非表示
-  )); ?>
-    </ul>  -->
+  )); ?> -->
+    </ul> 
+</div>
+
+
 </div>
 
 
 
 
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-</div><!-- endofpage -->
+<!-- endofpage -->
     
 
 

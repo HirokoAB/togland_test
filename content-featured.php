@@ -2,6 +2,10 @@
 Template Name: Archive-featured
 */
 ?>
+<?php
+include('loop_ids.php');
+?>
+
 
   <?php $args =  array( 
         'posts_per_page' => '2',
@@ -16,6 +20,7 @@ Template Name: Archive-featured
                              ) 
     );?>
 
+
 <!-- サブループを作成渡す配列は上記の内容 -->
   <?php $the_query = new WP_Query($args); ?>
      <!-- ここから記事取得のルサブループ -->
@@ -23,7 +28,24 @@ Template Name: Archive-featured
 
 
 		<?php while ( $the_query->have_posts()) : ?>
-                <?php $the_query->the_post();?>    
+                <?php $the_query->the_post();?>  
+
+
+              <?php 
+                $answer = array_search( get_the_ID(), $post_array );
+
+                if( floor ( $answer / 8 ) == 0 ){
+
+                      $pagenum_link = '';
+                      
+                      }else{
+                        $pagenum = floor( $answer / 8 ) + 1 .'/';
+                        $pagenum = '/page/'. $pagenum;
+
+                      }
+                
+                ?>
+
 
 <div class="col-lg-6">
  <div class="card">
@@ -31,7 +53,8 @@ Template Name: Archive-featured
       <?php if (has_post_thumbnail()): ?>
         <div id="wrapper">
           <div>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' , array( 'class' => 'card-img-top') ); ?></a>
+            <a href="<?php echo esc_url( home_url( '/' ).'diary'. $pagenum ); ?>#post-<?php the_ID(); ?>">
+		        <?php the_post_thumbnail( '' , array( 'class' => 'card-img-top') ); ?></a>
           </div>
       </div>
     	<?php else: ?>
@@ -55,11 +78,13 @@ Template Name: Archive-featured
                     $id = $term[0];
                     $name = $cat[0];
                   } ;?>
-
+                  
                   <div class="diary_cat-<?php echo $id ?> title-wrappar">
-
-        <?php the_title( '<h5 class="card-title"><a href="'.esc_url( get_permalink() ).'">','</a></h5>' ); ?>
-      </div>
+                  <a href="<?php echo esc_url( home_url( '/' ).'diary'. $pagenum ); ?>#post-<?php the_ID(); ?>">
+                    <?php the_title( '<h5 class="card-title">','</h5>' ); ?>
+                  </a>
+                  </div>
+                </a>
 
 
         <div class="card-text">

@@ -51,36 +51,32 @@ Template Name: page-about
 
 
       <div class="row">
-        <p class="col-md-8 offset-md-2">実は戸倉エリアには、この自然と豊かにふれあう機会をつくっているさまざまな活動や施設があります。そこを訪ねることが宝物の発見につながります。ワクワクしますよね、まさにエリア全体が自然を楽しめる公園のようなのです。なので自然公園＝ネイチャーパークと呼ぶことにしました。TOPページの宝探しの地図を手に、ぜひ戸倉ネイチャーパークにお越しください。心踊らせましょう。
+        <p class="col-md-8 offset-md-2 mg-t_5">実は戸倉エリアには、この自然と豊かにふれあう機会をつくっているさまざまな活動や施設があります。そこを訪ねることが宝物の発見につながります。ワクワクしますよね、まさにエリア全体が自然を楽しめる公園のようなのです。なので自然公園＝ネイチャーパークと呼ぶことにしました。TOPページの宝探しの地図を手に、ぜひ戸倉ネイチャーパークにお越しください。心踊らせましょう。
         </p>
       </div>
 
   <div class="row about_middle">
-    <div class="col-md-9 bk-color">
-
-       <div class="title-box title">
-        <h2 class="about_subtitle subtitle">遊びが学びにかわる場所って？</h2>
-      </div>
-      
-      <div class="row">
-          <p class="col-md-10">
-        戸倉ネイチャーパークのもう一つのコンセプトです。ネイチャーパークで自然と親しみ遊んでいると、地域の人と話をしていると、いつの間にか何かを学んでいる、そんな場所にしたいと思っています。人は、過ごした時間が”学べた””何かをつかんだ”時間になった時に、深い充実感を持つのではないでしょうか。戸倉ネイチャーパークがそんな場所になったらいいなと、みんなで向かう方向を表した言葉だととらえてください。
-          </p> 
-      </div>   
-    </div>
+           <div class="title-box title">
+                <h2 class="about_subtitle subtitle">遊びが学びにかわる場所って？</h2>
+           </div>
+          <div class="col-md-9 bk-color">
+            <div class="row">
+                <p class="col-md-10 mg-t_5">
+              戸倉ネイチャーパークのもう一つのコンセプトです。ネイチャーパークで自然と親しみ遊んでいると、地域の人と話をしていると、いつの間にか何かを学んでいる、そんな場所にしたいと思っています。人は、過ごした時間が”学べた””何かをつかんだ”時間になった時に、深い充実感を持つのではないでしょうか。戸倉ネイチャーパークがそんな場所になったらいいなと、みんなで向かう方向を表した言葉だととらえてください。
+                </p> 
+            </div>   
+          </div>
   </div>
 
 
   <div class="row about_row">
-        <div class="col-md-9 offset-md-3 bk-color">
-        
-          <div class="title-box title">
+     <div class="title-box title mg-r">
             <h2 class="about_subtitle subtitle">TOGURA NATURE PARK TIMESとは?</h2>
           </div>
 
-      
+        <div class="col-md-9 offset-md-3 bk-color">  
         <div class="row justify-content-end">
-          <p class="col-md-10">
+          <p class="col-md-10 mg-t_5">
           南三陸町戸倉地域、ネイチャーパークの中のいろいろな動きをみなさまにお届けするweb新聞です。2020年4月ゆるーりとtake-offします。ちょっとした生活情報からもちろんイベント情報などなど、ネイチャーパークが動いているなということをみなさんに知ってもらいたく発信していきます。しかーし、エリア内の動きを100%つかんで発信することは難しく、少々偏りが発生するかもしれないことを、先んじて了承をいただきたくお願い申し上げます。
           </p> 
         </div>   
